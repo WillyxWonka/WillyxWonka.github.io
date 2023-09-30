@@ -4,7 +4,7 @@ header
     color: black;
     font-size: 5vw;
     font-family: 'Courier New', monospace;
-    font-weight:200px;
+    font-weight:bold;
     text-align: center;
 }
 
@@ -21,7 +21,7 @@ body{
     text-align: center;
     font-weight: bold;
     font-family: 'Courier', Courier New, monospace;
-    font-size: 3vw;
+    font-size: 3.5vw;
     letter-spacing: 5%;
 }
 .TxtInput,.WinnerWinner{
@@ -47,15 +47,15 @@ body{
 #alphabetheader
 {
     font-weight:  bold;
-    font-size: 2vw;
-    margin-left: 29%;
+    font-size: 2.75vw;
+    margin-left: 25%;
 }
 #alphabet
 {
     color: black;
     background-color: rgb(255, 231, 210);
     overflow-wrap: break-word;
-    font-size: 3vw;
+    font-size: 3.5vw;
     border-style: solid;
     border-color: black;
     width: 30%;
@@ -68,7 +68,7 @@ body{
     color: black;
     background-color: rgb(255, 231, 210);
     overflow-wrap: break-word;
-    font-size: 100%;
+    font-size: 4.5vw;
     border-style: solid;
     border-color: black;
     width: 30%;
@@ -119,4 +119,15 @@ button:active
 {
     transform: scale(1.05);
     background-color: rgb(215, 251, 160);
+}
+#tips{
+    font-size: small;
+    font-weight: lighter;
+}
+.versionctrl{
+position:fixed;
+top: 96%;
+right: 2%;
+font-size: x-small;
+opacity: 25%;
 }

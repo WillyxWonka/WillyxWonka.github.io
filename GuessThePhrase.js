@@ -37,6 +37,7 @@ let GuideText = "";
 let CorrectLetters = "";
 let phrasehint = "";
 let AvailableLetters = "";
+let FL = 5;
 
 
 onload = GeneratePhrase();
@@ -102,7 +103,7 @@ function FreeLetters()
 {
     let randomCharacter = [];
 
-    for(let i = 0; i < 3; i++)
+    for(let i = 0; i < FL; i++)
     {
         let x = Math.floor(Math.random() * alphabet.length);
         randomCharacter += alphabet[x];
@@ -122,7 +123,7 @@ function UserGuess(Usertxt)
         LettersUsed.innerText += usertext;
         UpdateAvailableLetters(usertext)
         updateanswer(usertext)
-    }  
+    } 
 }
 function UpdateAvailableLetters(input)
 {
@@ -183,9 +184,9 @@ function EnableFinalGuess()
 function check(guess)
 {
     const wordtolower = guess.value.toLowerCase();
-
     if(event.keyCode === 13 && wordtolower == word)
     {
+        guess.value = ""
         document.getElementById("Phrase").innerText = "Thats Right!";
         CorrectLetters.innerText = word;
         CorrectLetters.style.backgroundColor= "#adff2f";
@@ -197,6 +198,7 @@ function check(guess)
     }
     if(event.keyCode === 13 && wordtolower != word)
     {
+        guess.value = ""
         document.getElementById("Phrase").innerText = "Wrong!";
         CorrectLetters.innerText = word;
         CorrectLetters.style.backgroundColor = "#ff0000";
@@ -251,7 +253,19 @@ function GenerateNewWord()
     let bet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
     alphabet = bet;
 
-    GuideText.innerText = "Pick 2 letters"
+    if(Points == 3)
+    {
+        FL--;
+    }
+    else if(Points == 7)
+    {
+        FL--;
+    }
+    else if(Points == 10)
+    {
+        document.getElementById("header").innerText = ("CONGRATULATIONS YOU BEAT THE ALPHA!!")
+    }
+    GuideText.innerText = `Pick 2 letters`
     LettersUsed.innerText ="";
     CorrectLetters.style.backgroundColor = "";
     document.getElementById("guesswordbtn").disabled = false;
