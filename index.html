@@ -4,14 +4,15 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Test</title>
+        <title>Word Decoder the Game!</title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
         <link rel="stylesheet" href="test.css">
         <script type="text/javascript" src="GuessThePhrase.js"></script>
 
     </head>
     <body>
+
         <header id="header">
             Word Decoder!
         </header>
@@ -27,40 +28,37 @@
         <div class=WinnerWinner>
             <input type="text" placeholder="...", id ="WinnerWinner", onkeydown="check(this)">
         </div>   
-
         <br>
-        <br>
-
         <div Id="Phrase">
         </div>   
         <div Id="CorrectLetters">
         </div>  
         <br> 
-        <br> 
-        <div id="alphabetheader">Avaiable Letters:</div>
-        <div id="lettersusedheader">Letters Used:</div>
-        <br>
-        <div class="infocont">
-            <div id="alphabet"></div>
-            <div Id='LettersUsed'></div>  
+        <div class="alphabetcont">
+            <div id="alphabetheader">Avaiable Letters/Letters Used</div>
+            <div id="lettersusedheader"></div>
+            <div class="infocont">
+                <div id="alphabet"></div>
+                <div Id='LettersUsed'></div>  
+            </div>
         </div>
         <br>
         <br>
-        <br> 
-        <div Id='p3'>
-            Turns Used:
-            <br>
-            0
-        </div>   
-        <div Id='p4'>
-            Points:
-            <br>
-            0
-        </div>   
         <br>
+        <br>
+        <div class="pointturncalc">
+            <div Id='p3'>
+                Turns Used:
+                0
+            </div>   
+            <div Id='p4'>
+                Points:
+                0
+            </div>  
+        </div>
         <div class = "btncont">
             <button class="btn1", id="generatewordbtn" onclick="GenerateNewWord()"> New Word</button>
             <button class="btn2", id="guesswordbtn" onclick="GuessWordBtn()"> Guess Word</button>
-        </div>   
+        </div>  
     </body>
 </html>
