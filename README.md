@@ -21,4 +21,6 @@ alpha 0.0.3
     -updated many initial scripts
     -added word difficulty scale based on amount of letters and commoness.
     -updated help/tips
-
+alpha 0.0.4
+    -fixed a bug where you could lose Free Letters in excess
+    -fixed issue where input field was not cleared when pressing buttons

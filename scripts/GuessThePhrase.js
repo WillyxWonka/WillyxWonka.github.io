@@ -180,6 +180,7 @@ function SetUserInputActive() //also sets final guess "inactive"
     UserText.disabled = false;
     UserText.style.opacity = 100;
     UserText.value = "";
+    AnswerGuessText.value = "";
 
     AnswerGuessText.disabled = true;
     AnswerGuessText.style.opacity = 0;
@@ -194,6 +195,7 @@ function SetFinalGuessInputActive() //also sets user guess "inactive"
     UserText.disabled = true;
     UserText.style.opacity = 0;
     UserText.value = "";
+    AnswerGuessText.value = "";
 
     AnswerGuessText.disabled = false;
     AnswerGuessText.style.opacity = 100;
@@ -226,39 +228,38 @@ export function GuessWordBtn()
 function CheckPoints(Points)
 {
     let Difficulty = document.getElementById("p5");
-    switch(Points)
+    if(Points <= -3)
     {
-        case -3:
-            FL +=2
-            Difficulty.innerText = "Difficulty: Very Easy"
-            break;
-        case 0:
-            FL = 5;
-            Difficulty.innerText = "Difficulty: Easy"
-            Difficulty.style.color = "#008000"
-            break;
-
-        case 3:
-            FL--;
-            Difficulty.innerText = "Difficulty: Moderate"
-            Difficulty.style.color = "#8B8000"
-            break;
-
-        case 7:
-            FL--
-            Difficulty.innerText = "Difficulty: Challenging"
-            Difficulty.style.color = "#ff0000"
-            break;
-        case 10:
-            FL--
-            Difficulty.innerText = "Difficulty: ALL"
-            Difficulty.style.color = "#9090ff"
-            document.getElementById("header").innerText = ("CONGRATULATIONS! You beat the Word Decoder alpha. All word difficulties are now possible, Good Luck!")
-            Difficulty.innerText = "Difficulty: All"
-            break;
-
-
+        FL = 7
+        Difficulty.innerText = "Difficulty: Very Easy"
     }
+    if(Points >= 0)
+    {
+        FL = 5;
+        Difficulty.innerText = "Difficulty: Easy"
+        Difficulty.style.color = "#008000"
+    }
+    if(Points >= 3)
+    {
+        FL = 4;
+        Difficulty.innerText = "Difficulty: Moderate"
+        Difficulty.style.color = "#8B8000"
+    }
+    if(Points >=7)
+    {
+        FL = 3
+        Difficulty.innerText = "Difficulty: Challenging"
+        Difficulty.style.color = "#ff0000"
+    }
+    if(Points >=10)
+    {
+        FL = 2
+        Difficulty.innerText = "Difficulty: ALL"
+        Difficulty.style.color = "#9090ff"
+        document.getElementById("header").innerText = ("CONGRATULATIONS! You beat the Word Decoder alpha. All word difficulties are now possible, Good Luck!")
+        Difficulty.innerText = "Difficulty: All"
+    }
+
 }
 export function GenerateNewWord()
 {
