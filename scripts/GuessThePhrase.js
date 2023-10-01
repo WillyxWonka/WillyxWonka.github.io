@@ -126,12 +126,14 @@ export function onTurnUse()
     if(event.keyCode === 13 && TurnCount < TurnCountMax)
     {
         UserText.value = ""
+        UserText.blur();
         TurnCount++;
         console.log("Turns used: " + TurnCount);
         document.getElementById("p3").innerText = "Turns Used: " +TurnCount+ "/" +TurnCountMax;
     }
     if(TurnCount >= TurnCountMax)
     {
+        UserText.blur();
         document.getElementById("guesswordbtn").disabled = true;
         SetFinalGuessInputActive();
     }
@@ -142,6 +144,7 @@ export function check(guess)
     if(event.keyCode === 13 && wordtolower == word)
     {
         guess.value = ""
+        guess.blur();
         document.getElementById("Phrase").innerText = "Thats Right!";
         CorrectLetters.innerText = word;
         CorrectLetters.style.backgroundColor= "#adff2f";
@@ -154,6 +157,7 @@ export function check(guess)
     if(event.keyCode === 13 && wordtolower != word)
     {
         guess.value = ""
+        guess.blur();
         document.getElementById("Phrase").innerText = "Wrong!";
         CorrectLetters.innerText = word;
         CorrectLetters.style.backgroundColor = "#ff0000";

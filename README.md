@@ -24,3 +24,5 @@ alpha 0.0.3
 alpha 0.0.4
     -fixed a bug where you could lose Free Letters in excess
     -fixed issue where input field was not cleared when pressing buttons
+alpha 0.0.5
+    -added blur function to text input fields for mobile ease of use
