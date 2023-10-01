@@ -2,12 +2,11 @@
 header 
 {   
     color: black;
-    font-size: 5vw;
+    font-size: 4.25vw;
     font-family: 'Courier New', monospace;
     font-weight:bold;
     text-align: center;
 }
-
 body{
     font-family: 'Courier New';
     color: black;
@@ -24,8 +23,12 @@ body{
     font-size: 3.5vw;
     letter-spacing: 5%;
 }
-.TxtInput,.WinnerWinner{
+.UserInput,.FinalGuessInput{
     text-align: center;
+}
+#InputFieldIndicator,#FinalGuessInputFieldIndicator
+{
+    display: inline-flex;
 }
 #Phrase,#p1
 {
@@ -36,10 +39,6 @@ body{
     position: fixed;
     bottom: 5%;
     right: 5%;
-}
-#p3,#p4{
-
-
 }
 .infocont{
     display: flex;
@@ -52,7 +51,7 @@ body{
 }
 #alphabet
 {
-    color: black;
+    color: dimgrey;
     background-color: rgb(255, 231, 210);
     overflow-wrap: break-word;
     font-size: 3.5vw;
@@ -65,7 +64,7 @@ body{
 }
 #LettersUsed
 {
-    color: black;
+    color: dimgray;
     background-color: rgb(255, 231, 210);
     overflow-wrap: break-word;
     font-size: 4.5vw;
@@ -123,6 +122,7 @@ button:active
 #tips{
     font-size: small;
     font-weight: lighter;
+    font-style: italic;
 }
 .versionctrl{
 position:fixed;
