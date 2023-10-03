@@ -1,6 +1,13 @@
 
 header 
-{   
+{       /*
+    text-shadow: 
+    0px 5px 5px #525252,
+    0px 5px 5px #525252,
+    0px 5px 5px #525252,
+    0px 5px 5px #525252;
+    */
+
     color: black;
     font-size: 4.25vw;
     font-family: 'Courier New', monospace;
@@ -35,6 +42,18 @@ body{
     text-align: center;
     font-size: 2vw;
 }
+#Phrase
+{
+    font-style: italic;
+    font-size: 3.15vw;
+    font-weight:  bold;
+    color:aquamarine;
+    text-shadow: 
+    0px 1px 1px #000000,
+    0px 1px 1px #000000,
+    0px 1px 1px #000000,
+    0px 1px 1px #000000;
+}   
 .pointturncalc{
     position: fixed;
     bottom: 5%;
@@ -52,6 +71,7 @@ body{
 #alphabet
 {
     color: dimgrey;
+    font-style: italic;
     background-color: rgb(255, 231, 210);
     overflow-wrap: break-word;
     font-size: 3.5vw;
@@ -64,7 +84,9 @@ body{
 }
 #LettersUsed
 {
-    color: dimgray;
+
+    color: dimgrey;
+    font-weight: bold;
     background-color: rgb(255, 231, 210);
     overflow-wrap: break-word;
     font-size: 4.5vw;

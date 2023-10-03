@@ -140,7 +140,9 @@ export function onTurnUse()
 }
 export function check(guess)
 {
-    const wordtolower = guess.value.toLowerCase();
+    const wordtolower = guess.value.toLowerCase().trim();
+
+
     if(event.keyCode === 13 && wordtolower == word)
     {
         guess.value = ""
@@ -286,3 +288,12 @@ export function GenerateNewWord()
     SetAnswerField();
     SetLetters();
 }
+
+/*function StartFinalGuessTimer()
+{
+    setTimeout(TestEnterGuess(), 10000);
+}
+function TestEnterGuess(){
+
+    console.log("END")
+}*/
