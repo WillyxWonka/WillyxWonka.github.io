@@ -29,4 +29,7 @@ alpha 0.0.5
 alpha 0.0.6
     -added trim function to input
     -added css
-    *started new functions with timers !*UNFINISHED!*
+    -added Timer 
+    -font/text updated
+    -added tip/help button
+    -Added animals

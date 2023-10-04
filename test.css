@@ -7,6 +7,9 @@ header
     0px 5px 5px #525252,
     0px 5px 5px #525252;
     */
+    text-shadow: 
+    .5px .5px 2.25px #353535;
+    
 
     color: black;
     font-size: 4.25vw;
@@ -15,15 +18,18 @@ header
     text-align: center;
 }
 body{
+
+    text-shadow: 
+    0px 0px 1.75px #353535;
     font-family: 'Courier New';
     color: black;
     font-weight:lighter;
-    background-color: #ffdab9;
+    background-color: peachpuff;
     width: 100%;
-    height: 100%;
 }
 #CorrectLetters
 {
+    
     text-align: center;
     font-weight: bold;
     font-family: 'Courier', Courier New, monospace;
@@ -47,17 +53,24 @@ body{
     font-style: italic;
     font-size: 3.15vw;
     font-weight:  bold;
-    color:aquamarine;
-    text-shadow: 
-    0px 1px 1px #000000,
-    0px 1px 1px #000000,
-    0px 1px 1px #000000,
-    0px 1px 1px #000000;
+    color:rgb(95, 255, 202);
 }   
 .pointturncalc{
+    text-shadow: 
+    .25px 0.25px 1px #000000;
     position: fixed;
-    bottom: 5%;
-    right: 5%;
+    bottom: 20%;
+    left: 2%;
+
+    display:inline-block;
+
+    width: 17.5%;
+    height: 20%;
+}
+#Timer{
+    color: orangered;
+
+    top: 10%;
 }
 .infocont{
     display: flex;
@@ -84,7 +97,6 @@ body{
 }
 #LettersUsed
 {
-
     color: dimgrey;
     font-weight: bold;
     background-color: rgb(255, 231, 210);
@@ -95,17 +107,22 @@ body{
     width: 30%;
     text-align: center;
 }
+#alphabet,#LettersUsed
+{
+    text-shadow: 
+    .75px .75x 1.5px #2d2d2d;
+}
 
 button{
     border-style: solid;
     border-width: 5%;
-    width: 12vw;
-    height: 5vh;
-    border-radius: 7%;
-    font-weight: 400;
+    width: 11vw;
+    height: 5.25vh;
+    border-radius: 15px;
     cursor: pointer; 
     transition:  ease-in-out .15s;   
-    font-size:75%;
+    font-size: 60%;
+    
 }
 button:active
 {
@@ -116,7 +133,7 @@ button:active
 }
 .btn1{
     position: fixed;
-    bottom: 5%;
+    bottom: 3%;
     font-family: 'Courier New';
     color: black;
     background-color: aquamarine;
@@ -124,14 +141,23 @@ button:active
 }
 .btn2{
     position: fixed;
-    bottom: 5%;
-    left: 18%;
+    bottom: 3%;
+    left: 13.75%;
     font-family: 'Courier New';
     color: black;
     background-color: #adff2f;
 }
+.btn3
+{
+    position: fixed;
+    bottom: 9%;
+    font-family: 'Courier New';
+    color: black;
+    background-color: rgb(255, 221, 86);
+    
+}
 
-.btn1:hover:not(:active) /* pseudo code */
+.btn1.btn3:hover:not(:active) /* pseudo code */
 {
     transform: scale(1.05);
     background-color: rgb(199, 255, 236);
@@ -142,9 +168,30 @@ button:active
     background-color: rgb(215, 251, 160);
 }
 #tips{
-    font-size: small;
+    text-align: center;
+    
+    text-shadow: 
+    1.25px 1.25px 2px rgb(0, 0, 0);
+    
+    font-size: 15px;
     font-weight: lighter;
     font-style: italic;
+
+    position:fixed;
+    top: 0%;
+    right: 10%;
+    overflow:scroll;
+    overflow-x:hidden;
+    width: 80%;
+    height: 60%;
+
+
+    color: rgb(161, 249, 255);
+    border: 2px solid #ffffff;
+    border-width: 2.75px;
+    padding: 5px 5px 5px;
+    background-color: rgba(0, 0, 0, 0.829);
+    border-radius: 12px;
 }
 .versionctrl{
 position:fixed;

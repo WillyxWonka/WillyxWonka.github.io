@@ -1,6 +1,8 @@
 
 import * as GTPD from "/scripts/GTPData.js";
-import * as NCC from "/scripts/NonCoreCode.js"; 
+import * as Timer from "/scripts/Timer.js"; 
+import * as PS from "/scripts/PointScript.js";
+
 let alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 let AnswerCurrent = [];
 let LettersUsed = [];
@@ -9,9 +11,9 @@ let int = 0;
 let TurnCountMax = 3
 let TurnCount = 0;
 let Points = 0;
-let FL = 5;
+let FreeLetters = 5;
 
-let rand = "";
+let userguess = "";
 let UserText;
 let word = ""; 
 let PointCount = "";
@@ -22,7 +24,7 @@ let AvailableLetters = "";
 let UserInputfieldIndicator = "";
 let FinalGueassInputFieldIndicator = "";
 
-onload = GetWordBank()//GeneratePhrase();
+onload = GetWordBank()
 onload = PageLoad;
 function PageLoad()
 {
@@ -41,9 +43,8 @@ function PageLoad()
     SetAnswerField();
     SetLetters();
     SetUserInputActive();
-    CheckPoints(Points);
+    PS.CheckPoints(Points);
 }
-
 function GetWordBank(){
     GTPD.GetWordBank(Points);
     word = GTPD.word;
@@ -59,11 +60,12 @@ function SetAnswerField()
     CorrectLetters.innerText = AnswerCurrent.join("");
 }
 
+
 function SetLetters()
 {
     let randomCharacter = [];
 
-    for(let i = 0; i < FL; i++)
+    for(let i = 0; i < FreeLetters; i++)
     {
         let x = Math.floor(Math.random() * alphabet.length);
         randomCharacter += alphabet[x];
@@ -75,19 +77,6 @@ function SetLetters()
     LettersUsed.innerText += randomCharacter;
 
     updateanswer(randomCharacter);
-}
-
-
-export function UserGuess(input)
-{
-    let usertext = input.value.toLowerCase();
-
-    if(event.keyCode === 13 && TurnCount < TurnCountMax)
-    {
-        LettersUsed.innerText += usertext;
-        UpdateAvailableLetters(usertext)
-        updateanswer(usertext)
-    } 
 }
 function UpdateAvailableLetters(input)
 {
@@ -133,47 +122,75 @@ export function onTurnUse()
     }
     if(TurnCount >= TurnCountMax)
     {
+        Timer.StartFinalGuessTimer();
+
         UserText.blur();
         document.getElementById("guesswordbtn").disabled = true;
         SetFinalGuessInputActive();
     }
 }
-export function check(guess)
+
+
+export function UserGuess()
 {
-    const wordtolower = guess.value.toLowerCase().trim();
+    let usertext = UserText.value.toLowerCase().trim();
 
-
-    if(event.keyCode === 13 && wordtolower == word)
+    if(event.keyCode === 13 && TurnCount < TurnCountMax)
     {
-        guess.value = ""
-        guess.blur();
-        document.getElementById("Phrase").innerText = "Thats Right!";
-        CorrectLetters.innerText = word;
-        CorrectLetters.style.backgroundColor= "#adff2f";
-
-        document.getElementById("guesswordbtn").disabled = true;
-        document.getElementById("generatewordbtn").style.borderColor = "#adff2f"
-        Points ++
-        PointCount.innerText = "Points: " + Points
+        LettersUsed.innerText += usertext;
+        UpdateAvailableLetters(usertext)
+        updateanswer(usertext)
+    } 
+}
+export function check()
+{
+    userguess = AnswerGuessText.value.toLowerCase().trim();
+    if(event.keyCode === 13 && userguess == word)
+    {
+        GuessRight();    
     }
-    if(event.keyCode === 13 && wordtolower != word)
+    if(event.keyCode === 13 && userguess != word)
     {
-        guess.value = ""
-        guess.blur();
-        document.getElementById("Phrase").innerText = "Wrong!";
-        CorrectLetters.innerText = word;
-        CorrectLetters.style.backgroundColor = "#ff0000";
-
         AnswerGuessText.disabled = true;
-        document.getElementById("guesswordbtn").disabled = true;
-        document.getElementById("generatewordbtn").style.borderColor = "#adff2f"
-        Points--;
-        PointCount.innerText = "Points: " + Points
-        if (Points < 10)
-        {
-            document.getElementById("header").innerText = "Word Decoder!"
-        }
+        GuessWrong() 
     }
+}
+export function GuessRight()    
+{
+    AnswerGuessText.value = ""
+    AnswerGuessText.blur();
+    document.getElementById("Phrase").innerText = "Thats Right!";
+    CorrectLetters.innerText = word;
+    CorrectLetters.style.backgroundColor= "#adff2f";
+
+    document.getElementById("guesswordbtn").disabled = true;
+    document.getElementById("generatewordbtn").style.borderColor = "#adff2f"
+    Points ++
+    PointCount.innerText = "Points: " + Points
+
+    Timer.StopTimer();//////////////////////////
+}
+export function GuessWrong()
+{
+    AnswerGuessText.value = ""
+    AnswerGuessText.blur();
+    
+    document.getElementById("Phrase").innerText = "Wrong!";
+    CorrectLetters.innerText = word;
+    CorrectLetters.style.backgroundColor = "#ff0000";
+
+    document.getElementById("guesswordbtn").disabled = true;
+    document.getElementById("generatewordbtn").style.borderColor = "#adff2f"
+    Points--;
+    PointCount.innerText = "Points: " + Points
+    
+    Timer.StopTimer();////////////////////
+    
+    if (Points < 10)
+    {
+        document.getElementById("header").innerText = "Word Decoder!"
+    }
+
 }
 
 
@@ -231,42 +248,6 @@ export function GuessWordBtn()
 }
 
 
-function CheckPoints(Points)
-{
-    let Difficulty = document.getElementById("p5");
-    if(Points <= -3)
-    {
-        FL = 7
-        Difficulty.innerText = "Difficulty: Very Easy"
-    }
-    if(Points >= 0)
-    {
-        FL = 5;
-        Difficulty.innerText = "Difficulty: Easy"
-        Difficulty.style.color = "#008000"
-    }
-    if(Points >= 3)
-    {
-        FL = 4;
-        Difficulty.innerText = "Difficulty: Moderate"
-        Difficulty.style.color = "#8B8000"
-    }
-    if(Points >=7)
-    {
-        FL = 3
-        Difficulty.innerText = "Difficulty: Challenging"
-        Difficulty.style.color = "#ff0000"
-    }
-    if(Points >=10)
-    {
-        FL = 2
-        Difficulty.innerText = "Difficulty: ALL"
-        Difficulty.style.color = "#9090ff"
-        document.getElementById("header").innerText = ("CONGRATULATIONS! You beat the Word Decoder alpha. All word difficulties are now possible, Good Luck!")
-        Difficulty.innerText = "Difficulty: All"
-    }
-
-}
 export function GenerateNewWord()
 {
     let bet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
@@ -282,18 +263,13 @@ export function GenerateNewWord()
     TurnCount = 0;
     document.getElementById("p3").innerText = "Turns Used: " +TurnCount+ "/" +TurnCountMax;
 
-    CheckPoints(Points);
+    PS.CheckPoints(Points);
     SetUserInputActive();
     GetWordBank();
     SetAnswerField();
     SetLetters();
-}
 
-/*function StartFinalGuessTimer()
-{
-    setTimeout(TestEnterGuess(), 10000);
-}
-function TestEnterGuess(){
+    FreeLetters = PS.CheckPoints(Points);
 
-    console.log("END")
-}*/
+    Timer.StopTimer();/////////////////////
+}

@@ -12,7 +12,7 @@ const Fruit = ["apple", "banana", "orange", "mango", "strawberry", "blueberry", 
 const vegetables = ["carrot", "broccoli", "potato", "tomato", "cucumber", "lettuce", "spinach", "zucchini", "pepper", 
 "onion", "garlic", "celery", "asparagus", "eggplant", "peas", "corn", "greenbean", "cauliflower", "cabbage", "radish", 
 "beet", "squash", "sweetpotato", "mushroom", "brusselsprout", "kale", "turnip", "okra", "leek", "artichoke", "rhubarb", 
-"pumpkin", "butternutsquash", "chard", "collardgreens", "bokchoy", "fennel", "parsnip", "endive", "watercress", "arugula", 
+"pumpkin", "chard", "collardgreens", "bokchoy", "fennel", "parsnip", "endive", "watercress", "arugula", 
 "radicchio", "chives", "shallot", "scallion"]
 const Activities = ["reading", "writing", "painting", "drawing", "gardening", "cooking", "baking", "photography", "hiking", 
 "running", "cycling", "swimming", "Tennis","birdwatching", "knitting", "sewing", "sculpting","fishing", "videogames", "crafting", 
@@ -22,7 +22,12 @@ const Colors = ["chartreuse", "aubergine", "periwinkle", "mauve", "cerulean", "v
 "topaz", "fawn", "russet", "sapphire", "azure", "fuchsia", "carmine", "cobalt", "garnet", "jade", "plum", "magenta", "red", 
 "blue", "green", "yellow", "orange", "purple", "pink", "brown", "gray", "black", "white", "beige", "turquoise", "teal", "violet",
  "maroon", "gold", "silver"]
-
+const Animals= [  "lion", "elephant", "giraffe", "kangaroo", "panda", "hippopotamus", "koala", "penguin", "platypus", 
+"meerkat", "panda", "sloth", "ostrich", "armadillo", "wallaby", "aardvark", "raccoon", "chameleon", "porcupine", "lemur", 
+"wombat", "capybara", "narwhal", "manatee", "ayeaye", "fox", "axolotl", "pangolin", "mantis", "coelacanth", "tuatara", "tiger", "leopard", 
+"peacock", "spider", "shark", "wolf", "serval","dog", "cat", "horse", "cow", "sheep", "chicken", "duck", "goose", "pig", "rabbit", "hamster", 
+"parrot", "goldfish", "turtle", "mouse", "frog", "bee", "butterfly", "ant", "eagle", "sparrow", "dolphin", "whale", "seagull", "octopus", "jellyfish",
+ "seahorse", "seal", "otter", "bear", "zebra", "cheetah", "gorilla"]
 const EasyFruit= ["apple", "banana", "orange", "mango", "strawberry", "blueberry", "grape", "pineapple", "watermelon",
  "kiwi", "peach", "pear", "cherry", "raspberry", "blackberry", "lemon", "lime", "grapefruit", "cranberry"]
 const MediumFruit = ["apricot", "plum", "guava", "fig", "avocado", "coconut", "pomegranate", "papaya", "passionfruit", 
@@ -32,9 +37,10 @@ const HardFruit = ["cantaloupe", "honeydewmelon", "starfruit", "jackfruit", "goo
 
 const EasyVegetables = ["carrot", "broccoli", "potato", "tomato", "cucumber", "lettuce", "spinach", "pepper", 
 "onion", "garlic", "celery", "eggplant", "peas", "corn", "greenbean", "cabbage", "radish" ]
-const MediumVegetables =["beet", "squash", "sweetpotato", "mushroom", "brusselsprout", "kale", "turnip", "leek", "cauliflower", "artichoke", 
-"pumpkin", "chard", "collardgreens", "bokchoy", "fennel", "parsnip", "arugula","asparagus" , "zucchini"]
-const HardVegetables = ["radicchio", "chives", "shallot", "scallion", "okra", "rhubarb","butternutsquash","watercress", "endive"]
+const MediumVegetables =["beet", "squash", "mushroom", "kale", "turnip", "leek", "cauliflower",
+"pumpkin", "chard", "bokchoy", "fennel", "parsnip", "arugula","asparagus" , "zucchini"]
+const HardVegetables = ["radicchio", "chives", "shallot", "scallion", "okra", "rhubarb","watercress", "endive", "parsnip","collardgreens", "brusselsprout",
+"artichoke"]
 
 const EasyColors = ["red", "blue", "green", "yellow", "orange", "purple", "pink", "brown", "gray", "black", "white"
 , "teal", "violet", "maroon", "gold", "silver"]
@@ -49,16 +55,23 @@ const MediumActivities =["gardening", "photography", "bouldering", "archery","sk
 "astronomy", "juggling", "woodworking", "videogames", "camping", "singing", "gambling","wrestling"]
 const HardActivities = ["kiteboarding","geocaching", "calligraphy", "falconry", "beekeeping", "basketweaving","larping", "origami", "glassblowing","capoeira"]  
 
+const EasyAnimals = ["lion", "koala",  "panda", "sloth", "fox", "tiger", "leopard", 
+"peacock", "spider", "shark", "wolf","dog", "cat", "horse", "cow", "sheep", "chicken", "duck", "goose", "pig", "rabbit", "hamster", "turtle", "mouse",
+ "frog", "bee", "butterfly", "ant", "whale","seal", "bear", ]
+const MediumAnimals =["elephant", "giraffe", "kangaroo", "meerkat", "ostrich", "porcupine","lemur","mantis","seahorse", "zebra", "cheetah", "gorilla"
+, "seagull", "octopus", "jellyfish","eagle", "sparrow", "dolphin", "otter","penguin","parrot", "goldfish"]
+const HardAnimals = ["hippopotamus","platypus", "armadillo", "wallaby", "aardvark","chameleon", "wombat","narwhal", "manatee","axolotl","coelacanth", "tuatara",
+, "serval", "capybara"]  
 /*
 const Easy = []
 const Medium =[]
 const Hard = []                
 */
 
-const EasyWordBank = [EasyFruit,EasyColors,EasyVegetables, EasyActivities];
-const MediumWordBank = [MediumFruit,MediumColors,MediumVegetables, MediumActivities];
-const HardWordBank = [HardFruit,HardColors,HardVegetables, HardActivities];
-const AllWordBank = [Fruit,Colors,vegetables,Activities]
+const EasyWordBank = [EasyFruit,EasyColors,EasyVegetables, EasyActivities,EasyAnimals];
+const MediumWordBank = [MediumFruit,MediumColors,MediumVegetables, MediumActivities,MediumAnimals];
+const HardWordBank = [HardFruit,HardColors,HardVegetables, HardActivities, HardAnimals];
+const AllWordBank = [Fruit,Colors,vegetables,Activities,Animals]
 let WordBank = [];
 
 export let word = "";
@@ -132,5 +145,7 @@ export function SetHintPhrase(x)
         case 3:
             phrasehint.innerText = ("Guess the Activity/Hobby!")
             break;
+        case 4:
+            phrasehint.innerText = ("Guess the Animal!")
     }
 }
