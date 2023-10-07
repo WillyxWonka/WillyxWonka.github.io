@@ -48,3 +48,9 @@ alpha 0.1.1 (HotFix)
 
     -adjust css
     -increased letters user can pick to 3
+    -increased tiomer to 30 seconds
+
+alpha 0.1.2 (HotFix)
+
+    -adjust css
+    

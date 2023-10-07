@@ -28,7 +28,7 @@
             .2vw .2vw .375vw #393939;
              
             color: black;
-            font-size: 7vw;
+            font-size: 5vw;
             font-family: 'Courier New', monospace;
             font-weight:bold;
             text-align: center;
@@ -81,7 +81,7 @@
 
             text-align: center;
             position: relative;
-            font-size: 8vw;
+            font-size: 5vw;
 
             margin-left: 2.5%;
             margin-bottom: 2.5%;
@@ -109,7 +109,7 @@
             margin-top: 2%;
             margin-bottom: 2%;
             border-width: .4vw;
-            font-size: 7vw;
+            font-size: 5vw;
 
             color: black;
             background-color: aquamarine;
@@ -123,12 +123,12 @@
             position: relative;
             display: flex;
 
-            left: 50%;
+            left: 58%;
 
             border-width: .4vw;
             margin-top: 3.5%;
 
-            font-size: 7vw;
+            font-size: 5vw;
             
             border-color: #000000;
         }
@@ -196,12 +196,11 @@
             .15vw .15vw .65vw #4a4a4a;
             font-size: 3.5vw;
 
-            position: relative;
+            position: fixed;
             display:inline-block;
 
-            left: 2%;
-            bottom: 32.5vw;
-
+            left: 3%;
+            bottom: 5%;
             width: 17.5%;
             height: 20%;
         }
@@ -234,7 +233,7 @@
             overflow:scroll;
             overflow-x:hidden;
             width: 90%;
-            height: 70%;
+            height: 50%;
         
         
             color: rgb(161, 249, 255);

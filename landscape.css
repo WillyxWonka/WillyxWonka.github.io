@@ -3,6 +3,7 @@
     
     header 
     {       
+        position: fixed;
         text-shadow: 
         .2vh .2vh .375vh #393939;
          
@@ -10,9 +11,8 @@
         font-size: 2vw;
         font-family: 'Courier New', monospace;
         font-weight:bold;
-        
-        text-align: right;  
-        margin-top: -2vh;
+         
+        right: 1%;
     }
     body{
         text-shadow: 
@@ -57,7 +57,7 @@
 
         text-align: center;
         position: relative;
-        font-size: 7vh;
+        font-size: 5vh;
 
         margin-left: 1.5%;
         margin-bottom: 2%;
@@ -82,7 +82,7 @@
         margin-top: 2%;
         margin-bottom: 2%;
         border-width: .4vh;
-        font-size: 6vh;
+        font-size: 5vh;
 
         color: black;
         background-color: aquamarine;
@@ -94,7 +94,7 @@
         position: relative;
         display: inline-flex;
 
-        left: 15%;
+        left: 20%;
 
         border-width: .3525vh;
 
@@ -102,7 +102,7 @@
         margin-left: 1.5%;
 
         text-align: center;
-        font-size: 6.5vh;
+        font-size: 5vh;
         border-color: #000000;
     }
     .btn1{
@@ -137,6 +137,7 @@
     }
     .FinalGuessInputCont
     {
+        margin-top: 0vh;
         font-size: 4vh;
         text-align: center;
     }
@@ -144,8 +145,7 @@
     {
         position: relative;
 
-        margin-left: 35.5vw;
-        margin-top: -5vh;
+        margin-left: 37vw;
         border-style:solid;
         border-radius: 3vh;
 
