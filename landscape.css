@@ -1,0 +1,226 @@
+@media screen and (orientation: landscape) 
+{
+    
+    header 
+    {       
+        text-shadow: 
+        .2vh .2vh .375vh #393939;
+         
+        color: black;
+        font-size: 2vw;
+        font-family: 'Courier New', monospace;
+        font-weight:bold;
+        text-align: center;
+    }
+    body{
+        text-shadow: 
+        .2vh .2vh .375vh #393939;
+        
+        font-family: 'Courier';
+        color: black;
+        font-weight:lighter;
+        background-color: peachpuff;
+        width: 100%;
+    }
+    #LetterButtonsHeader
+    {
+
+        font-size: 6vh;
+        color: rgb(0, 0, 0);
+        font-weight: BOLD;
+    }
+    .LetterButtons
+    {  
+        background-color: #ffeee0;
+        text-align: center;
+        font-size: larger; 
+
+        position: relative;
+
+        border-style:solid;
+        border-radius: 25px;
+        border-width: .75vh;
+        border-color: #4a4a4a;;
+
+        width: 92.5%;
+        
+        flex-wrap: wrap;
+        align-items: flex-end;
+        /* gap */ 
+        left: .5%;
+        bottom: 0px;
+    }
+    .alphabetbtn{
+        text-shadow: 
+        .15vh .1vh .4vh #000000;
+
+        border-radius: 100vw;
+        border-radius: 100vh;
+
+        width: 8vh;
+        height: 4vw;
+        text-align: center;
+        position: relative;
+        font-size: 5.25vh;
+
+        margin-left: 1.5%;
+        margin-bottom: 2%;
+        margin-top: 2%;   
+        border-width: .4vh;
+        border-color: #4a4a4a;;
+        
+        background-color: #e1efff;
+        color: rgb(0, 0, 0);     
+    }
+    .btn4,.btn5
+    {
+        text-shadow: 
+        .2vh .2vh .65vh #4a4a4a;
+
+        border-style: solid;
+        border-color: #3f3f3f;
+
+        font-family: 'Courier New';
+        position: relative;
+        text-align: center;
+        display: inline;
+        width: 25vh;
+        height: 4vw;
+
+        margin-top: 2%;
+        margin-bottom: 2%;
+        border-width: .4vh;
+        font-size: 5vh;
+
+        color: black;
+        background-color: aquamarine;
+    }
+    .btn1,.btn2,.btn3
+    {
+        text-shadow: 
+        .2vh .2vh .65vh #4a4a4a;
+
+        font-family: 'Courier New';
+        position: relative;
+        display: inline-flex;
+
+        left: 15%;
+
+        width: 35vh;
+        height: 6vh;
+        border-width: .3525vh;
+
+        margin-top: 2.15%;
+        margin-left: 1.5%;
+
+        font-size: 4.25vh;
+        border-color: #000000;
+    }
+    .btn1{
+        background-color: aquamarine;  
+    }
+    .btn2{
+        background-color: #adff2f;
+    }
+    .btn3
+    {
+        background-color: rgb(255, 221, 86);  
+    }
+    #Phrase
+    {
+        font-style: italic;
+        text-align: center;
+        text-shadow: 
+        .2vh .2vh .65vh #4a4a4a;
+
+        color: #171717;
+
+        font-size: 4.5vh;
+        font-weight: bold;
+    }
+    #CorrectLetters
+    { 
+        text-shadow: 
+        .2vh .2vh .65vh #4a4a4a;
+
+        text-align: center;
+        font-weight: bold;
+        font-family: 'Courier', Courier New, monospace;
+        font-size: 7vh;
+        letter-spacing: 4.5vh;
+    }
+    .FinalGuessInputCont
+    {
+        font-size: 4vh;
+        text-align: center;
+        margin-bottom: -2vh;
+    }
+    #FinalGuessInputFieldIndicator
+    {
+
+        margin-left: 52vh;
+        border-style:solid;
+        border-radius: 3vh;
+        width: 40%;
+        height: 4.25vh;
+        border-width: .4vh;
+
+        flex-wrap: wrap;
+        align-items: flex-end;
+        /* gap */ 
+        background-color: rgb(255, 255, 255);
+    }
+    .pointturncalc{
+        text-shadow: 
+        .12vh .12vh .5vh #4a4a4a;
+        font-size: 3vh;
+
+        position: relative;
+        display:inline-block;
+
+        left: 2.5%;
+        bottom: 90vh;
+
+        width: 17.5%;
+    }
+    #Timer{
+        color: orangered;
+        top: 10%;
+    }
+    .versionctrl{
+        position:fixed;
+        top: 96%;
+        right: 2%;
+        font-size:large;
+        opacity: 25%;
+    }
+    #tips
+    {
+        text-align: center;
+        transition:  ease-in-out 1s;   
+        
+        text-shadow: 
+        .2vw .2vw .65vh #4a4a4a;
+        
+        font-size: xx-large;
+        font-weight: lighter;
+        font-style: italic;
+    
+        position:fixed;
+        top: -1.5%;
+        right: 5%;
+        overflow:scroll;
+        overflow-x:hidden;
+        width: 90%;
+        height: 70%;
+        
+    
+        color: rgb(161, 249, 255);
+        border: 2px solid #ffffff;
+        border-width: 2.75px;
+        padding: 5px 5px 5px;
+        background-color: rgba(0, 0, 0, 0.89);
+        border-radius: 12px;
+    
+}  
+}

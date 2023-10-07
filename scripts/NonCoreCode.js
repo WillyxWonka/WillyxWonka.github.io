@@ -14,4 +14,3 @@ function Showtips()
         x.style.display = "block";
     }
 }
-

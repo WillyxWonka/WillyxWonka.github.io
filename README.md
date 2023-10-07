@@ -33,3 +33,13 @@ alpha 0.0.6
     -font/text updated
     -added tip/help button
     -Added animals
+
+alpha 0.1.0
+    -visual looks much different
+    -code has been greatly altered to support new input system
+    -Overhauled input system
+        changed to a button input system
+    -A lot of CSS changes
+        now seperate portrait and landscape css files
+        color changes based on answer
+        input buttons state

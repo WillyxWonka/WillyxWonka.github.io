@@ -6,13 +6,19 @@ let seconds = SecondsMax;
 
 export function StartFinalGuessTimer()
 {
-    setTimeout(FinalGuessTimeOut, 1000);
-    isTimer = true;
-
+    if(isTimer == false)
+    {
+        document.getElementById("LetterButtonsHeader").innerText = "FINAL GUESS ENDS: " + seconds + "s"
+        document.getElementById("LetterButtonsHeader").style.color = "#ff0000"
+        setTimeout(FinalGuessTimeOut, 1000);
+        isTimer = true;
+    }
 }
 function FinalGuessTimeOut()
 {
-    document.getElementById("Timer").innerText = "..." + seconds
+    //document.getElementById("Timer").innerText = "..." + seconds
+        document.getElementById("LetterButtonsHeader").innerText = "FINAL GUESS ENDS: " + seconds + "s"
+
     if(seconds <= 0)
     {
         StopTimer();
@@ -22,7 +28,7 @@ function FinalGuessTimeOut()
     }
     else
     {
-        setTimeout( Seconds, 1100);
+        setTimeout( Seconds, 1025);
         console.log("seconds: "+ seconds);
     }
 }
@@ -39,5 +45,7 @@ export function StopTimer()
 {   
     isTimer = false;
     seconds = SecondsMax
-    document.getElementById("Timer").innerText = "" 
+    //document.getElementById("Timer").innerText = "" 
+    document.getElementById("LetterButtonsHeader").innerText = ""
+    document.getElementById("LetterButtonsHeader").style.color = "#000000"
 }

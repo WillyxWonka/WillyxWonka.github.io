@@ -1,0 +1,257 @@
+
+    button:active
+    {
+        transform: scale(.95);
+        background-color: gold;
+        color: rgb(255, 255, 255);
+    }
+    button{
+        border-style: solid;
+        cursor: pointer; 
+        transition:  ease-in-out .2s;   
+        font-family: 'Courier New';
+        border-radius: 4vw;
+    }
+    button:disabled
+    {
+
+        border-color: #000000;
+        background-color: #00000043;
+        color: #00000085;
+    }
+
+    @media screen and (orientation: portrait) 
+    {
+        header 
+        {       
+            text-shadow: 
+            .2vw .2vw .375vw #393939;
+             
+            color: black;
+            font-size: 7vw;
+            font-family: 'Courier New', monospace;
+            font-weight:bold;
+            text-align: center;
+        }
+        body{
+            text-shadow: 
+            .2vw .2vw .375vw #393939;
+            
+            font-family: 'Courier';
+            color: black;
+            font-weight:lighter;
+            background-color: peachpuff;
+            width: 100%;
+        }
+        #LetterButtonsHeader
+        {
+            text-shadow: 
+            .2vw .2vw .375vw #393939;
+
+            font-size: 6vw;
+            color: rgb(0, 0, 0);
+            font-weight: BOLD;
+        }
+        .LetterButtons
+        {  
+            background-color: #ffeee0;
+            text-align: center;
+            font-size: larger; 
+
+            position: relative;
+
+            border-style:solid;
+            border-radius: 25px;
+            border-width: .75vw;
+            border-color: #4a4a4a;;
+
+            width: 92.5%;
+            
+            flex-wrap: wrap;
+            align-items: flex-end;
+            /* gap */ 
+            left: .5%;
+            bottom: 50px;
+        }
+        .alphabetbtn{
+            text-shadow: 
+            .15vw .1vw .4vw #000000;
+
+            border-radius: 100vw;
+            border-radius: 100vh;
+
+            width: 9vw;
+            height: 4vh;
+            text-align: center;
+            position: relative;
+            font-size: 5vw;
+
+            margin-left: 2%;
+            margin-bottom: 2%;
+            margin-top: 2%;   
+            border-width: .35vw;
+            border-color: #4a4a4a;;
+            
+            background-color: #e1efff;
+            color: rgb(0, 0, 0);     
+        }
+        .btn4,.btn5
+        {
+            text-shadow: 
+            .2vw .2vw .65vw #4a4a4a;
+
+            border-style: solid;
+            border-color: #3f3f3f;
+
+            font-family: 'Courier New';
+            position: relative;
+            text-align: center;
+            display: inline;
+            width: 25vw;
+            height: 4vh;
+
+            margin-top: 2%;
+            margin-bottom: 2%;
+            border-width: .4vw;
+            font-size: 5vw;
+
+            color: black;
+            background-color: aquamarine;
+        }
+        .btn1,.btn2,.btn3
+        {
+            text-shadow: 
+            .2vw .2vw .65vw #4a4a4a;
+
+            font-family: 'Courier New';
+            position: relative;
+            display: flex;
+
+            left: 65%;
+
+            width: 30vw;
+            height: 5.5vh;
+            border-width: .4vw;
+            margin-top: 1.5%;
+
+            font-size: 4.25vw;
+            
+            border-color: #000000;
+        }
+        .btn1{
+            background-color: aquamarine;  
+        }
+        .btn2{
+            background-color: #adff2f;
+        }
+        .btn3
+        {
+            background-color: rgb(255, 221, 86);  
+        }
+        #CorrectLetters
+        { 
+            text-shadow: 
+            .2vw .2vw .65vw #4a4a4a;
+
+            text-align: center;
+            font-weight: bold;
+            font-family: 'Courier', Courier New, monospace;
+            font-size: 10vw;
+            letter-spacing: 1.25vw;
+        }
+        .FinalGuessInputCont
+        {
+            font-size: 5vw;
+            text-align: center;
+            text-shadow: 
+            .2vw .2vw .375vw #393939;
+        }
+        #Phrase
+        {
+            font-style: italic;
+            text-align: center;
+            text-shadow: 
+            .2vw .2vw .65vw #4a4a4a;
+
+            color: #171717;
+
+            font-size: 6.25vw;
+            font-weight: bold;
+        }
+        #FinalGuessInputFieldIndicator
+        {
+            text-shadow: 
+            .2vw .2vw .375vw #393939;
+
+            margin-left: 18vw;
+            text-align: center;
+            font-size: 4.5vw;
+            border-style:solid;
+            border-radius: 1.5vw;
+            width: 60%;
+            height: 2.5vh;
+            border-width: .3vw;
+
+            flex-wrap: wrap;
+            align-items: flex-end;
+            /* gap */ 
+            background-color: rgb(255, 255, 255);
+        } 
+        .pointturncalc{
+            text-shadow: 
+            .15vw .15vw .65vw #4a4a4a;
+            font-size: 3.5vw;
+
+            position: relative;
+            display:inline-block;
+
+            left: 2%;
+            bottom: 32.5vw;
+
+            width: 17.5%;
+            height: 20%;
+        }
+        #Timer{
+            color: orangered;
+            top: 10%;
+        }
+        .versionctrl{
+            position:fixed;
+            top: 96%;
+            right: 2%;
+            font-size: 2.5vw;
+            opacity: 25%;
+        }
+        #tips
+        {
+            text-align: center;
+            transition:  ease-in-out 1s;   
+            
+            text-shadow: 
+            .2vw .2vw .65vw #4a4a4a;
+            
+            font-size: 2.75vw;
+            font-weight: lighter;
+            font-style: italic;
+        
+            position:fixed;
+            top: 0%;
+            right: 5%;
+            overflow:scroll;
+            overflow-x:hidden;
+            width: 90%;
+            height: 70%;
+        
+        
+            color: rgb(161, 249, 255);
+            border: 2px solid #ffffff;
+            border-width: 2.75px;
+            padding: 5px 5px 5px;
+            background-color: rgba(0, 0, 0, 0.829);
+            border-radius: 12px;
+        
+    }  
+    }
+
+
+

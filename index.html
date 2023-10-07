@@ -7,58 +7,83 @@
         <title>Word Decoder the Game!</title>
         <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-        <link rel="stylesheet" href="test.css">
+        <link rel="stylesheet" href="portrait.css">
+        <link rel="stylesheet" href="landscape.css">
         <script type="module">
-        import {UserGuess, onTurnUse, check, GenerateNewWord, GuessWordBtn } from "/scripts/GuessThePhrase.js";
-        window.UserGuess = UserGuess;
+        import { onTurnUse, check, GenerateNewWord, GuessWordBtn,updateAvailableLetters, Undo,Submit,FinalGuessInput } from "/scripts/GuessThePhrase.js";
         window.onTurnUse= onTurnUse;
         window.check = check;
         window.GenerateNewWord =GenerateNewWord;
         window.GuessWordBtn = GuessWordBtn;
+        window.updateAvailableLetters = updateAvailableLetters;
+        window.Undo = Undo;
+        window.Submit = Submit;
+        window.FinalGuessInput = FinalGuessInput;
         </script>
         <script type="module" src="scripts/GTPData.js"></script>
         <script type="text/javascript" src="scripts/NonCoreCode.js"></script>
         <script type="module" src="scripts/Timer.js"></script>
     </head>
     <body>
-
         <header id="header">
             Word Decoder!
         </header>
-
         <br>
-
-        <div Id="p1">
-            Pick 2 letters
-        </div> 
-        <div class=UserInput>
-            <input type="text" placeholder="", id="UserInput", maxlength="2", onkeydown="UserGuess(), onTurnUse()">
-            <div id = "InputFieldIndicator">
-            </div>
-        </div>   
-        <div class=FinalGuessInput>
-            <input type="text" placeholder="...", id ="FinalGuessInput", onkeydown="check()">
+        <br>
+        <div class=FinalGuessInputCont>
             <div id = "FinalGuessInputFieldIndicator">
+                ...
             </div>
+            <br>
         </div>   
-        <br>
         <div Id="Phrase">
         </div>   
         <div Id="CorrectLetters">
         </div>  
         <br> 
-        <div class="alphabetcont">
-            <div id="alphabetheader">Avaiable Letters/Letters Used</div>
-            <div id="lettersusedheader"></div>
-            <div class="infocont">
-                <div id="alphabet"></div>
-                <div Id='LettersUsed'></div>  
+        <br>
+        <br>
+        <br>
+        <div class="LetterButtons", id="LetterButtons">
+                <div id="LetterButtonsHeader">
+                    Pick 2 Letters
+                </div>
+            <button class="alphabetbtn", id="a" onclick="updateAvailableLetters(this), FinalGuessInput(this.id)">A</button>
+            <button class="alphabetbtn", id="b" onclick="updateAvailableLetters(this), FinalGuessInput(this.id)">B</button>
+            <button class="alphabetbtn", id="c" onclick="updateAvailableLetters(this), FinalGuessInput(this.id)">C</button>
+            <button class="alphabetbtn", id="d" onclick="updateAvailableLetters(this), FinalGuessInput(this.id)">D</button>
+            <button class="alphabetbtn", id="e" onclick="updateAvailableLetters(this), FinalGuessInput(this.id)">E</button>
+            <button class="alphabetbtn", id="f" onclick="updateAvailableLetters(this), FinalGuessInput(this.id)">F</button>
+            <button class="alphabetbtn", id="g" onclick="updateAvailableLetters(this), FinalGuessInput(this.id)">G</button>
+            <button class="alphabetbtn", id="h" onclick="updateAvailableLetters(this), FinalGuessInput(this.id)">H</button>
+            <button class="alphabetbtn", id="i" onclick="updateAvailableLetters(this), FinalGuessInput(this.id)">I</button>
+            <button class="alphabetbtn", id="j" onclick="updateAvailableLetters(this), FinalGuessInput(this.id)">J</button>
+            <button class="alphabetbtn", id="k" onclick="updateAvailableLetters(this), FinalGuessInput(this.id)">K</button>
+            <button class="alphabetbtn", id="l" onclick="updateAvailableLetters(this), FinalGuessInput(this.id)">L</button>
+            <button class="alphabetbtn", id="m" onclick="updateAvailableLetters(this), FinalGuessInput(this.id)">M</button>
+            <button class="alphabetbtn", id="n" onclick="updateAvailableLetters(this), FinalGuessInput(this.id)">N</button>
+            <button class="alphabetbtn", id="o" onclick="updateAvailableLetters(this), FinalGuessInput(this.id)">O</button>
+            <button class="alphabetbtn", id="p" onclick="updateAvailableLetters(this), FinalGuessInput(this.id)">P</button>
+            <button class="alphabetbtn", id="q" onclick="updateAvailableLetters(this), FinalGuessInput(this.id)">Q</button>
+            <button class="alphabetbtn", id="r" onclick="updateAvailableLetters(this), FinalGuessInput(this.id)">R</button>
+            <button class="alphabetbtn", id="s" onclick="updateAvailableLetters(this), FinalGuessInput(this.id)">S</button>
+            <button class="alphabetbtn", id="t" onclick="updateAvailableLetters(this), FinalGuessInput(this.id)">T</button>
+            <button class="alphabetbtn", id="u" onclick="updateAvailableLetters(this), FinalGuessInput(this.id)">U</button>
+            <button class="alphabetbtn", id="v" onclick="updateAvailableLetters(this), FinalGuessInput(this.id)">V</button>
+            <button class="alphabetbtn", id="w" onclick="updateAvailableLetters(this), FinalGuessInput(this.id)">W</button>
+            <button class="alphabetbtn", id="x" onclick="updateAvailableLetters(this), FinalGuessInput(this.id)">X</button>
+            <button class="alphabetbtn", id="y" onclick="updateAvailableLetters(this), FinalGuessInput(this.id)">Y</button>
+            <button class="alphabetbtn", id="z" onclick="updateAvailableLetters(this), FinalGuessInput(this.id)">Z</button>
+            <div>
+                <button class="btn5", id="Undobtn" onclick="Undo()">Undo</button>
+                <button class="btn4", id="Submitbtn" onclick="check(), Submit()">Submit</button>
             </div>
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
+        <div>
+            <button class="btn2", id="guesswordbtn" onclick="GuessWordBtn()"> Guess Word</button>
+            <button class="btn1", id="generatewordbtn" onclick="GenerateNewWord()"> New Word</button>
+            <button type="button" class="btn3" onclick="Showtips()",style="overflow-y:scroll;">Help/Tips</button>
+        </div>
         <div class="pointturncalc"> 
             <div Id='Timer'>
             </div>  
@@ -73,21 +98,28 @@
             </div>  
         </div>
         <div class = "btncont">
-            <button class="btn1", id="generatewordbtn" onclick="GenerateNewWord()"> New Word</button>
-            <button class="btn2", id="guesswordbtn" onclick="GuessWordBtn()"> Guess Word</button>
+
         </div>  
         <div class = "versionctrl">
-            version alpha 0.0.6
+            version alpha 0.1.0
         </div>  
     </body>
-    <button type="button" class="btn3" onclick="Showtips()",style="overflow-y:scroll;">Help/Tips</button>
     <p id="tips">
         HELP/TIPS: 
+        <br>
+        <br>
+        -Press Help/Tips button to close this menu.
         <br>
         <br>
         -The words were generated by AI and are challenging.<br>
         <br>
         -You are not deducted a point for pushing "new word," feel free to to try for a word you can solve<br>
+        <br>
+        <br>
+        -Pressing "guess word" will enable option to input final word guess early.<br>
+        <br>
+        <br>
+        -you must input the entire word and submit even if you guess all letters correctly.<br>
         <br>
         <br>
         -The timer starts when you use your last turn<br>
@@ -99,16 +131,10 @@
         -You are given 2 extra Free letters at -3 points.<br>
         <br>
         <br>
-        -press "Guess word" to enable Text box that will allow you to attmpt final word guess. press that same button to return to picking letters.<br>
+        -The letters are touch screen.<br>
         <br>
         <br>
-        -It is possible to enter a letter already given to you "BE CAREFUL."<br>
-        <br>
-        <br>
-        -The letters are not touch screen, you will need to input your letters and press enter.<br>
-        <br>
-        <br>
-        -you will automatically be forced to guess final word after reaching max turns, you will not fail the word when reaching max turns.<br>
+        -There is currently no support for keyboard input.<br>
         <br>
         <br>
         - if your guess attempt is wrong you have to attempt a new word and are deducted a point.<br>
@@ -117,6 +143,19 @@
         -You are not deducted a point for pushing "new word."
         <br>
         <br>
-        -currently working on difficulty selection and new words!"
+        -currently working on difficulty selection and new words!
+        
     </p>
 </html>
+       <!-- <div class="alphabetcont">
+            <div id="lettersusedheader"></div>
+            <div class="infocont">
+                <div id="alphabet"> Unavailable Letters:<br></div>
+                <div Id='LettersUsed'></div>  
+            </div>
+        </div>-->
+         <!--   <div class=UserInput>
+            <input type="text" placeholder="", id="UserInput", maxlength="2", onkeydown="UserGuess(), onTurnUse()">
+            <div id = "InputFieldIndicator">
+            </div>
+        </div>   -->
