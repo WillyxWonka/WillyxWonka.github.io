@@ -10,7 +10,7 @@
         cursor: pointer; 
         transition:  ease-in-out .2s;   
         font-family: 'Courier New';
-        border-radius: 4vw;
+        border-radius: 1000px;
     }
     button:disabled
     {
@@ -71,7 +71,6 @@
             align-items: flex-end;
             /* gap */ 
             left: .5%;
-            bottom: 50px;
         }
         .alphabetbtn{
             text-shadow: 
@@ -80,14 +79,12 @@
             border-radius: 100vw;
             border-radius: 100vh;
 
-            width: 9vw;
-            height: 4vh;
             text-align: center;
             position: relative;
-            font-size: 5vw;
+            font-size: 8vw;
 
-            margin-left: 2%;
-            margin-bottom: 2%;
+            margin-left: 2.5%;
+            margin-bottom: 2.5%;
             margin-top: 2%;   
             border-width: .35vw;
             border-color: #4a4a4a;;
@@ -107,13 +104,12 @@
             position: relative;
             text-align: center;
             display: inline;
-            width: 25vw;
-            height: 4vh;
+
 
             margin-top: 2%;
             margin-bottom: 2%;
             border-width: .4vw;
-            font-size: 5vw;
+            font-size: 7vw;
 
             color: black;
             background-color: aquamarine;
@@ -127,14 +123,12 @@
             position: relative;
             display: flex;
 
-            left: 65%;
+            left: 50%;
 
-            width: 30vw;
-            height: 5.5vh;
             border-width: .4vw;
-            margin-top: 1.5%;
+            margin-top: 3.5%;
 
-            font-size: 4.25vw;
+            font-size: 7vw;
             
             border-color: #000000;
         }
@@ -250,7 +244,11 @@
             background-color: rgba(0, 0, 0, 0.829);
             border-radius: 12px;
         
-    }  
+        } 
+        #p6,#p5,#p4
+        {
+            margin-top: 1vh;
+        } 
     }
 
 

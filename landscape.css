@@ -10,11 +10,13 @@
         font-size: 2vw;
         font-family: 'Courier New', monospace;
         font-weight:bold;
-        text-align: center;
+        
+        text-align: right;  
+        margin-top: -2vh;
     }
     body{
         text-shadow: 
-        .2vh .2vh .375vh #393939;
+        .15vh .15vh .6vh #4a4a4a;
         
         font-family: 'Courier';
         color: black;
@@ -24,8 +26,7 @@
     }
     #LetterButtonsHeader
     {
-
-        font-size: 6vh;
+        font-size: 5vh;
         color: rgb(0, 0, 0);
         font-weight: BOLD;
     }
@@ -47,21 +48,16 @@
         flex-wrap: wrap;
         align-items: flex-end;
         /* gap */ 
+        margin-top: 0vh;
         left: .5%;
-        bottom: 0px;
     }
     .alphabetbtn{
         text-shadow: 
         .15vh .1vh .4vh #000000;
 
-        border-radius: 100vw;
-        border-radius: 100vh;
-
-        width: 8vh;
-        height: 4vw;
         text-align: center;
         position: relative;
-        font-size: 5.25vh;
+        font-size: 7vh;
 
         margin-left: 1.5%;
         margin-bottom: 2%;
@@ -74,8 +70,6 @@
     }
     .btn4,.btn5
     {
-        text-shadow: 
-        .2vh .2vh .65vh #4a4a4a;
 
         border-style: solid;
         border-color: #3f3f3f;
@@ -84,21 +78,17 @@
         position: relative;
         text-align: center;
         display: inline;
-        width: 25vh;
-        height: 4vw;
 
         margin-top: 2%;
         margin-bottom: 2%;
         border-width: .4vh;
-        font-size: 5vh;
+        font-size: 6vh;
 
         color: black;
         background-color: aquamarine;
     }
     .btn1,.btn2,.btn3
     {
-        text-shadow: 
-        .2vh .2vh .65vh #4a4a4a;
 
         font-family: 'Courier New';
         position: relative;
@@ -106,14 +96,13 @@
 
         left: 15%;
 
-        width: 35vh;
-        height: 6vh;
         border-width: .3525vh;
 
-        margin-top: 2.15%;
+        margin-top: 0.5%;
         margin-left: 1.5%;
 
-        font-size: 4.25vh;
+        text-align: center;
+        font-size: 6.5vh;
         border-color: #000000;
     }
     .btn1{
@@ -128,10 +117,9 @@
     }
     #Phrase
     {
+        margin-bottom: 1vh;
         font-style: italic;
         text-align: center;
-        text-shadow: 
-        .2vh .2vh .65vh #4a4a4a;
 
         color: #171717;
 
@@ -140,8 +128,6 @@
     }
     #CorrectLetters
     { 
-        text-shadow: 
-        .2vh .2vh .65vh #4a4a4a;
 
         text-align: center;
         font-weight: bold;
@@ -153,34 +139,32 @@
     {
         font-size: 4vh;
         text-align: center;
-        margin-bottom: -2vh;
     }
     #FinalGuessInputFieldIndicator
     {
+        position: relative;
 
-        margin-left: 52vh;
+        margin-left: 35.5vw;
+        margin-top: -5vh;
         border-style:solid;
         border-radius: 3vh;
-        width: 40%;
-        height: 4.25vh;
+
+        font-size: 3.25vh;
+
+        width: 25%;
+        height: 2vw;
         border-width: .4vh;
 
-        flex-wrap: wrap;
-        align-items: flex-end;
         /* gap */ 
         background-color: rgb(255, 255, 255);
     }
     .pointturncalc{
-        text-shadow: 
-        .12vh .12vh .5vh #4a4a4a;
+        position: fixed;
         font-size: 3vh;
-
-        position: relative;
         display:inline-block;
 
         left: 2.5%;
-        bottom: 90vh;
-
+        top: 1.5%;
         width: 17.5%;
     }
     #Timer{
@@ -189,9 +173,9 @@
     }
     .versionctrl{
         position:fixed;
-        top: 96%;
+        top: 94%;
         right: 2%;
-        font-size:large;
+        font-size:medium;
         opacity: 25%;
     }
     #tips
@@ -199,10 +183,7 @@
         text-align: center;
         transition:  ease-in-out 1s;   
         
-        text-shadow: 
-        .2vw .2vw .65vh #4a4a4a;
-        
-        font-size: xx-large;
+        font-size: large;
         font-weight: lighter;
         font-style: italic;
     
@@ -222,5 +203,9 @@
         background-color: rgba(0, 0, 0, 0.89);
         border-radius: 12px;
     
-}  
+    }  
+        #p6,#p5,#p4
+        {
+            margin-top: .5vh;
+        } 
 }

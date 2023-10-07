@@ -11,7 +11,7 @@ const TurnCountMax = 3
 let TurnCount = 0;
 let Points = 0;
 let FreeLetters = 5;
-const SelectionMax = 2;
+const SelectionMax = 3;
 let selectionMax = 0;
 
 let UnavailableLetters = ""
@@ -32,6 +32,7 @@ function PageLoad()
     SetAnswerField();
     setLetters();
     PS.CheckPoints(Points);
+    document.getElementById("LetterButtonsHeader").innerText = (`Pick ${SelectionMax} Letters`)
 }
 function GetWordBank(){
     GTPD.GetWordBank(Points);
@@ -236,7 +237,6 @@ export function GuessRight()
     
     document.getElementById("Phrase").innerText = "Thats Right!";
     CorrectLetters.innerText = word;
-    CorrectLetters.style.backgroundColor= "#adff2f";
 
     document.getElementById("generatewordbtn").style.borderColor = "#adff2f"
 
@@ -254,7 +254,6 @@ export function GuessWrong()
     document.getElementById("Phrase").innerText = "Wrong!";
     CorrectLetters.innerText = word;
 
-    CorrectLetters.style.backgroundColor = "#ff0000";
     document.getElementById("LetterButtons").style.borderColor = "#ff0000"
     document.getElementById("LetterButtons").style.background = "#ff8787"
     document.getElementById("generatewordbtn").style.borderColor = "#adff2f"
@@ -296,9 +295,7 @@ function SetFinalGuessInputActive()
     }
     else if(TurnCount >= TurnCountMax)
     {
-        //document.getElementById("LetterButtonsHeader").innerText = "Pick 2 Letters"
         document.getElementById("LetterButtons").style.borderColor = "#ff0000"
-        //document.getElementById("LetterButtons").style.background = "#c9e2ff"
     }
 }
 
@@ -321,7 +318,7 @@ export function GuessWordBtn()
         int = 0;
         document.getElementById("guesswordbtn").innerText = ("Guess Word");
         document.getElementById("guesswordbtn").style.fontWeight = ""
-        document.getElementById("LetterButtonsHeader").innerText = "Pick 2 Letters"
+        document.getElementById("LetterButtonsHeader").innerText = (`Pick ${SelectionMax} Letters`)
         
         ChangeBackgroundOriginalcss();
 
@@ -345,7 +342,7 @@ export function GenerateNewWord() //new word button
     
         CorrectLetters.style.backgroundColor = "";
         FinalGueassInputFieldIndicator.innerText = "..."
-        document.getElementById("LetterButtonsHeader").innerText = "Pick 2 Letters"
+        document.getElementById("LetterButtonsHeader").innerText = (`Pick ${SelectionMax} Letters`)
 
         document.getElementById("guesswordbtn").disabled = false;
         document.getElementById("Undobtn").disabled = false;

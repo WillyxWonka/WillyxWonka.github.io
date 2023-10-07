@@ -43,3 +43,8 @@ alpha 0.1.0
         now seperate portrait and landscape css files
         color changes based on answer
         input buttons state
+
+alpha 0.1.1 (HotFix)
+
+    -adjust css
+    -increased letters user can pick to 3

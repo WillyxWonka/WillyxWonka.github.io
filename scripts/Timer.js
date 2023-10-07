@@ -1,7 +1,7 @@
 import * as GTP from "/scripts/GuessThePhrase.js";
 
 let isTimer = false;
-let SecondsMax = 20
+let SecondsMax = 30
 let seconds = SecondsMax;
 
 export function StartFinalGuessTimer()
