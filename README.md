@@ -50,7 +50,11 @@ alpha 0.1.1 (HotFix)
     -increased letters user can pick to 3
     -increased tiomer to 30 seconds
 
-alpha 0.1.2 (HotFix)
-
+ alpha 0.1.2 (HotFix)
     -adjust css
+
+alpha 0.1.3
+    -adjust css
+        (added responsive button effects)
+    -fixed issue were free letters were not correct at point threshholds
     

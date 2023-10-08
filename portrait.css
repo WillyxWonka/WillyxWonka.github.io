@@ -1,27 +1,43 @@
 
-    button:active
+    button
     {
-        transform: scale(.95);
-        background-color: gold;
-        color: rgb(255, 255, 255);
+    border-style: solid;
+    cursor: pointer; 
+    transition:  ease-out .4s;   
+    font-family: 'Courier New';
+    border-radius: 1000px;
+    z-index: 0;
     }
-    button{
-        border-style: solid;
-        cursor: pointer; 
-        transition:  ease-in-out .2s;   
-        font-family: 'Courier New';
-        border-radius: 1000px;
-    }
-    button:disabled
-    {
 
-        border-color: #000000;
-        background-color: #00000043;
-        color: #00000085;
+    .btn4:active,.btn5:active,.btn1:active,.btn2:active,.btn3:active
+    {
+        transform: scale(1.25);
     }
 
     @media screen and (orientation: portrait) 
     {
+        button:active 
+        {
+            z-index: 2;
+            
+            transform: scale(2.5);
+            color: rgb(255, 247, 0);
+            transition:  ease-in .0001s;   
+    
+            border-style: inset;
+            border-width: .625vw;
+        }
+        button:disabled 
+        {
+    
+            border-style: inset;
+            border-width: .5vw;
+            transform: scale(.85);
+    
+            border-color: #000000;
+            background-color: #00000043;
+            color: #00000085;
+        }
         header 
         {       
             text-shadow: 
@@ -74,10 +90,11 @@
         }
         .alphabetbtn{
             text-shadow: 
-            .15vw .1vw .4vw #000000;
+            .15vw .1vw .4vw #343053;
 
-            border-radius: 100vw;
-            border-radius: 100vh;
+            border-style: outset;
+            border-width: .6vw;
+            border-color: #000000;;
 
             text-align: center;
             position: relative;
@@ -86,8 +103,6 @@
             margin-left: 2.5%;
             margin-bottom: 2.5%;
             margin-top: 2%;   
-            border-width: .35vw;
-            border-color: #4a4a4a;;
             
             background-color: #e1efff;
             color: rgb(0, 0, 0);     
@@ -165,7 +180,7 @@
             font-style: italic;
             text-align: center;
             text-shadow: 
-            .2vw .2vw .65vw #4a4a4a;
+            .2vw .2vw .65vw #3f5c25;
 
             color: #171717;
 
@@ -193,7 +208,8 @@
         } 
         .pointturncalc{
             text-shadow: 
-            .15vw .15vw .65vw #4a4a4a;
+            .15vw .1vw .5vw #343053;
+
             font-size: 3.5vw;
 
             position: fixed;

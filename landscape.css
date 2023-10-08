@@ -1,6 +1,28 @@
 @media screen and (orientation: landscape) 
 {
-    
+    button:active 
+    {
+        z-index: 2;
+
+        margin-bottom: 0;
+        transform: scale(2.5);
+        color: rgb(255, 247, 0);
+        transition:  ease-in .0001s;   
+        overflow-wrap: normal;
+        border-style: inset;
+        border-width: .625vh;
+    }
+    button:disabled 
+    {
+
+        border-style: inset;
+        border-width: .625vh;
+        transform: scale(.85);
+
+        border-color: #000000;
+        background-color: #00000043;
+        color: #00000085;
+    }
     header 
     {       
         position: fixed;
@@ -16,7 +38,7 @@
     }
     body{
         text-shadow: 
-        .15vh .15vh .6vh #4a4a4a;
+        .15vh .15vh .6vh #414141;
         
         font-family: 'Courier';
         color: black;
@@ -53,7 +75,11 @@
     }
     .alphabetbtn{
         text-shadow: 
-        .15vh .1vh .4vh #000000;
+        .15vh .15vh .45vh #343053;
+
+        border-style: outset;
+        border-width: .6vh;
+        border-color: #000000;;
 
         text-align: center;
         position: relative;
@@ -62,8 +88,6 @@
         margin-left: 1.5%;
         margin-bottom: 2%;
         margin-top: 2%;   
-        border-width: .4vh;
-        border-color: #4a4a4a;;
         
         background-color: #e1efff;
         color: rgb(0, 0, 0);     
@@ -83,13 +107,13 @@
         margin-bottom: 2%;
         border-width: .4vh;
         font-size: 5vh;
-
+        
         color: black;
         background-color: aquamarine;
     }
     .btn1,.btn2,.btn3
     {
-
+        color: #000000;
         font-family: 'Courier New';
         position: relative;
         display: inline-flex;
@@ -159,6 +183,10 @@
         background-color: rgb(255, 255, 255);
     }
     .pointturncalc{
+
+        text-shadow: 
+        .15vh .1vh .35vh #393939;
+        
         position: fixed;
         font-size: 3vh;
         display:inline-block;

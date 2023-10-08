@@ -62,9 +62,8 @@ function setLetters()
         let y = document.getElementById(freeLetters[i])
         UnavailableLetters += y.id;
         y.disabled = true;
+
         ChangeButtonDisabled(y);
-        
-       // alphabet.splice(x, 1);
         updateanswer(freeLetters)
     }
     console.log("free letters this word: " + freeLetters)
@@ -85,8 +84,25 @@ export function updateAvailableLetters(input) // updates ingame button and thing
         input.style.backgroundColor = ("#acff2f4e")
         document.getElementById("guesswordbtn").disabled = true;
         document.getElementById("generatewordbtn").disabled = true;   
+        //vibrate();
+
     }
 }
+/*function vibrate() {
+    if (!window) {
+        return;
+    }
+
+    if (!window.navigator) {
+        return;
+    }
+
+    if (!window.navigator.vibrate) {
+        return;
+    }
+
+    window.navigator.vibrate([200, 100, 200]);
+}*/
 function ReactivateLetters(list) //reactivates the letters onscreen button // resets unavailable letters value for new word. 
 {                                 
     UnavailableLetters = ""
@@ -306,16 +322,17 @@ export function GuessWordBtn()
     if(int == 0 && selectedLetters.length == 0) // sets final guess state
     {
         int = 1;
+
         document.getElementById("guesswordbtn").innerText = ("Return");
-        document.getElementById("guesswordbtn").style.fontWeight = "bold"
-        
         document.getElementById("generatewordbtn").disabled = true;
+
         SetFinalGuessInputActive()
         return;
     }
     if(int == 1) //sets original state
     {
         int = 0;
+
         document.getElementById("guesswordbtn").innerText = ("Guess Word");
         document.getElementById("guesswordbtn").style.fontWeight = ""
         document.getElementById("LetterButtonsHeader").innerText = (`Pick ${SelectionMax} Letters`)
@@ -353,12 +370,13 @@ export function GenerateNewWord() //new word button
     
         TurnCount = 0;
         document.getElementById("p3").innerText = "Turns Used: " +TurnCount+ "/" +TurnCountMax;
-    
+
+        FreeLetters = PS.CheckPoints(Points);  // These need to be called first when new word id pressed or free letters are worong
         PS.CheckPoints(Points);
+
         GetWordBank();
         SetAnswerField();
         setLetters();
-        FreeLetters = PS.CheckPoints(Points);  
     }
 
 }
