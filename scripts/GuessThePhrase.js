@@ -70,8 +70,17 @@ function setLetters()
     console.log("Unavailable Letters this word: " + UnavailableLetters)
 }
 
-
-
+export function GetKeyChar(e)
+{
+    console.log(e.value)
+    /*for(i=97; i < 122; i++)
+    {
+        if(input == i)
+        {
+            updateAvailableLetters(i)
+        }
+    }*/
+}
 export function updateAvailableLetters(input) // updates ingame button and things related to it when it is clicked
 {
     if(int == 0 && selectionMax < SelectionMax)
