@@ -4,6 +4,7 @@ import * as Timer from "/scripts/Timer.js";
 import * as PS from "/scripts/PointScript.js";
 
 let alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+let bet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 let AnswerCurrent = [];
 
 let int = 0;
@@ -56,8 +57,9 @@ function setLetters()
 
     for(let i = 0; i < FreeLetters; i++)
     {
-        let x = Math.floor(Math.random() * alphabet.length);
-        freeLetters += alphabet[x];
+        let x = Math.floor(Math.random() * bet.length);
+        freeLetters += bet[x];
+        bet -= bet[x];
 
         let y = document.getElementById(freeLetters[i])
         UnavailableLetters += y.id;
@@ -70,21 +72,45 @@ function setLetters()
     console.log("Unavailable Letters this word: " + UnavailableLetters)
 }
 
-export function GetKeyChar(e)
+
+window.addEventListener('keydown', (e)=> 
 {
-    console.log(e.value)
-    /*for(i=97; i < 122; i++)
+    switch(e.key)
     {
-        if(input == i)
-        {
-            updateAvailableLetters(i)
-        }
-    }*/
+        case "Enter":
+            document.getElementById('Submitbtn').click()
+        return;
+        case "Backspace":
+            document.getElementById('Undobtn').click()
+        return;
+    }
+    let ekey = e.key.toString().toLowerCase()
+    console.log(ekey)
+    GetKeyButton(ekey)
+})
+
+export function GetKeyButton(key)
+{
+    let keyButton = document.getElementById(key)
+    if(int == 0)
+    {
+        let x = document.getElementById(key)
+        x.click()
+    }
+    if(int == 1)
+    {
+        FinalGueassInputFieldIndicator.innerText += keyButton.id
+    }
+
 }
+
+
+
 export function updateAvailableLetters(input) // updates ingame button and things related to it when it is clicked
 {
     if(int == 0 && selectionMax < SelectionMax)
     {
+
         selectionMax++
         selectedLetters[selectedLetters.length] = input.id; //adds letterbuttoin to the end of selectedletter list/array until submit is selected
 
@@ -327,14 +353,13 @@ function SetFinalGuessInputActive()
 
 export function GuessWordBtn()
 { 
-    console.log("int: " + int)
     if(int == 0 && selectedLetters.length == 0) // sets final guess state
     {
         int = 1;
 
         document.getElementById("guesswordbtn").innerText = ("Return");
         document.getElementById("generatewordbtn").disabled = true;
-
+        
         SetFinalGuessInputActive()
         return;
     }
@@ -360,6 +385,8 @@ export function GenerateNewWord() //new word button
 {
     if(selectedLetters.length == 0)
     {
+        bet = alphabet;
+
         selectedLetters = [] //empties array for new word
 
         ChangeBackgroundOriginalcss();

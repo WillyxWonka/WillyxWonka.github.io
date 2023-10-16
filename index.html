@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="portrait.css">
         <link rel="stylesheet" href="landscape.css">
         <script type="module">
-        import { onTurnUse, check, GenerateNewWord, GuessWordBtn,updateAvailableLetters, Undo,Submit,FinalGuessInput,GetKeyChar } from "/scripts/GuessThePhrase.js";
+        import { onTurnUse, check, GenerateNewWord, GuessWordBtn,updateAvailableLetters, Undo,Submit,FinalGuessInput,GetKeyButton } from "/scripts/GuessThePhrase.js";
         window.onTurnUse= onTurnUse;
         window.check = check;
         window.GenerateNewWord =GenerateNewWord;
@@ -24,7 +24,7 @@
         window.Undo = Undo;
         window.Submit = Submit;
         window.FinalGuessInput = FinalGuessInput;
-        window.GetKeyChar = GetKeyChar;
+        window.GetKeyChar = GetKeyButton;
         </script>
         <script type="module" src="scripts/GTPData.js"></script>
         <script type="text/javascript" src="scripts/NonCoreCode.js"></script>
@@ -76,13 +76,13 @@
             <button class="alphabetbtn", id="z" onclick="updateAvailableLetters(this), FinalGuessInput(this.id)">Z</button>
             <div>
                 <button class="btn5", id="Undobtn" onclick="Undo()">Undo</button>
-                <button class="btn4", id="Submitbtn" onclick="check(), Submit()">Submit</button>
+                <button  class="btn4", id="Submitbtn" onclick="check(), Submit()">Submit</button>
             </div>
         </div>
         <div>
             <button class="btn2", id="guesswordbtn" onclick="GuessWordBtn()"> Guess Word</button>
             <button class="btn1", id="generatewordbtn" onclick="GenerateNewWord()"> New Word</button>
-            <button type="button" class="btn3" onclick="Showtips()",style="overflow-y:scroll;">Help/Tips</button>
+            <button  id="btn3" class="btn3" onclick="Showtips()",style="overflow-y:scroll;">Help/Tips</button>
         </div>
         <div class="pointturncalc"> 
             <div Id='Timer'>
