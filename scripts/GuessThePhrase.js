@@ -1,7 +1,11 @@
 
 import * as GTPD from "/scripts/GTPData.js";
+import * as GTPDE from "/scripts/GTPEasyData.js"
+import * as GTPDM from "/scripts/GTPModerateData.js"
+import * as GTPDD from "/scripts/GTPDifficultData.js";
 import * as Timer from "/scripts/Timer.js"; 
 import * as PS from "/scripts/PointScript.js";
+
 
 let alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 let bet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
@@ -11,7 +15,7 @@ let int = 0;
 const TurnCountMax = 3
 let TurnCount = 0;
 let Points = 0;
-let FreeLetters = 5;
+let FreeLetters = 0;
 const SelectionMax = 3;
 let selectionMax = 0;
 
@@ -21,24 +25,65 @@ let PointCount = "";
 let CorrectLetters = "";
 let FinalGueassInputFieldIndicator = "";
 let selectedLetters = []
+let dataSource = ""
+
 
 onload = GetWordBank()
 onload = PageLoad;
 
 function PageLoad()
 {
+    PS.CheckPoints(Points, dataSource);
+    
     FinalGueassInputFieldIndicator = document.getElementById("FinalGuessInputFieldIndicator")
+    dataSource = document.getElementById("DataSourceString").innerText
     PointCount = document.getElementById("p4");
     CorrectLetters = document.getElementById("CorrectLetters");
     SetAnswerField();
     setLetters();
-    PS.CheckPoints(Points);
+    PS.CheckPoints(Points, dataSource);
     document.getElementById("LetterButtonsHeader").innerText = (`Pick ${SelectionMax} Letters`)
+
 }
 function GetWordBank(){
-    GTPD.GetWordBank(Points);
-    word = GTPD.word;
-    console.log(word)
+    
+    if(document.getElementById("DataSourceString").innerText == "Standard")
+    {
+        console.log("Hi Hello how ya doin?!  Its Standard")
+        dataSource = "Standard"
+
+        GTPD.GetWordBank(Points);
+        word = GTPD.word;
+        console.log(word)
+    }
+    if(document.getElementById("DataSourceString").innerText == "Easy")
+    {
+        console.log("Hi Hello how ya doin?!  Its Easy")
+        dataSource = "Easy"
+
+        GTPDE.GetWordBank(Points);
+        word = GTPDE.word;
+        console.log(word)
+    }
+    if(document.getElementById("DataSourceString").innerText == "Medium")
+    {
+        console.log("Hi Hello how ya doin?!   Its Medium")
+        dataSource ="Medium"
+
+        GTPDM.GetWordBank(Points);
+        word = GTPDM.word;
+        console.log(word)
+    }
+    if(document.getElementById("DataSourceString").innerText == "Difficult")
+    {
+        console.log("Hi Hello how ya doin?!   Its Difficult")
+        dataSource ="Difficult"
+
+        GTPDD.GetWordBank(Points);
+        word = GTPDD.word;
+        console.log(word)
+    }
+
 }
 
 
@@ -53,6 +98,7 @@ function SetAnswerField()
 }
 function setLetters()
 {
+    FreeLetters = PS.FreeLetters;
     let freeLetters = [];
 
     for(let i = 0; i < FreeLetters; i++)
@@ -407,8 +453,8 @@ export function GenerateNewWord() //new word button
         TurnCount = 0;
         document.getElementById("p3").innerText = "Turns Used: " +TurnCount+ "/" +TurnCountMax;
 
-        FreeLetters = PS.CheckPoints(Points);  // These need to be called first when new word id pressed or free letters are worong
-        PS.CheckPoints(Points);
+        FreeLetters = PS.CheckPoints(Points,dataSource);  // These need to be called first when new word id pressed or free letters are worong
+        PS.CheckPoints(Points,dataSource);
 
         GetWordBank();
         SetAnswerField();
