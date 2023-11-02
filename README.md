@@ -57,4 +57,7 @@ alpha 0.1.3
     -adjust css
         (added responsive button effects)
     -fixed issue were free letters were not correct at point threshholds
-    
+
+alpha 0.1.4
+    -Added keyboard support for enter backspace and all letters
+    -added difficulty modes    

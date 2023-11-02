@@ -135,7 +135,7 @@ window.addEventListener('keydown', (e)=>
     GetKeyButton(ekey)
 })
 
-export function GetKeyButton(key)
+ function GetKeyButton(key)
 {
     let keyButton = document.getElementById(key)
     if(int == 0)

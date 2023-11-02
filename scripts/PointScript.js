@@ -72,8 +72,6 @@ export function CheckPoints(Points, dataSource)
                 FreeLetterIndicator.innerText = "Free Letters " + FreeLetters
             }
         break;
-
-
     }
 
 }
