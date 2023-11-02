@@ -1,4 +1,5 @@
 
+
     button
     {
     border-style: solid;
@@ -14,6 +15,14 @@
         transform: scale(1.25);
     }
 
+    .page2btn
+    {
+        color: rgb(0, 0, 0);
+        border-radius: 15px;
+        border-style: solid;
+        border-width: .75vw;
+        border-color: #000000;
+    }
     @media screen and (orientation: portrait) 
     {
         button:active 
@@ -180,7 +189,7 @@
             font-style: italic;
             text-align: center;
             text-shadow: 
-            .2vw .2vw .65vw #3f5c25;
+            .2vw .2vw .65vw #4a4a4a;
 
             color: #171717;
 
@@ -224,7 +233,7 @@
             color: orangered;
             top: 10%;
         }
-        .versionctrl{
+            .versionctrl{
             position:fixed;
             top: 96%;
             right: 2%;
