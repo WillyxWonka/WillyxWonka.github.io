@@ -18,9 +18,9 @@ const Activities = ["reading", "writing", "painting", "drawing", "gardening", "c
 "running", "cycling", "swimming", "Tennis","birdwatching", "knitting", "sewing", "sculpting","fishing", "videogames", "crafting", 
 "pottery", "calligraphy", "origami", "dancing", "gambling", "surfing", "skateboarding", "photography", "Guitar", "Piano" ]
 const Colors = ["chartreuse", "aubergine", "periwinkle", "mauve", "cerulean", "vermilion", "cinnabar", "ochre", "sepia",
-"taupe", "indigo", "saffron", "teal", "marigold", "lilac", "lavender", "fandango", "verdigris", "amethyst", 
- "fawn", "russet", "azure", "fuchsia", "carmine", "cobalt", "garnet", "jade", "plum", "magenta", "red", 
-"blue", "green", "yellow", "orange", "purple", "pink", "brown", "gray", "black", "white", "beige", "turquoise", "violet",
+"taupe", "indigo", "saffron", "teal", "marigold", "lilac", "tangerine", "lavender", "fandango", "verdigris", "amethyst", 
+"topaz", "fawn", "russet", "sapphire", "azure", "fuchsia", "carmine", "cobalt", "garnet", "jade", "plum", "magenta", "red", 
+"blue", "green", "yellow", "orange", "purple", "pink", "brown", "gray", "black", "white", "beige", "turquoise", "teal", "violet",
  "maroon", "gold", "silver"]
 const Animals= [  "lion", "elephant", "giraffe", "kangaroo", "panda", "hippopotamus", "koala", "penguin", "platypus", 
 "meerkat", "panda", "sloth", "ostrich", "armadillo", "wallaby", "aardvark", "raccoon", "chameleon", "porcupine", "lemur", 
@@ -33,7 +33,7 @@ const EasyFruit= ["apple", "banana", "orange", "mango", "strawberry", "blueberry
 const MediumFruit = ["apricot", "plum", "guava", "fig", "avocado", "coconut", "pomegranate", "papaya", "passionfruit", 
 "lychee", "tangerine", "clementine", "huckleberry", "nectarine",]
 const HardFruit = ["cantaloupe", "honeydewmelon", "starfruit", "jackfruit", "gooseberry", "mulberry", "quince", "date", "blackcurrant", 
-"redcurrant", "kiwifruit", "plantain", "ackee" , "elderberry", "boysenberry", "dragonfruit", "persimmon", "boysenberry","durian"]
+"redcurrant", "kiwifruit", "plantain", "ackee" , "elderberry", "boysenberry", "dragonfruit", "persimmon"]
 
 const EasyVegetables = ["carrot", "broccoli", "potato", "tomato", "cucumber", "lettuce", "spinach", "pepper", 
 "onion", "garlic", "celery", "eggplant", "peas", "corn", "greenbean", "cabbage", "radish" ]
@@ -43,16 +43,17 @@ const HardVegetables = ["radicchio", "chives", "shallot", "scallion", "okra", "r
 "artichoke"]
 
 const EasyColors = ["red", "blue", "green", "yellow", "orange", "purple", "pink", "brown", "gray", "black", "white"
-, "violet", "maroon", "gold", "silver"]
-const MediumColors =["indigo", "cobalt", "magenta", "lilac", "lavender", "beige", "jade", "plum", "teal", "azure", "turquoise"]
-const HardColors = [ "verdigris", "amethyst", "ochre", "sepia", "taupe", "cinnabar", "vermilion",
- "periwinkle", "mauve", "cerulean", "garnet","aubergine", "carmine", "fawn", "fandango","marigold", "fuchsia", "chartreuse"]  
+, "teal", "violet", "maroon", "gold", "silver"]
+const MediumColors =["indigo", "sapphire", "cobalt", "magenta", "lilac", "lavender", 
+"tangerine", "beige", "jade", "plum", "chartreuse", "teal", "azure", "turquoise"]
+const HardColors = [ "topaz", "verdigris", "amethyst", "ochre", "sepia", "taupe", "cinnabar", "vermilion",
+ "periwinkle", "mauve", "cerulean", "garnet","aubergine", "carmine", "fawn", "fandango","marigold", "fuchsia"]  
 
  const EasyActivities = ["baking","reading", "swimming", "cooking", "hiking", "painting", "music", "fishing",
  "yoga", "dancing", "cycling", "drawing"]
 const MediumActivities =["gardening", "photography", "bouldering", "archery","skydiving",
 "astronomy", "juggling", "woodworking", "videogames", "camping", "singing", "gambling","wrestling"]
-const HardActivities = ["kiteboarding","geocaching", "calligraphy", "falconry", "beekeeping", "basketweaving","larping", "origami", "glassblowing","capoeira","parkour"]  
+const HardActivities = ["kiteboarding","geocaching", "calligraphy", "falconry", "beekeeping", "basketweaving","larping", "origami", "glassblowing","capoeira"]  
 
 const EasyAnimals = ["lion", "koala",  "panda", "sloth", "fox", "tiger", "leopard", 
 "peacock", "spider", "shark", "wolf","dog", "cat", "horse", "cow", "sheep", "chicken", "duck", "goose", "pig", "rabbit", "hamster", "turtle", "mouse",
