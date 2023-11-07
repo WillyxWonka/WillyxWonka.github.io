@@ -14,9 +14,10 @@ const vegetables = ["carrot", "broccoli", "potato", "tomato", "cucumber", "lettu
 "beet", "squash", "sweetpotato", "mushroom", "brusselsprout", "kale", "turnip", "okra", "leek", "artichoke", "rhubarb", 
 "pumpkin", "chard", "collardgreens", "bokchoy", "fennel", "parsnip", "endive", "watercress", "arugula", 
 "radicchio", "chives", "shallot", "scallion"]
-const Activities = ["reading", "writing", "painting", "drawing", "gardening", "cooking", "baking", "photography", "hiking", 
-"running", "cycling", "swimming", "Tennis","birdwatching", "knitting", "sewing", "sculpting","fishing", "videogames", "crafting", 
-"pottery", "calligraphy", "origami", "dancing", "gambling", "surfing", "skateboarding", "photography", "Guitar", "Piano" ]
+const Activities = ["chess", "piano", "basketball", "soccer", "golf", "dancing", "cooking", "hiking", "painting", "boxing"
+,"gardening", "photography", "archery", "camping", "singing", "gambling","wrestling", "yoga", "pottery", "karate", "meditation", "rugby", "football"
+,"calligraphy", "falconry", "beekeeping", "basketweaving","larping", "origami", "glassblowing","capoeira", "scubadiving", "parkour", "bungeejumping",
+ "basejumping", "hanggliding", "videogames", "bouldering","astronomy", "tabletennis"]
 const Colors = ["chartreuse", "aubergine", "periwinkle", "mauve", "cerulean", "vermilion", "cinnabar", "ochre", "sepia",
 "taupe", "indigo", "saffron", "teal", "marigold", "lilac", "tangerine", "lavender", "fandango", "verdigris", "amethyst", 
 "topaz", "fawn", "russet", "sapphire", "azure", "fuchsia", "carmine", "cobalt", "garnet", "jade", "plum", "magenta", "red", 
@@ -28,6 +29,7 @@ const Animals= [  "lion", "elephant", "giraffe", "kangaroo", "panda", "hippopota
 "peacock", "spider", "shark", "wolf", "serval","dog", "cat", "horse", "cow", "sheep", "chicken", "duck", "goose", "pig", "rabbit", "hamster", 
 "parrot", "goldfish", "turtle", "mouse", "frog", "bee", "butterfly", "ant", "eagle", "sparrow", "dolphin", "whale", "seagull", "octopus", "jellyfish",
  "seahorse", "seal", "otter", "bear", "zebra", "cheetah", "gorilla"]
+
 const EasyFruit= ["apple", "banana", "orange", "mango", "strawberry", "blueberry", "grape", "pineapple", "watermelon",
  "kiwi", "peach", "pear", "cherry", "raspberry", "blackberry", "lemon", "lime", "grapefruit", "cranberry"]
 const MediumFruit = ["apricot", "plum", "guava", "fig", "avocado", "coconut", "pomegranate", "papaya", "passionfruit", 
@@ -49,11 +51,12 @@ const MediumColors =["indigo", "sapphire", "cobalt", "magenta", "lilac", "lavend
 const HardColors = [ "topaz", "verdigris", "amethyst", "ochre", "sepia", "taupe", "cinnabar", "vermilion",
  "periwinkle", "mauve", "cerulean", "garnet","aubergine", "carmine", "fawn", "fandango","marigold", "fuchsia"]  
 
- const EasyActivities = ["baking","reading", "swimming", "cooking", "hiking", "painting", "music", "fishing",
- "yoga", "dancing", "cycling", "drawing"]
-const MediumActivities =["gardening", "photography", "bouldering", "archery","skydiving",
-"astronomy", "juggling", "woodworking", "videogames", "camping", "singing", "gambling","wrestling"]
-const HardActivities = ["kiteboarding","geocaching", "calligraphy", "falconry", "beekeeping", "basketweaving","larping", "origami", "glassblowing","capoeira"]  
+const EasyActivities = ["chess", "piano", "basketball", "soccer", "golf", "dancing", "cooking", "hiking", "painting", "boxing"]
+const MediumActivities =["gardening", "photography", "archery", "camping", "singing", "gambling","wrestling", "yoga", "pottery", 
+"karate", "meditation", "rugby", "football"]
+const HardActivities = ["calligraphy", "falconry", "beekeeping", "basketweaving","larping", "origami", "glassblowing",
+"capoeira", "scubadiving", "parkour", "bungeejumping", "basejumping", "hanggliding", "videogames", "bouldering","astronomy", 
+"tabletennis"]  
 
 const EasyAnimals = ["lion", "koala",  "panda", "sloth", "fox", "tiger", "leopard", 
 "peacock", "spider", "shark", "wolf","dog", "cat", "horse", "cow", "sheep", "chicken", "duck", "goose", "pig", "rabbit", "hamster", "turtle", "mouse",

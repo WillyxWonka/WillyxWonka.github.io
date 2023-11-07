@@ -12,8 +12,7 @@ const EasyVegetables = ["carrot", "broccoli", "potato", "tomato", "cucumber", "l
 const EasyColors = ["red", "blue", "green", "yellow", "orange", "purple", "pink", "brown", "gray", "black", "white"
 , "teal", "violet", "maroon", "gold", "silver"]
 
- const EasyActivities = ["baking","reading", "swimming", "cooking", "hiking", "painting", "music", "fishing",
- "yoga", "dancing", "cycling", "drawing"]
+const EasyActivities = ["chess", "piano", "basketball", "soccer", "golf", "dancing", "cooking", "hiking", "painting", "boxing"]
 
 const EasyAnimals = ["lion", "koala",  "panda", "sloth", "fox", "tiger", "leopard", 
 "peacock", "spider", "shark", "wolf","dog", "cat", "horse", "cow", "sheep", "chicken", "duck", "goose", "pig", "rabbit", "hamster", "turtle", "mouse",

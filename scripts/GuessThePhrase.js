@@ -7,7 +7,7 @@ import * as Timer from "/scripts/Timer.js";
 import * as PS from "/scripts/PointScript.js";
 
 
-let alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+const alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 let bet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 let AnswerCurrent = [];
 
@@ -100,17 +100,19 @@ function setLetters()
 {
     FreeLetters = PS.FreeLetters;
     let freeLetters = [];
-
+    let XY = []
     for(let i = 0; i < FreeLetters; i++)
     {
         let x = Math.floor(Math.random() * bet.length);
         freeLetters += bet[x];
-        bet -= bet[x];
+        console.log(bet[x])
+        //bet -= bet[x];
 
         let y = document.getElementById(freeLetters[i])
         UnavailableLetters += y.id;
         y.disabled = true;
 
+        
         ChangeButtonDisabled(y);
         updateanswer(freeLetters)
     }

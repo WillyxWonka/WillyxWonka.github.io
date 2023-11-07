@@ -12,7 +12,9 @@ const HardVegetables = ["radicchio", "chives", "shallot", "scallion", "okra", "r
 const HardColors = [ "topaz", "verdigris", "amethyst", "ochre", "sepia", "taupe", "cinnabar", "vermilion",
  "periwinkle", "mauve", "cerulean", "garnet","aubergine", "carmine", "fawn", "fandango","marigold", "fuchsia"]  
 
-const HardActivities = ["kiteboarding","geocaching", "calligraphy", "falconry", "beekeeping", "basketweaving","larping", "origami", "glassblowing","capoeira"]  
+ const HardActivities = ["calligraphy", "falconry", "beekeeping", "basketweaving","larping", "origami", "glassblowing",
+ "capoeira", "scubadiving", "parkour", "bungeejumping", "basejumping", "hanggliding", "videogames", "bouldering","astronomy", 
+ "tabletennis"]  
 
 const HardAnimals = ["hippopotamus","platypus", "armadillo", "wallaby", "aardvark","chameleon", "wombat","narwhal", "manatee","axolotl","coelacanth", "tuatara",
 , "serval", "capybara"]  

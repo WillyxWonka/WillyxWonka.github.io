@@ -60,4 +60,8 @@ alpha 0.1.3
 
 alpha 0.1.4
     -Added keyboard support for enter backspace and all letters
-    -added difficulty modes    
+    -added difficulty modes  
+
+alpha 0.1.5
+    -added css
+    -adjusted activites/hobbies word banks

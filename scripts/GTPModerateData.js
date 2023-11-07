@@ -14,8 +14,8 @@ const MediumVegetables =["beet", "squash", "mushroom", "kale", "turnip", "leek",
 const MediumColors =["indigo", "sapphire", "cobalt", "magenta", "lilac", "lavender", 
 "tangerine", "beige", "jade", "plum", "chartreuse", "teal", "azure", "turquoise"]
 
-const MediumActivities =["gardening", "photography", "bouldering", "archery","skydiving",
-"astronomy", "juggling", "woodworking", "videogames", "camping", "singing", "gambling","wrestling"]
+const MediumActivities =["gardening", "photography", "archery", "camping", "singing", "gambling","wrestling", "yoga", "pottery", 
+"karate", "meditation", "rugby", "football"]
 
 const MediumAnimals =["elephant", "giraffe", "kangaroo", "meerkat", "ostrich", "porcupine","lemur","mantis","seahorse", "zebra", "cheetah", "gorilla"
 , "seagull", "octopus", "jellyfish","eagle", "sparrow", "dolphin", "otter","penguin","parrot", "goldfish"]

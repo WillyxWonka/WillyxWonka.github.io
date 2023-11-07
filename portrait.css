@@ -23,6 +23,10 @@
         border-width: .75vw;
         border-color: #000000;
     }
+    #DataSourceString
+    {
+        opacity: 0;
+    }
     @media screen and (orientation: portrait) 
     {
         button:active 
@@ -138,7 +142,7 @@
             color: black;
             background-color: aquamarine;
         }
-        .btn1,.btn2,.btn3
+        .btn1,.btn2
         {
             text-shadow: 
             .2vw .2vw .65vw #4a4a4a;
@@ -225,20 +229,13 @@
             display:inline-block;
 
             left: 3%;
-            bottom: 5%;
+            bottom: 12%;
             width: 17.5%;
             height: 20%;
         }
         #Timer{
             color: orangered;
             top: 10%;
-        }
-            .versionctrl{
-            position:fixed;
-            top: 96%;
-            right: 2%;
-            font-size: 2.5vw;
-            opacity: 25%;
         }
         #tips
         {

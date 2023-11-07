@@ -1,4 +1,4 @@
- export let FreeLetters = 0;
+export let FreeLetters = 0;
 export function CheckPoints(Points, dataSource)
 {
     let Difficulty = document.getElementById("p5");
