@@ -27,28 +27,6 @@
     {
         opacity: 0;
     }
-
-    .PageImg
-    {
-
-
-        max-width: 1080px;
-        max-height: 480px;
-
-        min-width: auto;
-        min-height: auto;
-
-
-    }
-    .HomePagetext
-    {
-        font-size: 18px;
-        text-shadow: 
-        .2vw .2vw .375vw #393939;
-        
-        font-weight:lighter;
-        width: 100%;
-    }
     @media screen and (orientation: portrait) 
     {
         button:active 

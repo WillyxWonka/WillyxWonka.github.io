@@ -1,0 +1,62 @@
+
+
+.HomePageBody
+{
+    text-align:left;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+.PageImg
+{
+    max-width: 480px;
+    max-height: 200px;
+
+    min-width: auto;
+    min-height: auto;
+    padding: 2.5%;
+
+}
+.PageVid
+{
+    max-width: 480px;
+    max-height: 360px;
+
+    min-width: auto;
+    min-height: auto;
+    padding: 2.5%;
+
+}
+.HomePagetext
+{    
+    display: flex;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 
+    0vw 0vw 0vw #393939;
+
+    width: 480px;
+}
+.HomePagetextend{
+    font-size: 24px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 
+    0vw 0vw 0vw #393939;
+}
+.HomePageversionctrl
+{
+    position:fixed;
+    top: 91%;
+    right: 4%;
+    font-size:35px;
+    opacity: 100%;
+}
+.HomePageButtons{
+    width: 25%;
+    font-size: 4vh;
+    margin-left: 5%;
+    display: block;
+
+    margin-top: 3.5%;
+    margin-bottom: 0vh;d
+
+}
