@@ -4,59 +4,155 @@
 {
     text-align:left;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
-}
-.PageImg
-{
-    max-width: 480px;
-    max-height: 200px;
-
-    min-width: auto;
-    min-height: auto;
-    padding: 2.5%;
-
-}
-.PageVid
-{
-    max-width: 480px;
-    max-height: 360px;
-
-    min-width: auto;
-    min-height: auto;
-    padding: 2.5%;
-
-}
-.HomePagetext
-{    
-    display: flex;
-    font-size: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-shadow: 
     0vw 0vw 0vw #393939;
 
-    width: 480px;
 }
-.HomePagetextend{
-    font-size: 24px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-shadow: 
-    0vw 0vw 0vw #393939;
-}
-.HomePageversionctrl
+
+@media screen and (orientation: portrait) 
 {
-    position:fixed;
-    top: 91%;
-    right: 4%;
-    font-size:35px;
-    opacity: 100%;
+    .HPHeader{
+        position: fixed;
+        text-shadow: 
+        .2vw .2vw .375vw #393939;
+         
+        color: black;
+        font-size: 5vw;
+        font-family: 'Courier New', monospace;
+        font-weight:bold;
+         
+        right: 1%;
+    }
+    .HPTitles
+    {
+        text-shadow: 
+        .25vw .25vw .2vw #393939;
+        font-size: 9vw;
+        text-decoration: underline;
+        text-decoration-style:double;
+
+    }
+    .PageImg
+    {
+        max-width: 50vw;
+        padding: 1%;
+    
+    }
+    .PageVid
+    {
+        max-width: 80vw;
+
+        min-width: auto;
+        min-height: auto;
+        padding: 1%;
+    
+    }
+    .HomePagetext
+    {    
+        display: flex;
+        flex-wrap: wrap;
+
+        font-size: 4.5vw;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .HomePagetextend{
+        font-size: 5vw;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    }
+    .HomePageversionctrl
+    {
+        position:fixed;
+        top: 91%;
+        right: 4%;
+        font-size: 4.25vw;
+
+
+        opacity: 100%;
+
+        text-shadow: 
+        .2vw .2vw .5vw #393939;
+    }
+    .HomePageButtons{
+        background-color: aquamarine;
+        border-width: 1.5vw;
+        width: 50%;
+        font-size: 7vw;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 }
-.HomePageButtons{
-    width: 25%;
-    font-size: 4vh;
-    margin-left: 5%;
-    display: block;
 
-    margin-top: 3.5%;
-    margin-bottom: 0vh;d
 
+
+
+@media screen and (orientation: landscape) 
+{
+    .HPHeader{
+        position: fixed;
+        text-shadow: 
+        .2vh .2vh .375vh #393939;
+         
+        color: black;
+        font-size: 5vh;
+        font-family: 'Courier New', monospace;
+        font-weight:bold;
+         
+        right: 1%;
+    }
+    .HPTitles
+    {
+        text-shadow: 
+        .25vh .25vh .2vh #393939;
+        font-size: 8vh;
+        text-decoration: underline;
+        text-decoration-style:double;
+
+    }
+    .PageImg
+    {
+        max-width: 50vh;
+        padding: 1%;
+        min-width: auto;
+        min-height: auto;
+    }
+    .PageVid
+    {
+        max-width: 80vh;
+
+        min-width: auto;
+        min-height: auto;
+        padding: 1%;
+    
+    }
+    .HomePagetext
+    {    
+        display: inline-block;
+        font-size: 0vh;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .HomePagetextend{
+        font-size: 5vh;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    }
+    .HomePageversionctrl
+    {
+        position:fixed;
+        top: 91%;
+        right: 4%;
+        font-size: 4.25vh;
+
+
+        opacity: 100%;
+
+        text-shadow: 
+        .2vh .2vh .5vh #393939;
+    }
+    .HomePageButtons{
+        background-color: aquamarine;
+        border-width: 1.5vh;
+        width: 50%;
+        font-size: 7vh;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 }
