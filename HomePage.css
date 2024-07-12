@@ -47,13 +47,28 @@
         padding: 1%;
     
     }
-    .HomePagetext
+
+    .HomePagetextContainer
     {    
         display: flex;
         flex-wrap: wrap;
-
-        font-size: 4.5vw;
+        width: 60vw;
+    }
+    .HomePagetext
+    {    
+        box-shadow: -2px 0 15px #000000;
+        align-items: center;
+        margin: .75%;
+        background-color:burlywood
+    }
+    .HPpictxt
+    {
+        width: 50vw;
+        text-align: center;
+        font-size: 3.5vw;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-style: italic;
+        opacity: 50%;
     }
     .HomePagetextend{
         font-size: 5vw;
@@ -110,25 +125,41 @@
     }
     .PageImg
     {
-        max-width: 50vh;
-        padding: 1%;
+        width: 45vh;
         min-width: auto;
         min-height: auto;
+        
     }
     .PageVid
     {
-        max-width: 80vh;
 
+        max-width: 55vh;
         min-width: auto;
         min-height: auto;
         padding: 1%;
     
     }
+    .HomePagetextContainer
+    {    
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
     .HomePagetext
     {    
-        display: inline-block;
-        font-size: 0vh;
+        box-shadow: -2px 0 15px #000000;
+        align-items: center;
+        margin: .5%;
+        background-color:burlywood
+    }
+    .HPpictxt
+    {
+        width: 20vw;
+        text-align: center;
+        font-size: 2.5vh;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-style: italic;
+        opacity: 50%;
     }
     .HomePagetextend{
         font-size: 5vh;
@@ -151,6 +182,7 @@
     .HomePageButtons{
         background-color: aquamarine;
         border-width: 1.5vh;
+        border-color: black;
         width: 50%;
         font-size: 7vh;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
