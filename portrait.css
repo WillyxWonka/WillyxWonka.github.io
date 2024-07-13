@@ -8,6 +8,8 @@
     font-family: 'Courier New';
     border-radius: 1000px;
     z-index: 0;
+
+    touch-action: manipulation;
     }
 
     .btn4:active,.btn5:active,.btn1:active,.btn2:active,.btn3:active
@@ -120,7 +122,6 @@
             background-color: #e1efff;
             color: rgb(0, 0, 0);     
 
-            touch-action: manipulation;
         }
         .btn4,.btn5
         {
