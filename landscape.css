@@ -90,9 +90,9 @@
         margin-top: 2%;   
         
         background-color: #e1efff;
-        color: rgb(0, 0, 0);     
-
-
+        color: rgb(0, 0, 0);    
+        
+        touch-action: manipulation;
     }
     .btn4,.btn5
     {
@@ -112,6 +112,8 @@
         
         color: black;
         background-color: aquamarine;
+
+        touch-action: manipulation;
     }
     .btn1,.btn2
     {
@@ -130,6 +132,8 @@
         text-align: center;
         font-size: 5vh;
         border-color: #000000;
+
+        touch-action: manipulation;
     }
     .btn1{
         background-color: aquamarine;  
