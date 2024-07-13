@@ -119,6 +119,8 @@
             
             background-color: #e1efff;
             color: rgb(0, 0, 0);     
+
+            touch-action: manipulation;
         }
         .btn4,.btn5
         {
