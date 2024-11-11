@@ -245,7 +245,7 @@ export function Submit()
 }
 
 
-function updateanswer(input)
+function updateanswer(input)  // !!THIS IS WHERE CAN POSSIBLLY MAKE CORRECT WORD WITHOUT GUESSING IN EVENT THAT USER GUESSES ALL CORRECT LETTERS!!
 {
     for(let i = 0; i < input.length; i++)
     {
