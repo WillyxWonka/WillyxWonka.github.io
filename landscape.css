@@ -1,4 +1,168 @@
-@media screen and (orientation: landscape) 
+@media screen and (orientation: landscape) {
+    button:active {
+        z-index: 2;
+        margin-bottom: 0;
+        transform: scale(2.5);
+        color: rgb(255, 247, 0);
+        transition: ease-in .0001s;
+        border: inset .625vh;
+    }
+    
+    button:disabled {
+        border: inset .625vh;
+        transform: scale(.85);
+        border-color: black;
+        background-color: #00000043;
+        color: #00000085;
+    }
+    
+    header {
+        position: fixed;
+        text-shadow: .2vh .2vh .375vh #393939;
+        color: black;
+        font: bold 2vw 'Courier New', monospace;
+        right: 1%;
+    }
+    
+    body {
+        text-shadow: .15vh .15vh .6vh #414141;
+        font: lighter 'Courier';
+        color: black;
+        background-color: peachpuff;
+        width: 100%;
+    }
+    
+    #LetterButtonsHeader {
+        font-size: 5vh;
+        color: black;
+        font-weight: bold;
+    }
+    
+    .LetterButtons {
+        background-color: #ffeee0;
+        text-align: center;
+        font-size: larger;
+        position: relative;
+        border: solid .75vh #4a4a4a;
+        border-radius: 25px;
+        width: 92.5%;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        margin-top: 0;
+        left: .5%;
+    }
+    
+    .alphabetbtn {
+        text-shadow: .15vh .15vh .45vh #343053;
+        border: outset .6vh black;
+        text-align: center;
+        position: relative;
+        font-size: 5vh;
+        margin: 2% 0 2% 1.5%;
+        background-color: #e1efff;
+        color: black;
+        touch-action: manipulation;
+    }
+    
+    .btn1, .btn2, .btn3, .btn4, .btn5 {
+        font-family: 'Courier New';
+        position: relative;
+        text-align: center;
+        font-size: 5vh;
+        touch-action: manipulation;
+    }
+    
+    .btn4, .btn5 {
+        border: solid .4vh #3f3f3f;
+        background-color: aquamarine;
+        margin: 2% 0;
+        display: inline;
+    }
+    
+    .btn1, .btn2 {
+        border: solid .3525vh black;
+        left: 20%;
+        margin: 0.5% 0 0.5% 1.5%;
+        display: inline-flex;
+    }
+    
+    .btn1 { background-color: aquamarine; }
+    .btn2 { background-color: #adff2f; }
+    .btn3 { background-color: rgb(255, 221, 86); }
+    
+    #Phrase {
+        margin-bottom: 1vh;
+        font-style: italic;
+        text-align: center;
+        color: #171717;
+        font-size: 4.5vh;
+        font-weight: bold;
+    }
+    
+    #CorrectLetters {
+        text-align: center;
+        font: bold 7vh 'Courier New', monospace;
+        letter-spacing: 4.5vh;
+    }
+    
+    .FinalGuessInputCont {
+        margin-top: 0;
+        font-size: 4vh;
+        text-align: center;
+    }
+    
+    #FinalGuessInputFieldIndicator {
+        position: relative;
+        margin-left: 37vw;
+        border: solid .4vh;
+        border-radius: 3vh;
+        font-size: 3.25vh;
+        width: 25%;
+        height: 2vw;
+        background-color: white;
+    }
+    
+    .pointturncalc {
+        text-shadow: .15vh .1vh .35vh #393939;
+        position: fixed;
+        font-size: 3vh;
+        display: inline-block;
+        left: 2.5%;
+        top: 1.5%;
+        width: 17.5%;
+    }
+    
+    #Timer {
+        color: orangered;
+        top: 10%;
+    }
+    
+    #tips {
+        text-align: center;
+        transition: ease-in-out 1s;
+        font: lighter italic large;
+        position: fixed;
+        top: -1.5%;
+        right: 5%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        width: 90%;
+        height: 70%;
+        color: rgb(161, 249, 255);
+        border: solid 2.75px white;
+        padding: 5px;
+        background-color: rgba(0, 0, 0, 0.89);
+        border-radius: 12px;
+    }
+    
+    #p6, #p5, #p4 {
+        margin-top: .5vh;
+    }
+}
+
+
+
+/*@media screen and (orientation: landscape) 
 {
     button:active 
     {
@@ -235,4 +399,4 @@
         {
             margin-top: .5vh;
         } 
-}
+}*/

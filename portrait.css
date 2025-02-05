@@ -1,6 +1,187 @@
 
 
-    button
+    button {
+    border-style: solid;
+    cursor: pointer;
+    transition: ease-out 0.4s;
+    font-family: 'Courier New', monospace;
+    border-radius: 1000px;
+    z-index: 0;
+    touch-action: manipulation;
+}
+
+button:active {
+    z-index: 2;
+    transform: scale(2.5);
+    color: rgb(255, 247, 0);
+    transition: ease-in 0.0001s;
+    border-style: inset;
+    border-width: 0.625vw;
+}
+
+button:disabled {
+    border-style: inset;
+    border-width: 0.5vw;
+    transform: scale(0.85);
+    border-color: #000;
+    background-color: rgba(0, 0, 0, 0.26);
+    color: rgba(0, 0, 0, 0.52);
+}
+
+.btn1, .btn2, .btn3, .btn4, .btn5 {
+    text-shadow: 0.2vw 0.2vw 0.65vw #4a4a4a;
+    font-family: 'Courier New', monospace;
+    position: relative;
+    display: inline-block;
+    border-width: 0.4vw;
+    font-size: 5vw;
+    color: black;
+    touch-action: manipulation;
+}
+
+.btn1, .btn4 {
+    background-color: aquamarine;
+}
+
+.btn2 {
+    background-color: #adff2f;
+}
+
+.btn3 {
+    background-color: rgb(255, 221, 86);
+}
+
+.btn4:active, .btn5:active, .btn1:active, .btn2:active, .btn3:active {
+    transform: scale(1.25);
+}
+
+.page2btn {
+    color: black;
+    border-radius: 15px;
+    border: solid 0.75vw #000;
+}
+
+#DataSourceString {
+    opacity: 0;
+}
+
+header, body, #LetterButtonsHeader, #CorrectLetters, .FinalGuessInputCont, #Phrase {
+    text-shadow: 0.2vw 0.2vw 0.375vw #393939;
+    font-family: 'Courier New', monospace;
+    color: black;
+}
+
+header {
+    font-size: 5vw;
+    font-weight: bold;
+    text-align: center;
+}
+
+body {
+    font-weight: lighter;
+    background-color: peachpuff;
+    width: 100%;
+}
+
+#LetterButtonsHeader {
+    font-size: 6vw;
+    font-weight: bold;
+}
+
+.LetterButtons {
+    background-color: #ffeee0;
+    text-align: center;
+    font-size: larger;
+    position: relative;
+    border: solid 0.75vw #4a4a4a;
+    border-radius: 25px;
+    width: 92.5%;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    left: 0.5%;
+}
+
+.alphabetbtn {
+    text-shadow: 0.15vw 0.1vw 0.4vw #343053;
+    border: outset 0.6vw #000;
+    text-align: center;
+    font-size: 5vw;
+    margin: 2% 2.5% 2.5% 2.5%;
+    background-color: #e1efff;
+    color: black;
+    touch-action: manipulation;
+}
+
+#CorrectLetters {
+    text-align: center;
+    font-weight: bold;
+    font-size: 10vw;
+    letter-spacing: 1.25vw;
+}
+
+#Phrase {
+    font-style: italic;
+    text-align: center;
+    font-size: 6.25vw;
+    font-weight: bold;
+    color: #171717;
+}
+
+#FinalGuessInputFieldIndicator {
+    text-shadow: 0.2vw 0.2vw 0.375vw #393939;
+    margin-left: 18vw;
+    text-align: center;
+    font-size: 4.5vw;
+    border: solid 0.3vw #000;
+    border-radius: 1.5vw;
+    width: 60%;
+    height: 2.5vh;
+    background-color: white;
+}
+
+.pointturncalc {
+    text-shadow: 0.15vw 0.1vw 0.5vw #343053;
+    font-size: 3.5vw;
+    position: fixed;
+    display: inline-block;
+    left: 3%;
+    bottom: 12%;
+    width: 17.5%;
+    height: 20%;
+}
+
+#Timer {
+    color: orangered;
+    top: 10%;
+}
+
+#tips {
+    text-align: center;
+    transition: ease-in-out 1s;
+    text-shadow: 0.2vw 0.2vw 0.65vw #4a4a4a;
+    font-size: 2.75vw;
+    font-weight: lighter;
+    font-style: italic;
+    position: fixed;
+    top: 0%;
+    right: 5%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 90%;
+    height: 50%;
+    color: rgb(161, 249, 255);
+    border: 2.75px solid #fff;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.829);
+    border-radius: 12px;
+}
+
+#p6, #p5, #p4 {
+    margin-top: 1vh;
+}
+
+    
+    /*button
     {
     border-style: solid;
     cursor: pointer; 
@@ -280,6 +461,7 @@
             margin-top: 1vh;
         } 
     }
+    */
 
 
 

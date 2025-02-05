@@ -3,6 +3,8 @@
     <title>Tweaked studios</title>
 <head>
     <script type="text/javascript" src="scripts/NonCoreCode.js"></script>
+    <script type="text/javascript" src="scripts/HomePageScripts.js"></script>
+
     <link rel="stylesheet" href="portrait.css">
     <link rel="stylesheet" href="landscape.css">
     <link rel="stylesheet" href="Page2.css">
@@ -25,7 +27,7 @@
 
     <div class="HomePagetextContainer">
 
-        <div class="HomePagetext">
+        <div class="HomePagetext" onclick="enlargeImage(this)">
             <img class = "PageImg" src="pics/LowPolyCastleSetImg.png"> 
             <br>
                 <div class="HPpictxt">
@@ -33,7 +35,7 @@
                 </div>
         </div>
 
-        <div class="HomePagetext">
+        <div class="HomePagetext" onclick="enlargeImage(this)">
             <img class = "PageImg" src="pics/LowPOlySnowAutumnWideShot.png"> 
             <br>
                 <div class="HPpictxt">
@@ -41,15 +43,14 @@
                 </div>    
         </div>
 
-        <div class="HomePagetext">
+        <div class="HomePagetext" onclick="enlargeImage(this)">
             <img class = "PageImg" src="pics/Assets_WIP_Pic1.png"> 
             <br>
                 <div class="HPpictxt">
                     castle assets with modular pieces
                 </div>
         </div>
-
-        <div class="HomePagetext">
+        <div class="HomePagetext" onclick="enlargeImage(this)">
             <img class = "PageImg"  src = "pics/TD_WIPPic.png">
             <br>
                 <div class="HPpictxt">
@@ -57,7 +58,7 @@
                 </div>  
         </div>
 
-        <div class="HomePagetext">
+        <div class="HomePagetext" onclick="enlargeImage(this)">
             <img class = "PageImg"  src = "pics/TD_Wip_New.png">
             <br>
                 <div class="HPpictxt">
@@ -66,10 +67,13 @@
         </div>
         <div>
             <a href="ParticleLife.html" class="DifficultybtnHyper">    
-                <button class="HomePageButtons">Particle life Sim</button>   
+                <button class="ParticleSimButton">Particle life Sim</button>   
             </a> 
         </div> 
-    
+
+        <div id="imageOverlay" class="overlay" onclick="closeImage()">
+            <img id="overlayImg" class="overlay-content">
+        </div>
     </div>
     
     <br>

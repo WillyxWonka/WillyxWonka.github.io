@@ -21,6 +21,7 @@ class Particle {
         this.cols.set('blue', 'rgba(0, 0, 255, 0.5)');
         this.cols.set('yellow', 'rgba(255, 255, 0, 0.5)');
         this.cols.set('green', 'rgba(0, 255, 0, 0.5)');
+        this.cols.set('purple', 'rgba(150, 0, 150, 0.5)');
 
         this.position = position;
         this.colorName = color; // For force matrix lookup
@@ -68,13 +69,13 @@ class Particle {
         const normDy = dy / magnitude;
     
         // Check for overlap and apply repelling force if particles are too close
-        const minDistance = this.radius *1.23 + neighbor.radius*1.23;
-        const attractionThreshold = searchRadius * .85; // Attraction force taper off after this distance Math.abs(forceMultiplier)
+        const minDistance = this.radius *1.5 + neighbor.radius*1.5;
+        const attractionThreshold = searchRadius * .55; // Attraction force taper off after this distance Math.abs(forceMultiplier)
 
         if (distance < minDistance) {
             const overlap = minDistance - distance;
     
-            const repelFactor = -forceMultiplier * 1.5; // Adjust for the strength of repelling force
+            const repelFactor = -forceMultiplier * 10.5; // Adjust for the strength of repelling force
             this.velocity.dx += normDx * overlap * repelFactor;
             this.velocity.dy += normDy * overlap * repelFactor;
         } 
@@ -123,8 +124,8 @@ class Particle {
         }
     
         // Update particle position
-        this.position.x += this.velocity.dx / 1.25;
-        this.position.y += this.velocity.dy / 1.25;
+        this.position.x += this.velocity.dx / 1.3;
+        this.position.y += this.velocity.dy / 1.3;
     }
     
 }
@@ -132,29 +133,33 @@ class Particle {
 
 
 
-const forceColors = ['red', 'yellow', 'blue', 'green'];
+const forceColors = ['red', 'yellow', 'blue', 'green', 'purple'];
 const forceMatrix = [
-    [-.051, -1.20, 1.5, 10.51],   // Red interactions
-    [1.25, -.051, -.015, 10.075],   // Yellow interactions
-    [-1, -1, 2.5, 10.025],       // Blue interactions
-    [0.0, 0.0, 0.0, 0.00]        // Green interactions
+    [.035, -1.20, 1.5, 10.51,-.51],   // Red interactions
+    [1.25, -.051, -.015, 10.075,.51],   // Yellow interactions
+    [-1, -1, 2.5, 10.025,.51],       // Blue interactions
+    [0.0, 0.0, 0.0, 0.0,0],       // Green interactions
+    [.05, .05, -.5, -.00075, -.0025]    // purple interactions
     //Add search radius to specific colors for more interesting/dynimic behavior between particles
 ];
 
 // Initialize the particle system
 const particles = [];
 const numParticles = 1000;
+//const colArray = ['red', 'yellow', 'green','blue', 'purple'];
+//const amountArray = [.5,.15,.05,.15,.15];
 const colArray = ['red', 'yellow', 'green','blue'];
-//const amountArray = [.4,.4,.05,.15];
+const amountArray = [.7,.1,.05,.1,];
+/*
 function generateRandomAmounts(size) {
     const amounts = Array(size).fill(0).map(() => Math.random()); // Create an array of random numbers
     const sum = amounts.reduce((acc, val) => acc + val, 0); // Calculate the sum of all random numbers
     return amounts.map(val => val / sum); // Normalize so that the sum equals 1
-}
+}*/
 
 // Example usage
 const numColors = 4; // Number of desired colors
-const amountArray = generateRandomAmounts(numColors);
+//const amountArray = generateRandomAmounts(numColors);
 
 for (let i = 0; i < numParticles; i++) {
 
@@ -182,7 +187,7 @@ for (let i = 0; i < numParticles; i++) {
     const canvasHeight = window.innerHeight;
     
     const baseRadius = Math.min(canvasWidth, canvasHeight) * 0.0075; // Adjust scaling factor
-    const radius = Math.random() * baseRadius * 0.25 + baseRadius * 0.25;
+    const radius =  baseRadius * 0.25 + baseRadius * .1;//Math.random() * baseRadius * 0.25 + baseRadius * 0.25;
 
     particles.push(new Particle(position, color, velocity, radius, forceMatrix, forceColors));
 }
