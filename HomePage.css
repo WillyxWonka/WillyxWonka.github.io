@@ -50,28 +50,21 @@
 
 .HPbtncont
 {
+
+    display: flex;
+    flex-wrap: wrap; /* allows wrapping only when necessary */
+    justify-content: left; /* optional: centers content */
+    gap: 1%; /* controls spacing between buttons */
     margin-top: 2.5%;
+    
 }
 
 .HPDifficultybtnHyper
 {
+    display: inline-block;
     text-decoration: none;
 }
-/*
-.HomePageButtons, .ParticleSimButton
-{
-    width: 50%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    transition: all 0.25s ease-in-out; 
-}
 
-.HomePageButtons:hover, .ParticleSimButton:hover {
-    background-color: rgb(236, 255, 204);
-    color: rgb(1, 62, 29);
-    border-color: rgb(177, 255, 108); 
-    transform: scale(1.1);
-}
-*/
 
 .HomePagetext:hover ,  .btnIMG:hover
 {
@@ -125,17 +118,22 @@
         text-shadow: 0.25vw 0.25vw 0.2vw #393939;
         font-size: 9vw;
     }
-    .PageImg {
-        max-width: 35vw;
-    }
-    .PageVid {
-        max-width: 80vw;
-    }
+
     .HomePagetextContainer {
-        width: 100%;
+        max-width: 100%;
+        
     }
     .HomePagetext {
-        max-width: 35vw;
+        width: 45vw;
+    }
+    .PageImg {
+        margin-left: 2.5vw;
+        margin-top: 1.5vw;
+        margin-bottom: -1vw;
+        max-width: 40vw;
+    }
+    .PageVid {
+        max-width: 70vw;
     }
 
     .HPpictxt {
@@ -146,7 +144,7 @@
         opacity: 50%;
     }
     .HomePagetextend {
-        font-size: 5vw;
+        font-size: 3.5vw;
     }
     .HomePageversionctrl {
         font-size: 4.25vw;
@@ -160,20 +158,14 @@
         font-weight: 400;
         background-color: rgb(177, 255, 108); 
     }
-    .ParticleSimButton {
-        margin-top: 25%;
-        width: 25vw;
-        height: 25vw;
-        border: 0.65vw solid black;
-        font-size: 5vw;
-        font-weight: 400;
-        background-color: rgb(177, 255, 108); 
-    }
 
     .btnIMG
     {
-        width: 50vw;
-        height: 25vw;
+        width: 100%;
+        max-width: 60vw;
+
+        margin-bottom: -15%;
+
     }
 }
 
@@ -187,11 +179,21 @@
         text-shadow: 0.25vh 0.25vh 0.2vh #393939;
         font-size: 8vh;
     }
-    .PageImg {
+    .HomePagetextContainer {
+        max-width: 100%;
+        
+    }
+    .HomePagetext {
         width: 45vh;
     }
+    .PageImg {
+        margin-left: 2.5vh;
+        margin-top: 1.5vh;
+        margin-bottom: -1vh;
+        max-width: 40vh;
+    }
     .PageVid {
-        max-width: 55vh;
+        max-width: 60vh;
     }
     .HPpictxt {
         width: 20vw;
@@ -201,35 +203,14 @@
         opacity: 50%;
     }
     .HomePagetextend {
-        font-size: 5vh;
-    }
-    .HomePageversionctrl {
-        font-size: 4.25vh;
-        text-shadow: 0.2vh 0.2vh 0.5vh #393939;
-    }
-    .HomePageButtons {
-        margin-top: -5%;
-        width: 50vh;
-        height: 25vh;
-        border: 0.5vh solid black;
         font-size: 3vh;
-        font-weight: 400;
-        background-color: rgb(177, 255, 108); 
-    }
-    .ParticleSimButton {
-        margin-top: 25%;
-        width: 25vh;
-        height: 25vh;
-        border: 0.5vh solid black;
-        font-size: 3vh;
-        font-weight: 400;
-        background-color: rgb(177, 255, 108); 
     }
 
-        .btnIMG
+    .btnIMG
     {
-        width: 50vh;
-        height: 25vh;
+        width: 100%;
+        max-width: 50vh;
+
     }
 }
 
