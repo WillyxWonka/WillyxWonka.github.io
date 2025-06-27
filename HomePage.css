@@ -126,18 +126,22 @@
         font-size: 9vw;
     }
     .PageImg {
-        max-width: 50vw;
+        max-width: 35vw;
     }
     .PageVid {
         max-width: 80vw;
     }
     .HomePagetextContainer {
-        width: 60vw;
+        width: 120vw;
     }
+    .HomePagetext {
+        max-width: 35vw;
+    }
+
     .HPpictxt {
-        width: 50vw;
+        width: 35vw;
         text-align: center;
-        font-size: 3.5vw;
+        font-size: 2vw;
         font-style: italic;
         opacity: 50%;
     }
@@ -164,6 +168,12 @@
         font-size: 5vw;
         font-weight: 400;
         background-color: rgb(177, 255, 108); 
+    }
+
+    .btnIMG
+    {
+        width: 50vw;
+        height: 25vw;
     }
 }
 
