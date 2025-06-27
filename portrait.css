@@ -1,5 +1,6 @@
 
-
+@media screen and (orientation: portrait) 
+{
     button {
     border-style: solid;
     cursor: pointer;
@@ -176,10 +177,12 @@ body {
     border-radius: 12px;
 }
 
-#p6, #p5, #p4 {
+#p6, #p5, #p4, #p3 
+{
     margin-top: 1vh;
+    font-size: 2vh;
 }
-
+}
     
     /*button
     {
@@ -281,7 +284,7 @@ body {
             
             flex-wrap: wrap;
             align-items: flex-end;
-            /* gap */ 
+             gap
             left: .5%;
         }
         .alphabetbtn{
@@ -406,7 +409,7 @@ body {
 
             flex-wrap: wrap;
             align-items: flex-end;
-            /* gap */ 
+            gap 
             background-color: rgb(255, 255, 255);
         } 
         .pointturncalc{

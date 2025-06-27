@@ -1,4 +1,15 @@
-@media screen and (orientation: landscape) {
+@media screen and (orientation: landscape)
+ {
+
+    button {
+    border-style: solid;
+    cursor: pointer;
+    transition: ease-out 0.4s;
+    font-family: 'Courier New', monospace;
+    border-radius: 1000px;
+    z-index: 0;
+    touch-action: manipulation;
+    }
     button:active {
         z-index: 2;
         margin-bottom: 0;
@@ -33,12 +44,14 @@
     }
     
     #LetterButtonsHeader {
+        font-family: 'Courier New', monospace;
         font-size: 5vh;
         color: black;
         font-weight: bold;
     }
     
     .LetterButtons {
+        font-family: 'Courier New', monospace;
         background-color: #ffeee0;
         text-align: center;
         font-size: larger;
@@ -90,8 +103,10 @@
     .btn2 { background-color: #adff2f; }
     .btn3 { background-color: rgb(255, 221, 86); }
     
-    #Phrase {
+    #Phrase 
+    {
         margin-bottom: 1vh;
+        font-family: 'Courier New', monospace;
         font-style: italic;
         text-align: center;
         color: #171717;
@@ -123,6 +138,7 @@
     }
     
     .pointturncalc {
+                font-family: 'Courier New', monospace;
         text-shadow: .15vh .1vh .35vh #393939;
         position: fixed;
         font-size: 3vh;
@@ -141,6 +157,7 @@
         text-align: center;
         transition: ease-in-out 1s;
         font: lighter italic large;
+        font-size: 2.75vh;
         position: fixed;
         top: -1.5%;
         right: 5%;
@@ -155,9 +172,15 @@
         border-radius: 12px;
     }
     
-    #p6, #p5, #p4 {
+    #p6, #p5, #p4, #p3 
+    {
+
         margin-top: .5vh;
     }
+    
+    #DataSourceString {
+    opacity: 0;
+}
 }
 
 
@@ -233,7 +256,7 @@
         
         flex-wrap: wrap;
         align-items: flex-end;
-        /* gap */ 
+        
         margin-top: 0vh;
         left: .5%;
     }
@@ -349,7 +372,7 @@
         height: 2vw;
         border-width: .4vh;
 
-        /* gap */ 
+        
         background-color: rgb(255, 255, 255);
     }
     .pointturncalc{

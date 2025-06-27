@@ -47,22 +47,37 @@
     right: 4%;
     opacity: 100%;
 }
+
+.HPbtncont
+{
+    margin-top: 2.5%;
+}
+
+.HPDifficultybtnHyper
+{
+    text-decoration: none;
+}
+/*
 .HomePageButtons, .ParticleSimButton
 {
     width: 50%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     transition: all 0.25s ease-in-out; 
 }
+
 .HomePageButtons:hover, .ParticleSimButton:hover {
     background-color: rgb(236, 255, 204);
     color: rgb(1, 62, 29);
     border-color: rgb(177, 255, 108); 
     transform: scale(1.1);
 }
-.HomePagetext:hover
+*/
+
+.HomePagetext:hover ,  .btnIMG:hover
 {
     transform: scale(1.1);
 }
+
 
 /* Default styling for HomePagetext hover effect */
 .HomePagetext:hover {
