@@ -117,6 +117,7 @@
     .HPTitles {
         text-shadow: 0.25vw 0.25vw 0.2vw #393939;
         font-size: 9vw;
+          font-weight: normal;
     }
 
     .HomePagetextContainer {
@@ -129,11 +130,17 @@
     .PageImg {
         margin-left: 2.5vw;
         margin-top: 1.5vw;
-        margin-bottom: -1vw;
+        margin-bottom: 1vw;
         max-width: 40vw;
+
+        height: auto; 
+        display: block;
     }
     .PageVid {
-        max-width: 70vw;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 1rem auto; /* ! */
     }
 
     .HPpictxt {
@@ -178,6 +185,7 @@
     .HPTitles {
         text-shadow: 0.25vh 0.25vh 0.2vh #393939;
         font-size: 8vh;
+        font-weight: normal;
     }
     .HomePagetextContainer {
         max-width: 100%;
@@ -189,8 +197,11 @@
     .PageImg {
         margin-left: 2.5vh;
         margin-top: 1.5vh;
-        margin-bottom: -1vh;
+        margin-bottom: 1vh;
         max-width: 40vh;
+
+        height: auto; /* Maintains aspect ratio */
+        display: block; /* Ensures margins work properly */
     }
     .PageVid {
         max-width: 60vh;
