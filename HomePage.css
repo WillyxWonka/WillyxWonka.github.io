@@ -15,7 +15,8 @@
 }
 
 .HPTitles {
-    text-decoration: underline double;
+    text-decoration: underline;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .PageImg, .PageVid {
@@ -46,17 +47,7 @@
     top: 91%;
     right: 4%;
     opacity: 100%;
-}
-
-.HPbtncont
-{
-
-    display: flex;
-    flex-wrap: wrap; /* allows wrapping only when necessary */
-    justify-content: left; /* optional: centers content */
-    gap: 1%; /* controls spacing between buttons */
-    margin-top: 2.5%;
-    
+    font-size: 50%;
 }
 
 .HPDifficultybtnHyper
@@ -65,10 +56,14 @@
     text-decoration: none;
 }
 
-
-.HomePagetext:hover ,  .btnIMG:hover
+.btnIMG
 {
-    transform: scale(1.1);
+    transition: all 0.25s ease-in-out; 
+}
+.btnIMG:hover
+{
+    transform: scale(1.25);
+    cursor: pointer;
 }
 
 

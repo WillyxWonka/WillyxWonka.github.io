@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tweaked Studios Home Page</title>
 
-    <link rel="icon" type="image/png" href=" favcon/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="favcon/favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="favcon/favicon/favicon.svg" />
     <link rel="shortcut icon" href="favcon/favicon/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="favcon/favicon/apple-touch-icon.png" />
@@ -17,101 +17,103 @@
     <link rel="stylesheet" href="Page2.css">
 
     <script type="text/javascript" src="scripts/HomePageScripts.js"></script>
+    <meta name="description" content="Showcase of 3D game assets and tools by Tweaked Studios. Includes Unity-ready asset packs and Game Dev Demos demos.">
 </head>
 
 <body class="HomePageBody">
 
-    <header class = "HPHeader"> Tweaked Studios </header>
+    <header>
+        <h1 class = "HPHeader"> Tweaked Studios </h1>
+    </header>
     <br>
-    <div class="HomePagetextContainer">
-        <figure class="HomePagetext" onclick="enlargeImage(this)">
-            <img class="PageImg" src="pics/LowPolyCastleSetImg.png" alt="Castle image Work in Progress" width="640" height="360">
-            <figcaption class="HPpictxt">castle themed asset pack in blender.</figcaption>
-        </figure>
+    <main class="HomePageMainContent" aria-label="Main content with images and videos" role="main">
+        <section aria-labelledby="asset-gallery-Section">
+            <h2 id="asset-gallery-Section" class="HPTitles">Asset Gallery</h2>  
+                <div class="HomePagetextContainer" >
+                    <figure class="HomePagetext" onclick="enlargeImage(this)">
+                        <img class="PageImg" src="pics/LowPolyCastleSetImg.png" alt="Castle image Work in Progress" width="640" height="360">
+                        <figcaption class="HPpictxt">castle themed asset pack in blender.</figcaption>
+                    </figure>
 
-        <figure class="HomePagetext" onclick="enlargeImage(this)">
-            <img class="PageImg" src="pics/SnowyAutumnProps Full.png" alt="snowy autumn props" width="640" height="360" loading="lazy">
-            <figcaption class="HPpictxt">snow autumn theme asset pack "Currently available unity asset store."</figcaption>
-        </figure>
+                    <figure class="HomePagetext" onclick="enlargeImage(this)">
+                        <img class="PageImg" src="pics/SnowyAutumnProps Full.png" alt="snowy autumn props" width="640" height="360" loading="lazy">
+                        <figcaption class="HPpictxt">snow autumn theme asset pack "Currently available unity asset store."</figcaption>
+                    </figure>
 
-        <figure class="HomePagetext" onclick="enlargeImage(this)">
-            <img class="PageImg" src="pics/Assets_WIP_Pic1.png" alt="Castle image Work in Progress" width="640" height="360" loading="lazy">
-            <figcaption class="HPpictxt">castle assets with modular pieces</figcaption>
-        </figure>
+                    <figure class="HomePagetext" onclick="enlargeImage(this)">
+                        <img class="PageImg" src="pics/Assets_WIP_Pic1.png" alt="Castle image Work in Progress" width="640" height="360" loading="lazy">
+                        <figcaption class="HPpictxt">castle assets with modular pieces</figcaption>
+                    </figure>
 
-        <figure class="HomePagetext" onclick="enlargeImage(this)">
-            <img class="PageImg" src="pics/TD_WIPPic.png" alt="Alpha image of game in progress" width="640" height="360" loading="lazy">
-            <figcaption class="HPpictxt">alpha image of TD style game in development using assets.</figcaption>
-        </figure>
+                    <figure class="HomePagetext" onclick="enlargeImage(this)">
+                        <img class="PageImg" src="pics/TD_WIPPic.png" alt="Alpha image of game in progress" width="640" height="360" loading="lazy">
+                        <figcaption class="HPpictxt">alpha image of TD style game in development using assets.</figcaption>
+                    </figure>
 
-        <figure class="HomePagetext" onclick="enlargeImage(this)">
-            <img class="PageImg" src="pics/TD_Wip_New.png" alt="Castle image Work in Progress" width="640" height="360" loading="lazy">
-            <figcaption class="HPpictxt">alpha image of TD style game in development using updated assets.</figcaption>
-        </figure>
+                    <figure class="HomePagetext" onclick="enlargeImage(this)">
+                        <img class="PageImg" src="pics/TD_Wip_New.png" alt="Castle image Work in Progress" width="640" height="360" loading="lazy">
+                        <figcaption class="HPpictxt">alpha image of TD style game in development using updated assets.</figcaption>
+                    </figure>
 
-        <figure class="HomePagetext" onclick="enlargeImage(this)">
-            <img class="PageImg" src="pics/NewTreesStaged.PNG" alt="Props image Work in Progress" width="640" height="360" loading="lazy">
-            <figcaption class="HPpictxt">Mid-Poly Tree Assets in development.</figcaption>
-        </figure>
+                    <figure class="HomePagetext" onclick="enlargeImage(this)">
+                        <img class="PageImg" src="pics/NewTreesStaged.PNG" alt="Props image Work in Progress" width="640" height="360" loading="lazy">
+                        <figcaption class="HPpictxt">Mid-Poly Tree Assets in development.</figcaption>
+                    </figure>
 
-        <figure class="HomePagetext" onclick="enlargeImage(this)">
-            <img class="PageImg" src="pics/Props_W-alt.png" alt="Props image Work in Progress" width="640" height="360" loading="lazy">
-            <figcaption class="HPpictxt">
-                Example scene with modular Walls/roofs pack.<br>
-                material swap to flat color.
-            </figcaption>
-        </figure>
+                    <figure class="HomePagetext" onclick="enlargeImage(this)">
+                        <img class="PageImg" src="pics/Props_W-alt.png" alt="Props image Work in Progress" width="640" height="360" loading="lazy">
+                        <figcaption class="HPpictxt">
+                            Example scene with modular Walls/roofs pack.<br>
+                            material swap to flat color.
+                        </figcaption>
+                    </figure>
 
-        <figure class="HomePagetext" onclick="enlargeImage(this)">
-            <img class = "PageImg"  src = "pics/ModualarwallsProps.png" alt="Props image Work in Progress" width="640" height="360" loading="lazy">
-            <figcaption class="HPpictxt">Walls From modular low poly building set</figcaption>
-        </figure>
+                    <figure class="HomePagetext" onclick="enlargeImage(this)">
+                        <img class = "PageImg"  src = "pics/ModualarwallsProps.png" alt="Props image Work in Progress" width="640" height="360" loading="lazy">
+                        <figcaption class="HPpictxt">Walls From modular low poly building set</figcaption>
+                    </figure>
 
-        <div id="imageOverlay" class="overlay" onclick="closeImage()">
-            <img id="overlayImg" class="overlay-content">
-        </div>
-    </div>
-    
-    <br>
+                    <div id="imageOverlay" class="overlay" onclick="closeImage()">
+                        <img id="overlayImg" class="overlay-content">
+                    </div>
+                </div>
+        </section>
+        
+        <br>
+        <h2 id="Video-Demos" class="HPTitles">Video Demos</h2>
+        <section aria-labelledby="Video-Demos">
+            <div class="HomePagetextvid">
+                <video class="PageVid" aria-label="video of A-star pathfinding algorithm" controls autoplay muted loop playsinline>
+                    <source src="pics/AStar_example.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
 
-    <div class="HomePagetextvid">
-    <video class="PageVid" controls autoplay muted loop playsinline>
-        <source src="pics/AStar_example.mp4" type="video/mp4">
-        <!-- Optional: Only include if you actually have a .webm file -->
-        <!-- <source src="pics/AStar_example.webm" type="video/webm"> -->
-        Your browser does not support the video tag.
-    </video>
+                <video class="PageVid"  aria-label="video of flowfield pathfinding algorithm" controls autoplay muted loop playsinline>
+                    <source src="pics/FlowField_Example.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>      
+    </main>
 
-    <video class="PageVid" controls autoplay muted loop playsinline>
-        <source src="pics/FlowField_Example.mp4" type="video/mp4">
-        <!-- Optional: Only include if you actually have a .webm file -->
-        <!-- <source src="pics/FlowField_Example.webm" type="video/webm"> -->
-        Your browser does not support the video tag.
-    </video>
-    </div>
-    
-    <h3 class = "HPTitles" >Finished projects</h3>
-                
-    <div class="HPbtncont">
-        <a href="index11.html" class="HPDifficultybtnHyper">    
-            <img src = "pics/WordDecoderBanner.png" class="btnIMG">
-        </a> 
+    <nav aria-labelledby="Finished-Projects">
+        <h2 id="Finished-Projects" class="HPTitles">Finished projects</h2>     
+            <a href="index11.html" aria-label="Button to Play word decoder the game" class="HPDifficultybtnHyper">    
+                <img src = "pics/WordDecoderBanner.png" class="btnIMG" alt="Word Decoder Button">
+            </a> 
 
-        <a href="ParticleLife.html" class="HPDifficultybtnHyper" >    
-            <img src = "pics/PSBanner.png" class="btnIMG">
-        </a> 
+            <a href="ParticleLife.html" aria-label="Button to Particle Life Simulator Visualization"class="HPDifficultybtnHyper" >    
+                <img src = "pics/PSBanner.png" class="btnIMG" alt="Particle Life Simulator Button">
+            </a> 
 
-        <a 
-            href="https://assetstore.unity.com/publishers/67561" class="HPDifficultybtnHyper">   
-            <img src = "pics/GameAssetsBanner.png" class="btnIMG">
-        </a>       
-    </div>   
+            <a 
+                href="https://assetstore.unity.com/publishers/67561" aria-label="Button to Tweaked Studios Asset Store Page" class="HPDifficultybtnHyper">   
+                <img src = "pics/GameAssetsBanner.png" class="btnIMG" alt="Unity Asset Store Button">
+            </a>       
+    </nav> 
 
-</div>
-
+    <footer class = "HomePageversionctrl">
+        Tweaked.Studios.Contact@gmail.com
+    </footer> 
 </body>
-
-<div class = "HomePageversionctrl">
-    Tweaked.Studios.Contact@gmail.com
-</div> 
 </html>
