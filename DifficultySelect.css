@@ -1,0 +1,308 @@
+@keyframes breathe{
+    0% {
+        transform: scale(1);
+        box-shadow: 0px 2px 6px rgb(58, 94, 58);
+    }
+    50% {
+        transform: scale(1.05);
+         box-shadow: 0px 2px 4px rgb(58, 175, 58);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0px 2px 6px rgb(58, 94, 58);
+    }
+}
+@keyframes colorS {
+    0% {
+        color: #b363ff; 
+        text-shadow:  -1px 1px 3px rgb(130, 255, 130);
+    }
+    25% {
+        color: #7fffd4;
+        text-shadow: -1px 1px 3px rgb(255, 66, 66);
+    }
+    80% {
+        color: #db7093; 
+        text-shadow:  -1px 1px 3px rgb(221, 255, 0);
+    }
+    100% {
+        color: #b363ff;
+        text-shadow:  -1px 1px 3px rgb(130, 255, 130);
+    }
+}
+@keyframes breathe2{
+    0% {
+        box-shadow: 0px .5vw 1vw #7fffd4;
+    }
+    25% {
+         box-shadow: 0px .5vw 1vw #db7093; 
+    }
+    50% {
+        box-shadow: 0px .5vw 1vw  #b363ff;
+    }
+    100% {
+        box-shadow: 0px .5vw 1vw #7fffd4;
+    }
+}
+
+*
+{ 
+    font-family: 'Courier New', Courier, monospace, ui-monospace;
+}
+header
+{
+    animation: colorS 5s linear infinite;
+}
+main
+{
+    margin: 0 auto;
+    min-width: 40%; /* or a % */
+    width: fit-content;
+    text-shadow: -.025vw .025vw .1vw #393939;
+}
+button
+{
+    border-width: clamp(0.05em, 0.09em, 0.25em);
+    margin-top: 2%;
+    padding: 1%;
+    color: black;
+
+    word-wrap:break-word;
+    min-width: 50%;
+
+    border-color: black;
+    border-style: solid;
+    border-width: .0925em;
+    border-radius: 1em;
+
+}
+.btncont
+{
+
+    display: flex;    
+    flex-direction: column;
+    align-items: center;
+    
+    border-color: black;
+    border-style: solid;
+    border-width: .0785em;
+    border-radius: 1em;
+
+    background-color: antiquewhite;
+    box-shadow: -.1em .1em .125em rgb(13, 8, 11);
+}
+#StandardModeBtn
+{
+    background-color:aquamarine;
+}
+#EasyModeBtn
+{
+    background-color:lime;
+}
+#MediumModeBtn
+{
+    background-color:rgb(255, 247, 0);
+}
+#DifficultModeBtn
+{
+    background-color:rgb(255, 4, 4);
+}
+.tips-btn
+{
+    background-color: rgb(255, 221, 86);
+    transform: scale(0.7);
+}
+
+#tips-container::-webkit-scrollbar 
+{
+    width:  clamp(.25rem, 1vw, 1rem);
+}
+
+#tips-container::-webkit-scrollbar-track 
+{
+    background: rgba(0, 0, 0, 0.1);
+    width: clamp(.25rem, .75vw, .75rem);
+}
+#tips-container::-webkit-scrollbar-thumb
+{
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: clamp(.25rem, .75vw, .75rem);;
+    border: .25rem solid transparent;
+    background-clip: content-box;
+}
+
+#tips-container
+{
+    transition: ease-in-out 1s;
+    color: rgb(161, 249, 255);
+}
+
+#tips
+{
+    list-style-type: circle ;
+}
+#tips > li
+{
+    margin-top: 7%;
+    opacity: 80%;
+    font-style: italic;
+}
+
+.Difficultybtn:hover:not(:active)
+{
+    animation: breathe 1.15s ease-in-out infinite;
+    border-color: gold;
+    transition: ease-in-out .25s;
+    transform: scale(1.25);
+}
+.tips-btn:hover:not(:active)
+{
+    box-shadow: 0 0 15px goldenrod;
+    border-color: gold;
+    transition: ease-in-out .1s;
+    transform: scale(.8);
+}
+.Difficultybtn:active, .tips-btn:active
+{
+    border-color: greenyellow;
+    transition: ease-in-out .025s;
+    transform: scale(.75);
+}
+
+.hidden
+{
+    display: none;
+}
+
+
+@media screen and (orientation: portrait) 
+{
+    body
+    {
+        background-color: peachpuff;
+        width: 100%;
+    }
+    main
+    {
+        font-size: clamp(1rem, 8vw, 2.5rem);
+        text-align: center;
+        color: black;
+    }
+    .Difficultybtn, .tips-btn
+    {
+        width: 50%;
+    }
+    .versionctrl
+    {
+        position:fixed;
+        top: 95%;
+        right: 1%;
+        font-size: clamp(.75rem, 3vw, 1.5rem);
+        opacity: 25%;
+    }
+    #tips-container > h3
+    {
+        text-align: center;
+        color: rgb(161, 249, 255);
+    }
+    #tips-container
+    {
+        position: fixed;
+        top: 5%;
+        height: 50%;
+        right: 50%;
+        transform: translate(50%, 10%); /* vertically center */
+        width: 75%;
+        
+        font-size: clamp(.75rem, 2vw, 1.5rem);
+        border: solid 3px black;
+        background-color: rgba(0, 0, 0, 0.89);
+        border-radius: 1em;
+    }
+    header 
+    {
+        justify-self: center;
+        color: black;
+        font-size: clamp(.65rem, 1vw, 1rem);
+
+    }
+    .btncont
+    {
+        width: 95%;
+        transform: translateY(40%); 
+    }
+    button
+    {
+        font-size: clamp(.25rem, 6vw, 3rem);
+    }
+}
+
+
+@media screen and (orientation: landscape) 
+{
+    body
+    {
+        background-color: peachpuff;
+        width: 100%;
+        
+    }
+    main
+    {
+        text-align: center;
+        font-size: clamp(1rem, 3vw, 2.5rem);
+        color: black;
+        
+    }
+    .Difficultybtn,.tips-btn
+    {
+        width: 40%;
+    }
+
+    #tips-container > h3
+    {
+        text-align: center;
+        color: rgb(161, 249, 255);
+    }
+    #tips-container
+    {
+        position: fixed;
+        top: 50%;
+        max-height: 60%;
+        max-width: 25%;
+        transform: translate(5%, -50%); /* vertically center */
+
+        
+        font-size: clamp(.8rem, 1.125vw, 2rem);
+        border: solid .25vh black;
+        background-color: rgba(0, 0, 0, 0.89);
+        border-radius: 1em;
+    }
+    header 
+    {
+        position: fixed;
+        color: black;
+        font-size: clamp(.5rem, 1vw, 1.5rem); 
+        right: 2%;
+        top: 0%;
+    }
+
+    .versionctrl
+    {
+        position:fixed;
+        top: 92.5%;
+        right: 2%;
+        font-size: clamp(.75rem, 1vw, 1.5rem); 
+        opacity: 25%;
+    }
+    button
+    {
+        font-size: clamp(1rem, 2.5vw, 2rem);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

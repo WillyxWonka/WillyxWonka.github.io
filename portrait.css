@@ -29,7 +29,7 @@ button:disabled {
     color: rgba(0, 0, 0, 0.52);
 }
 
-.btn1, .btn2, .btn3, .btn4, .btn5 {
+.btn1, .btn2, .tips-btn, .btn4, .btn5 {
     text-shadow: 0.2vw 0.2vw 0.65vw #4a4a4a;
     font-family: 'Courier New', monospace;
     position: relative;
@@ -48,13 +48,10 @@ button:disabled {
     background-color: #adff2f;
 }
 
-.btn3 {
+.tips-btn {
     background-color: rgb(255, 221, 86);
 }
 
-.btn4:active, .btn5:active, .btn1:active, .btn2:active, .btn3:active {
-    transform: scale(1.25);
-}
 
 .page2btn {
     color: black;
@@ -73,7 +70,7 @@ header, body, #LetterButtonsHeader, #CorrectLetters, .FinalGuessInputCont, #Phra
 }
 
 header {
-    font-size: 5vw;
+    font-size: 3vw;
     font-weight: bold;
     text-align: center;
 }
@@ -156,28 +153,9 @@ body {
     top: 10%;
 }
 
-#tips {
-    text-align: center;
-    transition: ease-in-out 1s;
-    text-shadow: 0.2vw 0.2vw 0.65vw #4a4a4a;
-    font-size: 2.75vw;
-    font-weight: lighter;
-    font-style: italic;
-    position: fixed;
-    top: 0%;
-    right: 5%;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    width: 90%;
-    height: 50%;
-    color: rgb(161, 249, 255);
-    border: 2.75px solid #fff;
-    padding: 5px;
-    background-color: rgba(0, 0, 0, 0.829);
-    border-radius: 12px;
-}
 
-#p6, #p5, #p4, #p3 
+
+#FreeLetters, #curDifficulty, #Points, #TurnsUsed 
 {
     margin-top: 1vw;
     font-size: 3vw;
@@ -196,7 +174,7 @@ body {
     touch-action: manipulation;
     }
 
-    .btn4:active,.btn5:active,.btn1:active,.btn2:active,.btn3:active
+    .btn4:active,.btn5:active,.btn1:active,.btn2:active,.tips-btn:active
     {
         transform: scale(1.25);
     }
@@ -359,7 +337,7 @@ body {
         .btn2{
             background-color: #adff2f;
         }
-        .btn3
+        .tips-btn
         {
             background-color: rgb(255, 221, 86);  
         }

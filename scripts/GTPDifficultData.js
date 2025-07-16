@@ -10,14 +10,14 @@ const HardVegetables = ["radicchio", "chives", "shallot", "scallion", "okra", "r
 "artichoke"]
 
 const HardColors = [ "topaz", "verdigris", "amethyst", "ochre", "sepia", "taupe", "cinnabar", "vermilion",
- "periwinkle", "mauve", "cerulean", "garnet","aubergine", "carmine", "fawn", "fandango","marigold", "fuchsia"]  
+ "periwinkle", "mauve", "cerulean", "garnet","aubergine", "carmine", "fawn", "fandango","marigold", "fuchsia", "chartreuse"]  
 
  const HardActivities = ["calligraphy", "falconry", "beekeeping", "basketweaving","larping", "origami", "glassblowing",
  "capoeira", "scubadiving", "parkour", "bungeejumping", "basejumping", "hanggliding", "videogames", "bouldering","astronomy", 
  "tabletennis"]  
 
 const HardAnimals = ["hippopotamus","platypus", "armadillo", "wallaby", "aardvark","chameleon", "wombat","narwhal", "manatee","axolotl","coelacanth", "tuatara",
-, "serval", "capybara"]  
+, "serval", "capybara", "liger"]  
 /*
 const Easy = []
 const Medium =[]

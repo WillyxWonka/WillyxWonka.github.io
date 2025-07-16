@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Difficulty Select</title>
+    
+    <link rel="stylesheet" href="DifficultySelect.css">
+
+    <link rel="icon" type="image/png" href="favcon/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favcon/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="favcon/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favcon/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="favcon/favicon/site.webmanifest" />
+
+    <script type="text/javascript" src="scripts/NonCoreCode.js"></script>
+</head>
+
+
+<body>
+    <header> 
+        <h1>Word Decoder!</h1>
+    </header>
+    
+    <main>
+        <h3 class="HPTitles">
+                Choose a difficulty:
+        </h3>
+        <nav class="btncont" role="navigation">
+            
+            <button onclick="location.href='StandardMode.html'" id="StandardModeBtn" class="Difficultybtn" aria-label="Select Standard mode">Standard</button>   
+            <button onclick="location.href='EasyMode.html'"  id="EasyModeBtn" class="Difficultybtn" aria-label="Select Easy mode">Easy</button>    
+            <button onclick="location.href='MediumMode.html'"  id="MediumModeBtn" class="Difficultybtn" aria-label="Select Medium Mode">Medium</button>  
+            <button onclick="location.href='DifficultMode.html'" id="DifficultModeBtn" class="Difficultybtn" aria-label="Select Difficult Mode">Difficult</button>   
+            <button  id="tips-btn" class="tips-btn" onclick="Showtips()" aria-label="Display/Hide Tips">Help/Tips</button>
+
+        </nav> 
+    </main>
+
+    <aside aria-labelledby="tips-header">
+        <div id="tips-container" style="overflow-y: scroll;">
+            <h3 id="tips-header"> HELP/TIPS: </h3>
+            <ol id="tips" >
+                <li>Press Help/Tips or esc button to close this menu.</li>
+                <li>Guessing all the correct letters will solve the word.</li>
+                <li>There is currently an issue where sometimes free letters are not accurate. The issue is sometimes a letter is selected twice and has no effect.</li>
+                <li>There is moderate keyboard support: Enter = Submit, Backspace = Undo, all alphabet keys = Letter.</li>
+                <li>If your guess attempt is wrong, you have to attempt a new word and are deducted a point.</li>
+                <li>You are not deducted a point for pushing "New Word." Feel free to try for a word you can solve.</li>
+                <li>Pressing "Guess Word" will enable the option to input a final word guess early.</li>
+                <li>The timer starts when you use your last turn.</li>
+                <li>You are given one less free letter per word at 3, 7, and 10 points.</li>
+                <li>The letters are touch-screen friendly.</li>
+                <li>Currently working on new words and word types!</li>
+            </ol>
+        </div>
+    </aside>
+
+    <footer class = "versionctrl">
+        version alpha 0.2
+    </footer> 
+
+</body>
+</html>

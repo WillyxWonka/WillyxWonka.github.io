@@ -4,19 +4,19 @@ let WBScale = 0;
 let BankType = 0;
 
 const EasyFruit= ["apple", "banana", "orange", "mango", "strawberry", "blueberry", "grape", "pineapple", "watermelon",
- "kiwi", "peach", "pear", "cherry", "raspberry", "blackberry", "lemon", "lime", "grapefruit", "cranberry"]
+ "kiwi", "peach", "pear", "cherry", "raspberry", "blackberry", "lemon", "lime", "grapefruit"]
 
 const EasyVegetables = ["carrot", "broccoli", "potato", "tomato", "cucumber", "lettuce", "spinach", "pepper", 
 "onion", "garlic", "celery", "eggplant", "peas", "corn", "greenbean", "cabbage", "radish" ]
 
 const EasyColors = ["red", "blue", "green", "yellow", "orange", "purple", "pink", "brown", "gray", "black", "white"
-, "teal", "violet", "maroon", "gold", "silver"]
+, "violet", "maroon", "gold", "silver"]
 
-const EasyActivities = ["chess", "piano", "basketball", "soccer", "golf", "dancing", "cooking", "hiking", "painting", "boxing"]
+const EasyActivities = ["chess", "piano", "basketball", "soccer", "golf", "dancing", "cooking", "hiking", "painting", "boxing", "art"]
 
 const EasyAnimals = ["lion", "koala",  "panda", "sloth", "fox", "tiger", "leopard", 
 "peacock", "spider", "shark", "wolf","dog", "cat", "horse", "cow", "sheep", "chicken", "duck", "goose", "pig", "rabbit", "hamster", "turtle", "mouse",
- "frog", "bee", "butterfly", "ant", "whale","seal", "bear", ]
+ "frog", "bee", "ant", "whale","seal", "bear", ]
 
 /*
 const Easy = []

@@ -12,9 +12,8 @@
     <link rel="manifest" href="favcon/favicon/site.webmanifest" />
 
     <link rel="stylesheet" href="HomePage.css">
-    <link rel="stylesheet" href="landscape.css">
-    <link rel="stylesheet" href="portrait.css">
-    <link rel="stylesheet" href="Page2.css">
+
+ 
 
     <script type="text/javascript" src="scripts/HomePageScripts.js"></script>
     <meta name="description" content="Showcase of 3D game assets and tools by Tweaked Studios. Includes Unity-ready asset packs and Game Dev Demos demos.">
@@ -30,37 +29,37 @@
         <section aria-labelledby="asset-gallery-Section">
             <h2 id="asset-gallery-Section" class="HPTitles">Asset Gallery</h2>  
                 <div class="HomePagetextContainer" >
-                    <figure class="HomePagetext" onclick="enlargeImage(this)">
+                    <figure class="hp-gallery-card" onclick="enlargeImage(this)">
                         <img class="PageImg" src="pics/LowPolyCastleSetImg.png" alt="Castle image Work in Progress" width="640" height="360">
                         <figcaption class="HPpictxt">castle themed asset pack in blender.</figcaption>
                     </figure>
 
-                    <figure class="HomePagetext" onclick="enlargeImage(this)">
+                    <figure class="hp-gallery-card" onclick="enlargeImage(this)">
                         <img class="PageImg" src="pics/SnowyAutumnProps Full.png" alt="snowy autumn props" width="640" height="360" loading="lazy">
                         <figcaption class="HPpictxt">snow autumn theme asset pack "Currently available unity asset store."</figcaption>
                     </figure>
 
-                    <figure class="HomePagetext" onclick="enlargeImage(this)">
+                    <figure class="hp-gallery-card" onclick="enlargeImage(this)">
                         <img class="PageImg" src="pics/Assets_WIP_Pic1.png" alt="Castle image Work in Progress" width="640" height="360" loading="lazy">
                         <figcaption class="HPpictxt">castle assets with modular pieces</figcaption>
                     </figure>
 
-                    <figure class="HomePagetext" onclick="enlargeImage(this)">
+                    <figure class="hp-gallery-card" onclick="enlargeImage(this)">
                         <img class="PageImg" src="pics/TD_WIPPic.png" alt="Alpha image of game in progress" width="640" height="360" loading="lazy">
                         <figcaption class="HPpictxt">alpha image of TD style game in development using assets.</figcaption>
                     </figure>
 
-                    <figure class="HomePagetext" onclick="enlargeImage(this)">
+                    <figure class="hp-gallery-card" onclick="enlargeImage(this)">
                         <img class="PageImg" src="pics/TD_Wip_New.png" alt="Castle image Work in Progress" width="640" height="360" loading="lazy">
                         <figcaption class="HPpictxt">alpha image of TD style game in development using updated assets.</figcaption>
                     </figure>
 
-                    <figure class="HomePagetext" onclick="enlargeImage(this)">
+                    <figure class="hp-gallery-card" onclick="enlargeImage(this)">
                         <img class="PageImg" src="pics/NewTreesStaged.PNG" alt="Props image Work in Progress" width="640" height="360" loading="lazy">
                         <figcaption class="HPpictxt">Mid-Poly Tree Assets in development.</figcaption>
                     </figure>
 
-                    <figure class="HomePagetext" onclick="enlargeImage(this)">
+                    <figure class="hp-gallery-card" onclick="enlargeImage(this)">
                         <img class="PageImg" src="pics/Props_W-alt.png" alt="Props image Work in Progress" width="640" height="360" loading="lazy">
                         <figcaption class="HPpictxt">
                             Example scene with modular Walls/roofs pack.<br>
@@ -68,9 +67,9 @@
                         </figcaption>
                     </figure>
 
-                    <figure class="HomePagetext" onclick="enlargeImage(this)">
+                    <figure class="hp-gallery-card" onclick="enlargeImage(this)">
                         <img class = "PageImg"  src = "pics/ModualarwallsProps.png" alt="Props image Work in Progress" width="640" height="360" loading="lazy">
-                        <figcaption class="HPpictxt">Walls From modular low poly building set</figcaption>
+                        <figcaption class="HPpictxt"> Walls From modular low poly building set </figcaption>
                     </figure>
 
                     <div id="imageOverlay" class="overlay" onclick="closeImage()">
@@ -97,19 +96,26 @@
     </main>
 
     <nav aria-labelledby="Finished-Projects">
-        <h2 id="Finished-Projects" class="HPTitles">Finished projects</h2>     
-            <a href="index11.html" aria-label="Button to Play word decoder the game" class="HPDifficultybtnHyper">    
-                <img src = "pics/WordDecoderBanner.png" class="btnIMG" alt="Word Decoder Button">
-            </a> 
+        <h2 id="Finished-Projects" class="HPTitles">Finished projects</h2>   
+            <div class="nav-buttons">
+                <div>
+                    <a href="DifficulySelect.html" aria-label="Button to Play word decoder the game" class="HPDifficultybtnHyper">    
+                        <img src="pics/WordDecoderBanner.png" class="btnIMG" alt="Word Decoder Button">
+                    </a> 
+                </div>
 
-            <a href="ParticleLife.html" aria-label="Button to Particle Life Simulator Visualization"class="HPDifficultybtnHyper" >    
-                <img src = "pics/PSBanner.png" class="btnIMG" alt="Particle Life Simulator Button">
-            </a> 
+                <div>
+                    <a href="ParticleLife.html" aria-label="Button to Particle Life Simulator Visualization" class="HPDifficultybtnHyper">    
+                        <img src="pics/PSBanner.png" class="btnIMG" alt="Particle Life Simulator Button">
+                    </a> 
+                </div>
 
-            <a 
-                href="https://assetstore.unity.com/publishers/67561" aria-label="Button to Tweaked Studios Asset Store Page" class="HPDifficultybtnHyper">   
-                <img src = "pics/GameAssetsBanner.png" class="btnIMG" alt="Unity Asset Store Button">
-            </a>       
+                <div>
+                    <a href="https://assetstore.unity.com/publishers/67561" aria-label="Button to Tweaked Studios Asset Store Page" class="HPDifficultybtn">   
+                        <img src="pics/GameAssetsBanner.png" class="btnIMG" alt="Unity Asset Store Button">
+                    </a>     
+                </div>
+            </div>  
     </nav> 
 
     <footer class = "HomePageversionctrl">

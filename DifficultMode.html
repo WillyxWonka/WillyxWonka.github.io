@@ -1,17 +1,23 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Word Decoder the Game!</title>
-        <meta name="description" content="">
+
+        <title>Word Decoder - Difficult</title>
+        <meta name="description" content="A simple word guessing game."> 
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
         
-        <link rel="stylesheet" href="portrait.css">
-        <link rel="stylesheet" href="landscape.css">
+        <link rel="stylesheet" href="WordDecoderStyles.css">
+
+        <link rel="icon" type="image/png" href="favcon/favicon/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="favcon/favicon/favicon.svg" />
+        <link rel="shortcut icon" href="favcon/favicon/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="favcon/favicon/apple-touch-icon.png" />
+        <link rel="manifest" href="favcon/favicon/site.webmanifest" />
+
         <script type="module">
-        import { onTurnUse, check, GenerateNewWord, GuessWordBtn,updateAvailableLetters, Undo,Submit,FinalGuessInput} from "/scripts/GuessThePhrase.js";
+        import { onTurnUse, check, GenerateNewWord, GuessWordBtn,updateAvailableLetters, Undo,Submit,FinalGuessInput,GetKeyButton } from "/scripts/GuessThePhrase.js";
         window.onTurnUse= onTurnUse;
         window.check = check;
         window.GenerateNewWord =GenerateNewWord;
@@ -20,85 +26,92 @@
         window.Undo = Undo;
         window.Submit = Submit;
         window.FinalGuessInput = FinalGuessInput;
+        window.GetKeyChar = GetKeyButton;
         </script>
-        <script type="module" src="scripts/GTPDifficultData.js"></script>
+
+        <script type="module" src="scripts/GTPData.js"></script>
         <script type="text/javascript" src="scripts/NonCoreCode.js"></script>
         <script type="module" src="scripts/Timer.js"></script>
     </head>
-    <body>
-        <header id="header">
-            Difficult Mode!
-        </header>
-        <br>
-        <div class=FinalGuessInputCont>
-            <div id = "FinalGuessInputFieldIndicator">
-            </div>
-        </div>   
-        <br>
-        <div Id="Phrase">
-        </div>   
-        <div Id="CorrectLetters">
-        </div>  
-        <br>
-        <div class="LetterButtons", id="LetterButtons">
-                <div id="LetterButtonsHeader">
-                </div>
-            <button class="alphabetbtn", id="a" onclick="updateAvailableLetters(this), FinalGuessInput(this.id)">A</button>
-            <button class="alphabetbtn", id="b" onclick="updateAvailableLetters(this), FinalGuessInput(this.id)">B</button>
-            <button class="alphabetbtn", id="c" onclick="updateAvailableLetters(this), FinalGuessInput(this.id)">C</button>
-            <button class="alphabetbtn", id="d" onclick="updateAvailableLetters(this), FinalGuessInput(this.id)">D</button>
-            <button class="alphabetbtn", id="e" onclick="updateAvailableLetters(this), FinalGuessInput(this.id)">E</button>
-            <button class="alphabetbtn", id="f" onclick="updateAvailableLetters(this), FinalGuessInput(this.id)">F</button>
-            <button class="alphabetbtn", id="g" onclick="updateAvailableLetters(this), FinalGuessInput(this.id)">G</button>
-            <button class="alphabetbtn", id="h" onclick="updateAvailableLetters(this), FinalGuessInput(this.id)">H</button>
-            <button class="alphabetbtn", id="i" onclick="updateAvailableLetters(this), FinalGuessInput(this.id)">I</button>
-            <button class="alphabetbtn", id="j" onclick="updateAvailableLetters(this), FinalGuessInput(this.id)">J</button>
-            <button class="alphabetbtn", id="k" onclick="updateAvailableLetters(this), FinalGuessInput(this.id)">K</button>
-            <button class="alphabetbtn", id="l" onclick="updateAvailableLetters(this), FinalGuessInput(this.id)">L</button>
-            <button class="alphabetbtn", id="m" onclick="updateAvailableLetters(this), FinalGuessInput(this.id)">M</button>
-            <button class="alphabetbtn", id="n" onclick="updateAvailableLetters(this), FinalGuessInput(this.id)">N</button>
-            <button class="alphabetbtn", id="o" onclick="updateAvailableLetters(this), FinalGuessInput(this.id)">O</button>
-            <button class="alphabetbtn", id="p" onclick="updateAvailableLetters(this), FinalGuessInput(this.id)">P</button>
-            <button class="alphabetbtn", id="q" onclick="updateAvailableLetters(this), FinalGuessInput(this.id)">Q</button>
-            <button class="alphabetbtn", id="r" onclick="updateAvailableLetters(this), FinalGuessInput(this.id)">R</button>
-            <button class="alphabetbtn", id="s" onclick="updateAvailableLetters(this), FinalGuessInput(this.id)">S</button>
-            <button class="alphabetbtn", id="t" onclick="updateAvailableLetters(this), FinalGuessInput(this.id)">T</button>
-            <button class="alphabetbtn", id="u" onclick="updateAvailableLetters(this), FinalGuessInput(this.id)">U</button>
-            <button class="alphabetbtn", id="v" onclick="updateAvailableLetters(this), FinalGuessInput(this.id)">V</button>
-            <button class="alphabetbtn", id="w" onclick="updateAvailableLetters(this), FinalGuessInput(this.id)">W</button>
-            <button class="alphabetbtn", id="x" onclick="updateAvailableLetters(this), FinalGuessInput(this.id)">X</button>
-            <button class="alphabetbtn", id="y" onclick="updateAvailableLetters(this), FinalGuessInput(this.id)">Y</button>
-            <button class="alphabetbtn", id="z" onclick="updateAvailableLetters(this), FinalGuessInput(this.id)">Z</button>
-            <div>
-                <button class="btn5", id="Undobtn" onclick="Undo()">Undo</button>
-                <button  class="btn4", id="Submitbtn" onclick="check(), Submit()">Submit</button>
-            </div>
-        </div>
-        <div>
-            <button class="btn2", id="guesswordbtn" onclick="GuessWordBtn()"> Guess Word</button>
-            <button class="btn1", id="generatewordbtn" onclick="GenerateNewWord()"> New Word</button>
-        </div>
-        <div class="pointturncalc"> 
-            <div Id='Timer'>
-            </div>  
-            <div Id='p3'>
-                Turns Used: 0
-            </div>   
-            <div Id='p4'>
-                Points: 0
-            </div>  
-            <div Id='p5'>
-                Difficulty: 
-            </div>  
-            <div Id='p6'>
-                Free Letters:
-            </div>  
-            <div id = "DataSourceString">
-                Difficult
-            </div>  
-        </div>
-        <div class = "btncont">
 
-        </div>  
+    <body>
+
+        <header id="header">
+            <h1>Difficult Mode!</h1>
+        </header>
+        <main>
+            <div class="FinalGuessInputCont">
+                <div id = "FinalGuessInputFieldIndicator"></div>
+            </div>   
+            <br>
+            <div id="Phrase"></div>   
+            <div id="CorrectLetters"></div>  
+            <section class="core-game-space">
+                <fieldset class="LetterButtons" id="LetterButtons">
+
+                       <!-- <Legend id="LetterButtonsHeader"></Legend> --> 
+                        <div id="LetterButtonsHeader"></div>
+                        <div id='Timer' aria-label="Timer"></div>  
+
+                        <button type="button" class="alphabetbtn" id="a" onclick="updateAvailableLetters(this); FinalGuessInput(this.id)">A</button>
+                        <button type="button" class="alphabetbtn" id="b" onclick="updateAvailableLetters(this); FinalGuessInput(this.id)">B</button>
+                        <button type="button" class="alphabetbtn" id="c" onclick="updateAvailableLetters(this); FinalGuessInput(this.id)">C</button>
+                        <button type="button" class="alphabetbtn" id="d" onclick="updateAvailableLetters(this); FinalGuessInput(this.id)">D</button>
+                        <button type="button" class="alphabetbtn" id="e" onclick="updateAvailableLetters(this); FinalGuessInput(this.id)">E</button>
+                        <button type="button" class="alphabetbtn" id="f" onclick="updateAvailableLetters(this); FinalGuessInput(this.id)">F</button>
+                        <button type="button" class="alphabetbtn" id="g" onclick="updateAvailableLetters(this); FinalGuessInput(this.id)">G</button>
+                        <button type="button" class="alphabetbtn" id="h" onclick="updateAvailableLetters(this); FinalGuessInput(this.id)">H</button>
+                        <button type="button" class="alphabetbtn" id="i" onclick="updateAvailableLetters(this); FinalGuessInput(this.id)">I</button>
+                        <button type="button" class="alphabetbtn" id="j" onclick="updateAvailableLetters(this); FinalGuessInput(this.id)">J</button>
+                        <button type="button" class="alphabetbtn" id="k" onclick="updateAvailableLetters(this); FinalGuessInput(this.id)">K</button>
+                        <button type="button" class="alphabetbtn" id="l" onclick="updateAvailableLetters(this); FinalGuessInput(this.id)">L</button>
+                        <button type="button" class="alphabetbtn" id="m" onclick="updateAvailableLetters(this); FinalGuessInput(this.id)">M</button>
+                        <button type="button" class="alphabetbtn" id="n" onclick="updateAvailableLetters(this); FinalGuessInput(this.id)">N</button>
+                        <button type="button" class="alphabetbtn" id="o" onclick="updateAvailableLetters(this); FinalGuessInput(this.id)">O</button>
+                        <button type="button" class="alphabetbtn" id="p" onclick="updateAvailableLetters(this); FinalGuessInput(this.id)">P</button>
+                        <button type="button" class="alphabetbtn" id="q" onclick="updateAvailableLetters(this); FinalGuessInput(this.id)">Q</button>
+                        <button type="button" class="alphabetbtn" id="r" onclick="updateAvailableLetters(this); FinalGuessInput(this.id)">R</button>
+                        <button type="button" class="alphabetbtn" id="s" onclick="updateAvailableLetters(this); FinalGuessInput(this.id)">S</button>
+                        <button type="button" class="alphabetbtn" id="t" onclick="updateAvailableLetters(this); FinalGuessInput(this.id)">T</button>
+                        <button type="button" class="alphabetbtn" id="u" onclick="updateAvailableLetters(this); FinalGuessInput(this.id)">U</button>
+                        <button type="button" class="alphabetbtn" id="v" onclick="updateAvailableLetters(this); FinalGuessInput(this.id)">V</button>
+                        <button type="button" class="alphabetbtn" id="w" onclick="updateAvailableLetters(this); FinalGuessInput(this.id)">W</button>
+                        <button type="button" class="alphabetbtn" id="x" onclick="updateAvailableLetters(this); FinalGuessInput(this.id)">X</button>
+                        <button type="button" class="alphabetbtn" id="y" onclick="updateAvailableLetters(this); FinalGuessInput(this.id)">Y</button>
+                        <button type="button" class="alphabetbtn" id="z" onclick="updateAvailableLetters(this); FinalGuessInput(this.id)">Z</button>
+
+
+                        <section class="main-buttons">
+                            <button class="undo-btn" id="Undobtn" onclick="Undo()" aria-pressed="false" >Undo</button>
+                            <button  class="submit-btn" id="Submitbtn" onclick="check(); Submit()">Submit</button>
+                        </section>
+                </fieldset>
+            </section>
+
+            <section class="secondary-buttons">
+                    <button class="guess-word-btn" id="guesswordbtn" onclick="GuessWordBtn()"> Guess Word</button>
+                    <button class="new-word-btn" id="generatewordbtn" onclick="GenerateNewWord()"> New Word</button>
+            </section>
+        </main>
+        
+        <aside aria-label="Game information, stats">
+            <div class="game-info"> 
+                <div id='TurnsUsed' aria-label="Turns info">
+                    Turns Used: 0
+                </div>   
+                <div id='Points' aria-label="Points info">
+                    Points: 0
+                </div>  
+                <div id='curDifficulty' aria-label="Difficulty info">
+                    Difficulty: 
+                </div>  
+                <div id='FreeLetters' aria-label="Free Letters info">
+                    Free Letters:
+                </div>  
+                <div id="DataSourceString" aria-hidden="true"> <!-- not to be read, is invisible and necessary for getting correct script info-->
+                    Difficult
+                </div>  
+            </div>
+        </aside>
     </body>
 </html>

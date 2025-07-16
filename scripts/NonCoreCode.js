@@ -1,22 +1,22 @@
 
-
-let y = true;
-
 function Showtips()
 {
-    let x = document.getElementById("tips")
-    let z = document.getElementById("btn3")
-    if(y)
-    {
-        y = !y
-        x.style.display = "none";
-    }
-    else{
-        y = !y
-        x.style.display = "block";
-    }
+    let x = document.getElementById("tips-container")
+    let z = document.getElementById("tips-btn")
+        
+    const isPressed = z.getAttribute("aria-pressed") === "true";
+    z.setAttribute("aria-pressed",(!isPressed).toString())
+
+    x.classList.toggle("hidden");
     z.blur();
+
 }
+
+document.addEventListener("keydown", function(event) {
+if (event.key === "Escape") {
+    Showtips();
+}
+});
 
 
 

@@ -37,7 +37,7 @@ function PageLoad()
     
     FinalGueassInputFieldIndicator = document.getElementById("FinalGuessInputFieldIndicator")
     dataSource = document.getElementById("DataSourceString").innerText
-    PointCount = document.getElementById("Points");
+    PointCount = document.getElementById("p4");
     CorrectLetters = document.getElementById("CorrectLetters");
     SetAnswerField();
     setLetters();
@@ -126,7 +126,7 @@ window.addEventListener('keydown', (e)=>
     switch(e.key)
     {
         case "Enter":
-                document.getElementById('Submitbtn').click()
+            document.getElementById('Submitbtn').click()
         return;
         case "Backspace":
             document.getElementById('Undobtn').click()
@@ -137,7 +137,7 @@ window.addEventListener('keydown', (e)=>
     GetKeyButton(ekey)
 })
 
- export function GetKeyButton(key) //THIS WAS CHANGED TO BE EXPORTED!  DID THIS BREAK EVERYTHING?
+ function GetKeyButton(key)
 {
     let keyButton = document.getElementById(key)
     if(int == 0)
@@ -245,7 +245,7 @@ export function Submit()
 }
 
 
-function updateanswer(input)  // !!THIS IS WHERE CAN POSSIBLLY MAKE CORRECT WORD WITHOUT GUESSING IN EVENT THAT USER GUESSES ALL CORRECT LETTERS!! update: did implement did it break everything?
+function updateanswer(input)  // !!THIS IS WHERE CAN POSSIBLLY MAKE CORRECT WORD WITHOUT GUESSING IN EVENT THAT USER GUESSES ALL CORRECT LETTERS!!
 {
     for(let i = 0; i < input.length; i++)
     {
@@ -259,12 +259,7 @@ function updateanswer(input)  // !!THIS IS WHERE CAN POSSIBLLY MAKE CORRECT WORD
             AnswerCurrent[j] = AnswerCurrent[j];
         }
     }
-    CorrectLetters.innerText = AnswerCurrent.join("");
-
-    if(CorrectLetters.innerText == word) // !!THIS IS NEW ADDED DID IT BREAK EVERYTHING?!!
-    {   
-        GuessRight();
-    }
+    CorrectLetters.innerText = AnswerCurrent.join("")
 }
 
 
@@ -274,7 +269,7 @@ export function onTurnUse()
     {
         TurnCount++;
         console.log("Turns used: " + TurnCount);
-        document.getElementById("TurnsUsed").innerText = "Turns Used: " +TurnCount+ "/" +TurnCountMax;
+        document.getElementById("p3").innerText = "Turns Used: " +TurnCount+ "/" +TurnCountMax;
     }
     if(TurnCount >= TurnCountMax)
     {
@@ -314,9 +309,8 @@ function DisableAllButtons()
 }
 function ChangeBackgroundOriginalcss()
 {
-    document.getElementById("LetterButtons").style.borderColor = "#000000";
-    document.getElementById("LetterButtons").style.background = "#ffeee0";
-    document.getElementById("LetterButtonsHeader").style.color = "#000000";
+    document.getElementById("LetterButtons").style.borderColor = "#000000"
+    document.getElementById("LetterButtons").style.background = "#ffeee0"
 }
 function ResetSelecionVal()
 {
@@ -339,11 +333,11 @@ export function check()
 export function GuessRight()    
 {
     DisableAllButtons()
-
+    
     document.getElementById("Phrase").innerText = "Thats Right!";
     CorrectLetters.innerText = word;
 
-    //document.getElementById("generatewordbtn").style.borderColor = "#adff2f"
+    document.getElementById("generatewordbtn").style.borderColor = "#adff2f"
 
     document.getElementById("LetterButtons").style.borderColor = "#497900"
     document.getElementById("LetterButtons").style.background = "#adff2f"
@@ -361,11 +355,16 @@ export function GuessWrong()
 
     document.getElementById("LetterButtons").style.borderColor = "#ff0000"
     document.getElementById("LetterButtons").style.background = "#ff8787"
-    //document.getElementById("generatewordbtn").style.borderColor = "#adff2f"
+    document.getElementById("generatewordbtn").style.borderColor = "#adff2f"
 
     Points--;
     PointCount.innerText = "Points: " + Points
     Timer.StopTimer();
+    
+    if (Points < 10)
+    {
+        document.getElementById("header").innerText = "Word Decoder!"
+    }
 }
 
 
@@ -451,10 +450,10 @@ export function GenerateNewWord() //new word button
         document.getElementById("Submitbtn").disabled = false;
         document.getElementById("generatewordbtn").style.borderColor = ""
         
-        if(int == 1){ GuessWordBtn();} //what is this?
+        if(int == 1){ GuessWordBtn();}
     
         TurnCount = 0;
-        document.getElementById("TurnsUsed").innerText = "Turns Used: " +TurnCount+ "/" +TurnCountMax;
+        document.getElementById("p3").innerText = "Turns Used: " +TurnCount+ "/" +TurnCountMax;
 
         FreeLetters = PS.CheckPoints(Points,dataSource);  // These need to be called first when new word id pressed or free letters are worong
         PS.CheckPoints(Points,dataSource);

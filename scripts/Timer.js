@@ -17,7 +17,7 @@ export function StartFinalGuessTimer()
 function FinalGuessTimeOut()
 {
     //document.getElementById("Timer").innerText = "..." + seconds
-        document.getElementById("LetterButtonsHeader").innerText = "FINAL GUESS ENDS: " + seconds + "s"
+    document.getElementById("LetterButtonsHeader").innerText = "FINAL GUESS ENDS: " + seconds + "s";
 
     if(seconds <= 0)
     {
@@ -44,8 +44,8 @@ function Seconds()
 export function StopTimer()
 {   
     isTimer = false;
-    seconds = SecondsMax
+    seconds = SecondsMax;
     //document.getElementById("Timer").innerText = "" 
-    document.getElementById("LetterButtonsHeader").innerText = ""
-    document.getElementById("LetterButtonsHeader").style.color = "#000000"
+    document.getElementById("LetterButtonsHeader").innerText = " ";
+    //document.getElementById("LetterButtonsHeader").style.color = "#000000"
 }

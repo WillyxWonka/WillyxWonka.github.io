@@ -1,8 +1,10 @@
 export let FreeLetters = 0;
 export function CheckPoints(Points, dataSource)
 {
-    let Difficulty = document.getElementById("p5");
-    let FreeLetterIndicator = document.getElementById("p6");
+    //let Difficulty = document.getElementById("p5");
+    //let FreeLetterIndicator = document.getElementById("p6");
+    let Difficulty = document.getElementById("curDifficulty");
+    let FreeLetterIndicator = document.getElementById("FreeLetters");
     
     switch (dataSource)
     {
