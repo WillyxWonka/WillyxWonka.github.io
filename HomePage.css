@@ -1,9 +1,17 @@
-
+*
+{ 
+    font-family: 'Courier New', Courier, monospace, ui-monospace;
+}
 .HomePageBody 
 {
     background-color: peachpuff;
     text-align: left;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    overflow-x: hidden;
 }
 
 /* Common Styles */
@@ -24,12 +32,20 @@
     min-width: auto;
     min-height: 45%;
     padding: .25%;
-    
 }
-
 .HomePagetextContainer {
     display: flex;
     flex-wrap: wrap;
+    background-color: beige;
+    border-style: solid;
+    border-width: 0.2em;
+    border-radius: 1em;
+    border-color: black;
+    justify-content: center;
+
+    padding: 1em 0em;
+    margin: 0 auto;
+    width: 97.5%;
 }
 
 .hp-gallery-card 
@@ -38,23 +54,25 @@
     flex-direction: column;
     justify-content: space-between;
 
-    box-shadow: -2px 0 15px #000000;
+    box-shadow: -.075em .125em .5em rgb(13, 8, 11);
     align-items: center;
     margin: 0.75%;
     background-color: burlywood;
 
     transition: all 0.25s ease-in-out; 
-    padding: .25%;
+    margin: 1em .5em;
+    padding: .125em;
 
-    border-radius: 1%;
-    border-width: 1px;
+    border-radius: 1em;
+    border-width: 0.125em;
     border-style:solid;
     border-color: #000000;
-}
 
+    line-height: 1; /*unitless and will auto adjust with font size*/
+    text-align: justify;
+}
 .HPpictxt
 {
-    font-family:'Courier New', Courier, monospace;
     text-align: center;
     font-style: italic;
     opacity: 50%;
@@ -62,7 +80,6 @@
 }
 .HomePageversionctrl 
 {
-    font-family: 'Courier New', Courier, monospace;
     position: fixed;
     bottom: 2.5%;
     right: 2.5%;
@@ -74,12 +91,60 @@
     display: inline-block;
     text-decoration: none;
 }
+.HPbtn:hover:not(:active)
+{
+    box-shadow: 0 0 .25em goldenrod;
+    border-color: gold;
+    transition: ease-in-out .1s;
+    transform: scale(1.1);
+}
+.HPbtn:active
+{
+    border-color: greenyellow;
+    background-color: rgb(233, 255, 233);
+    box-shadow: 0 0 1em goldenrod;
+    color: rgb(64, 95, 32);
 
+    transition: ease-in-out .025s;
+    transform: scale(.75);
+    opacity: 90%;
+    font-style: italic;
+}
+
+.HPbtn
+{
+    border-width: clamp(0.05em, 0.09em, 0.25em);
+    border-radius: 1em;
+    text-decoration: none;
+
+    font-size: clamp(1rem, 3vw, 2.5rem);
+    text-shadow: -.025vw .025vw .1vw #393939;
+    text-align: center;
+    color: black;
+    background-color: beige;
+
+    display: flex;
+    align-items: center;     /* vertical centering */
+    justify-content: center; /* horizontal centering */
+    overflow-wrap: break-word;
+    max-width: 75%;
+    min-width: 30%;
+    border-color: black;
+    border-style: solid;
+    cursor: pointer;
+
+    z-index: 1;
+
+}
 .nav-buttons
 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 1em;
+    background-color:rgba(63, 54, 46, .85);
+    padding: 1em;
+    width: 100%;
 }
 .nav-buttons > div /* gets inner divs of nav element */ 
 {
@@ -122,7 +187,7 @@
     max-height: 90%;
     border: 5px solid rgb(0, 0, 0);
     border-radius: 10px;
-    box-shadow: -2px 0px 15px #000000;
+    box-shadow: -.1em .1em .125em rgb(13, 8, 11);
 }
 /* When active, show the overlay */
 .overlay.active {
