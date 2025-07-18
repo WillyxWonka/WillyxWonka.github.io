@@ -45,6 +45,7 @@ main
 .core-game-space
 {
     text-align: center;
+    justify-content: center;
 }
 
 
