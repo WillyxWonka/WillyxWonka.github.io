@@ -30,7 +30,6 @@
     font-family: 'Courier New', Courier, monospace, ui-monospace;
     text-shadow: -.025vw .025vw .1vw #393939;
     color: black;
-    box-sizing: border-box; /* ensures padding and border are included in element's total width and height */
 }
 body 
 {
