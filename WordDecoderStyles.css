@@ -30,6 +30,7 @@
     font-family: 'Courier New', Courier, monospace, ui-monospace;
     text-shadow: -.025vw .025vw .1vw #393939;
     color: black;
+    box-sizing: border-box; /* ensures padding and border are included in element's total width and height */
 }
 body 
 {
@@ -46,6 +47,7 @@ main
     text-align: center;
 }
 
+
 #FinalGuessInputFieldIndicator 
 {
     text-align: center;
@@ -57,16 +59,6 @@ main
     display: block;
     margin-left: auto;
     margin-right: auto;
-    /*
-    text-align: center;
-    border-width: .0925em;
-    border-style: solid;
-    color: black;
-    border-radius: 1.5em;
-
-    justify-self: center;
-    background-color: white;
-    */
 }
 .new-word-btn, .guess-word-btn
 { 
@@ -102,19 +94,9 @@ button
     border-radius: 2em;
     border-color: black;
 
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    
-    /*    
-    border-color: black !important;
-    border-style: solid !important;
-    background-color: inherit;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    */
-
+    appearance: none; /* removes browser default styling - allows personal styling to buttons and stuff*/
+    -webkit-appearance: none; /* removes browser default styling - allows personal styling to buttons and stuff*/
+    -moz-appearance: none; /* removes browser default styling - allows personal styling to buttons and stuff*/
 
     cursor: pointer;
     transition: ease-in-out 0.1s;
@@ -168,8 +150,16 @@ button:disabled
     color: orangered;
     top: 10%;
 }
-#DataSourceString 
+.game-info > div
 {
+    opacity: 75%;
+}
+#DataSourceString /* might be effecting strange layout inconsistancies with game info container */
+{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-size: clamp(.5rem, 1vw, 1.5rem);
     opacity: 0;
 }
 
@@ -177,14 +167,6 @@ button:disabled
 /* Portrait */
 @media screen and (orientation: portrait) 
 {
-    .new-word-btn, .submit-btn {
-        background-color: aquamarine;
-    }
-
-    .guess-word-btn {
-        background-color: #adff2f;
-    }
-
     header {
         font-size: clamp(.5rem, 2.5vw, 1.5rem); 
         font-weight: bold;
@@ -251,18 +233,18 @@ button:disabled
 
         gap: clamp(0.5rem, 2vw, 1.5rem);
         border-radius: 2em;
-        
         justify-content: space-evenly;
-        align-items: center;
+
     }
 
     .game-info > div {
         padding: 0.25em 0.75em;
         border-radius: 0.5em;
+
         background-color: whitesmoke;
-        box-shadow: 0 0.125em 0.25em rgba(0, 0, 0, 0.1);
         flex: 1 1 auto;
-        min-width: max-content;
+        max-width: 35%;
+        min-width: 10ch;
         text-align: center;
     }
 }
@@ -335,26 +317,23 @@ button:disabled
     }
     .game-info {
         margin-top: 2%;
-        display: flex; /* inline-flex not necessary unless it's inside a line-level element */
+        display: flex;
         flex-wrap: wrap;
         font-size: clamp(0.875rem, 1.2vw, 1.25rem);
-
         gap: clamp(0.5rem, 2vw, 1.5rem);
-        border-radius: 2em;
         
-        justify-content: space-evenly;
-        justify-self: center;
+        justify-content: center;
         align-items: center;
+        
     }
 
     .game-info > div {
         padding: 0.125em 0.5em;
         border-radius: 0.5em;
         background-color: whitesmoke;
-        box-shadow: 0 0.125em 0.25em rgba(0, 0, 0, 0.1);
-        flex: 1 1 auto;
-        min-width: max-content;
-        width: 15%;
+        flex: 0 1 auto;
+        width: fit-content;
         text-align: center;
+
     }
 }

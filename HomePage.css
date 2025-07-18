@@ -1,39 +1,38 @@
+/* Common Styles */
 *
 { 
     font-family: 'Courier New', Courier, monospace, ui-monospace;
+    text-shadow: -.025vw .025vw .1vw #393939;
 }
 .HomePageBody 
 {
     background-color: peachpuff;
-    text-align: left;
 
-    line-height: 1;
+    line-height: 1; /*unitless and will auto adjust with font size*/
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    margin: 0;
+    margin: 0 auto;
     overflow-x: hidden;
-}
 
-/* Common Styles */
+}
 .HPHeader {
     position: fixed;
     color: black;
-    font-family: 'Courier New', monospace;
     font-weight: bold;
     right: 1%;
+    z-index: 10;
 }
-
 .HPTitles {
     text-decoration: underline;
-    font-family: 'Courier New', Courier, monospace;
+    font-size: clamp(1.75rem, 4vw, 3rem) !important;
 }
 
-.PageImg, .PageVid {
+.PageVid {
     min-width: auto;
-    min-height: 45%;
-    padding: .25%;
+    padding:.5em;
 }
 .HomePagetextContainer {
+
     display: flex;
     flex-wrap: wrap;
     background-color: beige;
@@ -41,38 +40,47 @@
     border-width: 0.2em;
     border-radius: 1em;
     border-color: black;
-    justify-content: center;
 
-    padding: 1em 0em;
+    justify-content: space-between;
     margin: 0 auto;
-    width: 97.5%;
-}
+    padding:.125em 0em;
 
+    position: relative;
+    width: 98%;
+    line-height: 1; /*unitless and will auto adjust with font size*/
+}
 .hp-gallery-card 
 {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    flex-wrap: wrap;
 
     box-shadow: -.075em .125em .5em rgb(13, 8, 11);
     align-items: center;
-    margin: 0.75%;
     background-color: burlywood;
 
     transition: all 0.25s ease-in-out; 
     margin: 1em .5em;
     padding: .125em;
-
-    border-radius: 1em;
+    
+    border-radius: .5em;
     border-width: 0.125em;
     border-style:solid;
     border-color: #000000;
 
-    line-height: 1; /*unitless and will auto adjust with font size*/
-    text-align: justify;
+}
+.PageImg
+{
+    border-radius: .25em;
+    width: 90%;
+    height: auto; 
+    display: block;
+    margin: auto auto auto auto;
+    padding: .25em;
 }
 .HPpictxt
 {
+    margin-top: auto;
     text-align: center;
     font-style: italic;
     opacity: 50%;
@@ -85,11 +93,6 @@
     right: 2.5%;
     opacity: 75%;
     color: black;
-}
-.HPDifficultybtnHyper
-{
-    display: inline-block;
-    text-decoration: none;
 }
 .HPbtn:hover:not(:active)
 {
@@ -117,38 +120,29 @@
     border-radius: 1em;
     text-decoration: none;
 
-    font-size: clamp(1rem, 3vw, 2.5rem);
+    font-size: clamp(1rem, 3.25vw, 2rem);
     text-shadow: -.025vw .025vw .1vw #393939;
+    padding: .125em;
     text-align: center;
     color: black;
     background-color: beige;
 
-    display: flex;
-    align-items: center;     /* vertical centering */
-    justify-content: center; /* horizontal centering */
-    overflow-wrap: break-word;
-    max-width: 75%;
-    min-width: 30%;
+    margin: 1% 1%;
+    display: flex; 
     border-color: black;
     border-style: solid;
     cursor: pointer;
 
     z-index: 1;
-
 }
 .nav-buttons
 {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1em;
+    display: inline-flex;
+    justify-content: space-evenly;
+    align-items: center;
     background-color:rgba(63, 54, 46, .85);
-    padding: 1em;
+    
     width: 100%;
-}
-.nav-buttons > div /* gets inner divs of nav element */ 
-{
-    display: inline-block;
 }
 .btnIMG
 {
@@ -161,32 +155,31 @@
 }
 
 
-/* Default styling for hp-gallery-card hover effect */
 .hp-gallery-card:hover {
     transform: scale(1.1);
-    cursor: pointer;
+    cursor: zoom-in;
 }
-/* Full-screen overlay hidden by default */
 .overlay {
+    margin: 0 auto;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
     display: flex;
     align-items: center;
     justify-content: center;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.4s ease-in-out;
+    transition: opacity 0.25s ease-in-out;
 }
 /* Enlarged image */
 .overlay-content {
     max-width: 90%;
     max-height: 90%;
     border: 5px solid rgb(0, 0, 0);
-    border-radius: 10px;
+    border-radius: .125em;
     box-shadow: -.1em .1em .125em rgb(13, 8, 11);
 }
 /* When active, show the overlay */
@@ -198,100 +191,61 @@
 
 /* Portrait Mode */
 @media screen and (orientation: portrait) {
+    .HomePageBody
+    {
+        overflow-x: hidden;
+    }
     .HPHeader {
-        text-shadow: 0.2vw 0.2vw 0.375vw #393939;
-        font-size: 5vw;
+        font-size: clamp(.65rem, 1vw, 1rem);
     }
     .HPTitles {
-        text-shadow: 0.25vw 0.25vw 0.2vw #393939;
-        font-size: 9vw;
           font-weight: normal;
     }
-
     .HomePagetextContainer {
-        max-width: 100%;
-        
+        height: clamp(20vh, 45vh, 60vh);
+        overflow-y: auto;
     }
     .hp-gallery-card {
-        width: 45vw;
+        position: relative;
+        width: 40%;
     }
-    .PageImg {
-        margin-left: 2.5vw;
-        margin-top: 1.5vw;
-        margin-bottom: 1vw;
-        max-width: 40vw;
 
-        height: auto; 
-        display: block;
-    }
     .PageVid {
-        max-width: 100%;
+        max-width: 75%;
         height: auto;
         display: block;
         margin: 1rem auto; /* ! */
     }
-
     .HPpictxt 
     {
-        font-size: 2vw;
+        font-size: clamp(.5rem, 1.25vw, 1.5rem);
     }
     .HomePageversionctrl {
-        font-size: 4.25vw;
-        text-shadow: 0.2vw 0.2vw 0.5vw #393939;
-    }
-    .btnIMG
-    {
-        width: 100%;
-        max-width: 60vw;
-        margin-bottom: -15%;
+        font-size: clamp(.75rem, 1.25vw, 1.25rem);
     }
 }
 
 /* Landscape Mode */
 @media screen and (orientation: landscape) {
     .HPHeader {
-        text-shadow: 0.2vh 0.2vh 0.375vh #393939;
-        font-size: 5vh;
+        font-size: clamp(1rem, 2vw, 2rem); 
+
     }
     .HPTitles {
-        text-shadow: 0.25vh 0.25vh 0.2vh #393939;
-        font-size: 8vh;
         font-weight: normal;
-    }
-    .HomePagetextContainer {
-        max-width: 100%;
-        
     }
     .hp-gallery-card {
         width: 45vh;
-    }
-    .PageImg {
-        margin-left: 2.5vh;
-        margin-top: 1.5vh;
-        margin-bottom: 1vh;
-        max-width: 40vh;
-
-        height: auto; /* Maintains aspect ratio */
-        display: block; /* Ensures margins work properly */
     }
     .PageVid {
         max-width: 60vh;
     }
     .HPpictxt
     {
-        font-size: 2.5vh;
+        font-size: clamp(.5rem, 1.25vw, 1.5rem);
     }
-
-    .btnIMG
-    {
-        width: 100%;
-        max-width: 50vh;
-    }
-
     .HomePageversionctrl 
     {
-    font-size: 3.5vh;
-    text-shadow: 0.2vh 0.2vh 0.5vh #393939;
+        font-size: clamp(1rem, 1.5vw, 2rem);
     }
-
 }
