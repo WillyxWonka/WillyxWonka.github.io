@@ -12,10 +12,6 @@
     <link rel="manifest" href="favcon/favicon/site.webmanifest" />
 
     <link rel="stylesheet" href="HomePage.css">
-
- 
-
-    <script type="text/javascript" src="scripts/HomePageScripts.js"></script>
     <meta name="description" content="Showcase of 3D game assets and tools by Tweaked Studios. Includes Unity-ready asset packs and Game Dev Demos demos.">
 </head>
 
@@ -23,21 +19,100 @@
 
 <body class="HomePageBody">
 
-    <header>
-        <h1 class = "HPHeader"> Tweaked Studios </h1>
-    </header>
+    <header><h1 class = "HPHeader"></h1></header>
+
+    <nav aria-labelledby="Finished-Projects">
+        <div class="nav-buttons">
+            <div>
+                <a href="DifficulySelect.html" aria-label="Button to Play word decoder the game" class="HPbtn">Word Decoder v1</a> 
+            </div>
+            <div>
+                <a href="ParticleLife.html" aria-label="Button to Particle Life Simulator Visualization" class="HPbtn">Particle Life Simulator</a> 
+            </div>
+            <div>
+                <a href="https://assetstore.unity.com/publishers/67561" aria-label="Button to Tweaked Studios Asset Store Page" class="HPbtn">Unity Assets</a>     
+            </div>
+        </div>  
+    </nav> 
+
     <br>
+
     <main class="HomePageMainContent" aria-label="Main content with images and videos" role="main">
+
+        <section aria-labelledby="Works in progress">
+            <h2 id="works-in-progress-Section" class="HPTitles">Works in progress</h2>  
+        <div id="wip-div">
+            <span style="color: orangered; padding: 0 1rem;">NEW:</span>REACT.js + NODE.js BASED REWORK IN DEVELOPMENT, HOSTED ON VERCEL
+            <a href="https://project-react-repo.vercel.app" aria-label="Work in progress page rework" class="new-btn" style="margin-left: 1.5rem;">Visit</a>
+        </div>
+        </section>
+
         <section aria-labelledby="asset-gallery-Section">
-            <h2 id="asset-gallery-Section" class="HPTitles">Asset Gallery</h2>  
-                <div class="HomePagetextContainer" >
-                    <figure class="hp-gallery-card" onclick="enlargeImage(this)">
+            <h2 id="asset-gallery-Section" class="HPTitles">Gallery</h2>  
+                <div class="HomePagetextContainer" id="HomePagetextContainer" >
+                </div>
+                <div id="imageOverlay" class="overlay" onclick="closeImage()">
+                    <img id="overlayImg" class="overlay-content">
+                </div>
+        </section>
+        <br>
+        <br>
+        <br>
+        <section aria-labelledby="Video-Demos">
+            <h2 id="Video-Demos" class="HPTitles">Video Demos</h2>
+            <div class="HomePagetextvid">
+                <video class="PageVid" aria-label="video of A-star pathfinding algorithm" controls autoplay muted loop playsinline>
+                    <source src="pics/AStar_example.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+                <video class="PageVid"  aria-label="video of flowfield pathfinding algorithm" controls autoplay muted loop playsinline>
+                    <source src="pics/FlowField_Example.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>      
+    </main>
+<!--
+    <nav aria-labelledby="Finished-Projects">
+        <h2 id="Finished-Projects" class="HPTitles">Finished projects</h2>   
+            <div class="nav-buttons">
+                <div>
+                    <a href="DifficulySelect.html" aria-label="Button to Play word decoder the game" class="HPbtn">    
+                        Word Decoder
+                    </a> 
+                </div>
+                <div>
+                    <a href="ParticleLife.html" aria-label="Button to Particle Life Simulator Visualization" class="HPbtn">    
+                        Particle Life Simulator
+                    </a> 
+                </div>
+                <div>
+                    <a href="https://assetstore.unity.com/publishers/67561" aria-label="Button to Tweaked Studios Asset Store Page" class="HPbtn">   
+                        Unity Assets
+                    </a>     
+                </div>
+            </div>  
+    </nav> -->
+    <br>
+    <br>
+    <footer class = "HomePageversionctrl">
+        Tweaked.Studios.Contact@gmail.com
+    </footer> 
+
+    <script type="text/javascript" src="scripts/HomePageScripts.js"></script>
+</body>
+</html>
+
+
+
+                    <!--<figure class="hp-gallery-card" onclick="enlargeImage(this)">
                         <img class="PageImg" src="pics/LowPolyCastleSetImg.png" alt="Castle image Work in Progress" width="640" height="360">
                         <figcaption class="HPpictxt">castle themed asset pack in blender.</figcaption>
                     </figure>
 
                     <figure class="hp-gallery-card" onclick="enlargeImage(this)">
-                        <img class="PageImg" src="pics/SnowyAutumnProps Full.png" alt="snowy autumn props" width="640" height="360" loading="lazy">
+                        <img class="PageImg" src="pics/SnowyAutumnPropsFull.png" alt="snowy autumn props" width="640" height="360" loading="lazy">
                         <figcaption class="HPpictxt">snow autumn theme asset pack "Currently available unity asset store."</figcaption>
                     </figure>
 
@@ -73,59 +148,4 @@
                         <img class = "PageImg"  src = "pics/ModualarwallsProps.png" alt="Props image Work in Progress" width="640" height="360" loading="lazy">
                         <figcaption class="HPpictxt"> Walls From modular low poly building set </figcaption>
                     </figure>
-
-                    <div id="imageOverlay" class="overlay" onclick="closeImage()">
-                        <img id="overlayImg" class="overlay-content">
-                    </div>
-                </div>
-        </section>
-        
-        <br>
-        <h2 id="Video-Demos" class="HPTitles">Video Demos</h2>
-        <section aria-labelledby="Video-Demos">
-            <div class="HomePagetextvid">
-                <video class="PageVid" aria-label="video of A-star pathfinding algorithm" controls autoplay muted loop playsinline>
-                    <source src="pics/AStar_example.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-
-                <video class="PageVid"  aria-label="video of flowfield pathfinding algorithm" controls autoplay muted loop playsinline>
-                    <source src="pics/FlowField_Example.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </section>      
-    </main>
-
-    <nav aria-labelledby="Finished-Projects">
-        <h2 id="Finished-Projects" class="HPTitles">Finished projects</h2>   
-            <div class="nav-buttons">
-                <div>
-                    <a href="DifficulySelect.html" aria-label="Button to Play word decoder the game" class="HPbtn">    
-                        <!--<img src="pics/WordDecoderBanner.png" class="btnIMG" alt="Word Decoder Button">-->
-                        Word Decoder
-                    </a> 
-                </div>
-
-                <div>
-                    <a href="ParticleLife.html" aria-label="Button to Particle Life Simulator Visualization" class="HPbtn">    
-                        <!--<img src="pics/PSBanner.png" class="btnIMG" alt="Particle Life Simulator Button">-->
-                        Particle Life Simulator
-                    </a> 
-                </div>
-
-                <div>
-                    <a href="https://assetstore.unity.com/publishers/67561" aria-label="Button to Tweaked Studios Asset Store Page" class="HPbtn">   
-                        <!--<img src="pics/GameAssetsBanner.png" class="btnIMG" alt="Unity Asset Store Button">-->
-                        Unity Assets
-                    </a>     
-                </div>
-            </div>  
-    </nav> 
-    <br>
-    <br>
-    <footer class = "HomePageversionctrl">
-        Tweaked.Studios.Contact@gmail.com
-    </footer> 
-</body>
-</html>
+                    --->

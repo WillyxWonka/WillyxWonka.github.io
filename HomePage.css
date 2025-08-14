@@ -1,19 +1,15 @@
 /* Common Styles */
-*
-{ 
+*{ 
     font-family: 'Courier New', Courier, monospace, ui-monospace;
     text-shadow: -.025vw .025vw .1vw #393939;
 }
-.HomePageBody 
-{
+.HomePageBody {
     background-color: peachpuff;
-
     line-height: 1; /*unitless and will auto adjust with font size*/
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     margin: 0 auto;
     overflow-x: hidden;
-
 }
 .HPHeader {
     position: fixed;
@@ -26,13 +22,11 @@
     text-decoration: underline;
     font-size: clamp(1.75rem, 4vw, 3rem) !important;
 }
-
 .PageVid {
     min-width: auto;
     padding:.5em;
 }
 .HomePagetextContainer {
-
     display: flex;
     flex-wrap: wrap;
     background-color: beige;
@@ -40,37 +34,30 @@
     border-width: 0.2em;
     border-radius: 1em;
     border-color: black;
-
     justify-content: space-between;
     margin: 0 auto;
     padding:.125em 0em;
-
     position: relative;
     width: 98%;
     line-height: 1; /*unitless and will auto adjust with font size*/
 }
-.hp-gallery-card 
-{
+.hp-gallery-card {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-
     box-shadow: -.075em .125em .5em rgb(13, 8, 11);
     align-items: center;
     background-color: burlywood;
-
     transition: all 0.25s ease-in-out; 
     margin: 1em .5em;
     padding: .125em;
-    
     border-radius: .5em;
     border-width: 0.125em;
     border-style:solid;
     border-color: #000000;
 
 }
-.PageImg
-{
+.PageImg{
     border-radius: .25em;
     width: 90%;
     height: auto; 
@@ -78,83 +65,90 @@
     margin: auto auto auto auto;
     padding: .25em;
 }
-.HPpictxt
-{
+.HPpictxt{
     margin-top: auto;
     text-align: center;
     font-style: italic;
-    opacity: 50%;
-    color:  black;   
+    color:rgba(0, 0, 0, .5);   
+    text-shadow: none;;
+    background-color: rgba(255, 255, 255, 0.386);
+    border-style: solid;
+    border-radius: .5em;
+    border-color: rgb(0, 0, 0);
+    border-width: .125em;
+    padding: 2.5%;
+    margin: 2% ;
 }
-.HomePageversionctrl 
-{
+.HomePageversionctrl {
     position: fixed;
     bottom: 2.5%;
     right: 2.5%;
     opacity: 75%;
     color: black;
 }
-.HPbtn:hover:not(:active)
-{
+.HPbtn:hover:not(:active), .new-btn:hover:not(:active){
     box-shadow: 0 0 .25em goldenrod;
     border-color: gold;
     transition: ease-in-out .1s;
     transform: scale(1.1);
 }
-.HPbtn:active
-{
+.HPbtn:active,.new-btn:active{
     border-color: greenyellow;
     background-color: rgb(233, 255, 233);
     box-shadow: 0 0 1em goldenrod;
     color: rgb(64, 95, 32);
-
     transition: ease-in-out .025s;
     transform: scale(.75);
     opacity: 90%;
     font-style: italic;
 }
-
-.HPbtn
-{
+.HPbtn{
     border-width: clamp(0.05em, 0.09em, 0.25em);
     border-radius: 1em;
     text-decoration: none;
-
-    font-size: clamp(1rem, 3.25vw, 2rem);
+    font-size: clamp(1rem, 1.25vw, 2rem);
     text-shadow: -.025vw .025vw .1vw #393939;
     padding: .125em;
     text-align: center;
     color: black;
     background-color: beige;
-
     margin: 1% 1%;
     display: flex; 
     border-color: black;
     border-style: solid;
     cursor: pointer;
-
     z-index: 1;
 }
-.nav-buttons
-{
+.new-btn{
+    border-width: clamp(0.05em, 0.09em, 0.25em);
+    border-radius: 1em;
+    text-decoration: none;
+    font-size: clamp(1rem, 1.25vw, 2rem);
+    padding: .25em;
+    text-align: center;
+    color: black;
+    background-color: rgb(255, 149, 0);
+    margin: 1% 1%;
+    display: flex; 
+    border-color: black;
+    border-style: solid;
+    cursor: pointer;
+    z-index: 1;
+}
+.nav-buttons{
     display: inline-flex;
     justify-content: space-evenly;
     align-items: center;
     background-color:rgba(63, 54, 46, .85);
-    
     width: 100%;
 }
-.btnIMG
-{
+.btnIMG{
     transition: all 0.25s ease-in-out; 
 }
-.btnIMG:hover
-{
+.btnIMG:hover{
     transform: scale(1.25);
     cursor: pointer;
 }
-
-
 .hp-gallery-card:hover {
     transform: scale(1.1);
     cursor: zoom-in;
@@ -181,13 +175,19 @@
     border: 5px solid rgb(0, 0, 0);
     border-radius: .125em;
     box-shadow: -.1em .1em .125em rgb(13, 8, 11);
+    z-index: 10;
 }
 /* When active, show the overlay */
 .overlay.active {
     opacity: 1;
     visibility: visible;
 }
-
+#wip-div{
+    padding: 0 0em;
+    display: flex;
+    align-items: center;
+    font-size: clamp(1rem, 1vw,2rem)
+}
 
 /* Portrait Mode */
 @media screen and (orientation: portrait) {
@@ -218,7 +218,7 @@
     }
     .HPpictxt 
     {
-        font-size: clamp(.5rem, 1.25vw, 1.5rem);
+        font-size: clamp(.5rem, 1vw, 1.5rem);
     }
     .HomePageversionctrl {
         font-size: clamp(.75rem, 1.25vw, 1.25rem);
@@ -227,6 +227,13 @@
 
 /* Landscape Mode */
 @media screen and (orientation: landscape) {
+    
+    #wip-div{
+        padding: 0 0em;
+        display: flex;
+        align-items: center;
+        font-size: clamp(1rem, 2vw,2rem)
+    }
     .HPHeader {
         font-size: clamp(1rem, 2vw, 2rem); 
 
@@ -242,7 +249,7 @@
     }
     .HPpictxt
     {
-        font-size: clamp(.5rem, 1.25vw, 1.5rem);
+        font-size: clamp(.5rem, 1vw, 1.5rem);
     }
     .HomePageversionctrl 
     {
