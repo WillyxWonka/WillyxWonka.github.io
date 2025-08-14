@@ -30,7 +30,7 @@ var images = [
     ["pics/LowPolyCastleSetImg.png", "Low-Poly Castle Set"],
     ["pics/SnowyAutumnPropsFull.png", "Low-Poly snowy-Autumn themed asset pack currently available on the Unity Asset Store"],
     ["pics/ModualarwallsProps.png", "Walls From modular low poly asset pack in development"],
-    ["pics/NewTreesStaged.png", "Mid-poly trees work-in-progress for medieval asset pack"],
+    ["pics/UpdatedTrees.png", "Mid-poly trees work-in-progress for medieval asset pack"],
     ["pics/Props_W-alt.png", "Props for medieval asset pack. With alternate flat material"],
     ["pics/TD_Wip_New.png", "Alpha image of Castle Defense game in development"],
     ["pics/TD_WIPPic.png", "Early work-in-progress image of Castle Defense game"]
